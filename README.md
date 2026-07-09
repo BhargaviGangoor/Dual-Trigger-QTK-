@@ -394,3 +394,11 @@ This is an honest, defensible position — it shows crypto maturity without over
 *"We don't invent new cryptography — we identify and close a specific, provable blind spot (behaviorally-active-but-anomalous ghost devices) in an existing, published, formally-secure protocol (Quarantined-TreeKEM), using a fused HMM + relational Graph-LSTM trust score as an additive trigger condition, and we prove this empirically against QTK's own baseline."*
 
 ---
+
+## PART 5 — RELATED WORK TO CITE (don't skip these)
+
+- **Chevalier, Lebrun, Martinelli, Taleb — "Quarantined-TreeKEM"** (CCS 2024 / IACR ePrint 2023/1903) — your direct comparison point and the protocol you're extending.
+- **MLS / RFC 9420** — the standard your work sits inside; cite for TreeKEM/CGKA background.
+- **GNN-based trust propagation + certificate revocation for IoT (2026, Scientific Reports)** — nearest prior art for "graph + decay + credential revocation," different domain (IoT certs vs. E2EE messaging sessions) — cite and explicitly differentiate.
+- **"Trusted device" patent family** (retention-probability decay triggering re-authentication) — prior art for device-level decay-triggers-reauth; cite to show you're aware the general pattern isn't new, only your specific graph+CGKA combination is.
+- Standard UEBA / behavioral anomaly detection literature (for HMM/LSTM positioning, as already noted in earlier notes).
