@@ -20,3 +20,9 @@
 **Why this is a good final-year paper now:** You're no longer proposing something vague. You're making a precise, provable claim against a specific, real, respected paper (QTK, CCS 2024): "your timer misses this threat class, ours catches it — here's the proof." That's exactly the shape of a strong, fundable, publishable contribution.
 
 ---
+
+## PART 2 — TECHNICAL VERSION: THE QTK-GROUNDED ARCHITECTURE
+
+### A. What QTK actually does (know this cold — it's your direct comparison point)
+
+- QTK = a TreeKEM-based Continuous Group Key Agreement (CGKA) protocol, fully compatible with the MLS standard (RFC 9420), associated with a **(t,m)-perfect secret sharing scheme**.
