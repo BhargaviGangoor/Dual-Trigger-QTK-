@@ -26,3 +26,12 @@
 ### A. What QTK actually does (know this cold — it's your direct comparison point)
 
 - QTK = a TreeKEM-based Continuous Group Key Agreement (CGKA) protocol, fully compatible with the MLS standard (RFC 9420), associated with a **(t,m)-perfect secret sharing scheme**.
+- ## PART 2 — TECHNICAL VERSION: THE QTK-GROUNDED ARCHITECTURE
+
+### A. What QTK actually does (know this cold — it's your direct comparison point)
+
+- QTK = a TreeKEM-based Continuous Group Key Agreement (CGKA) protocol, fully compatible with the MLS standard (RFC 9420), associated with a **(t,m)-perfect secret sharing scheme**.
+- It implements a **quarantine mechanism for inactive users**, which the paper literally calls **"ghost users."**
+- **Trigger condition (the weak point you're targeting):** at each commit, the committer checks whether a user's encryption key age exceeds a fixed parameter δ_inact:
+  `e_i − e_pk ≥ δ_inact  →  declare "ghost user"  →  quarantine`
+  where e_i = current epoch, e_pk = epoch of that user's last path/key update.
