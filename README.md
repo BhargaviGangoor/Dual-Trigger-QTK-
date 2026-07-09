@@ -35,3 +35,7 @@
 - **Trigger condition (the weak point you're targeting):** at each commit, the committer checks whether a user's encryption key age exceeds a fixed parameter δ_inact:
   `e_i − e_pk ≥ δ_inact  →  declare "ghost user"  →  quarantine`
   where e_i = current epoch, e_pk = epoch of that user's last path/key update.
+
+ **Quarantine mechanism:** the ghost user's key material is updated *on their behalf* and locked behind a (t,m) threshold secret-sharing scheme — t of m other members must cooperate to reconstruct it.
+- **Recovery:** if the quarantined user reconnects before full expulsion, quarantine lifts and they can recover messages sent during their offline period.
+- **The gap:** this trigger is purely time-based. A device that stays technically active (still pinging, still syncing occasionally) but is behaviorally anomalous — the actual ghost-pairing threat model — is invisible to QTK's δ_inact check.
