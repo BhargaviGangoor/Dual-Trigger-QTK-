@@ -60,5 +60,7 @@ QTK Quarantine Mechanism (UNCHANGED — inherit their proven crypto machinery)
         │
         ▼
 Recovery path: device must clear BOTH (a) reconnect check AND (b) R(d,t) drop
+
+**Key design principle:** you are NOT replacing QTK's crypto. You are ADDING a second, ML-driven trigger condition alongside their original epoch-based one. This is important for your security argument (see below).
    below θ_R before shares are reconstructed and device rejoins normally
 ```
