@@ -39,3 +39,26 @@
  **Quarantine mechanism:** the ghost user's key material is updated *on their behalf* and locked behind a (t,m) threshold secret-sharing scheme — t of m other members must cooperate to reconstruct it.
 - **Recovery:** if the quarantined user reconnects before full expulsion, quarantine lifts and they can recover messages sent during their offline period.
 - **The gap:** this trigger is purely time-based. A device that stays technically active (still pinging, still syncing occasionally) but is behaviorally anomalous — the actual ghost-pairing threat model — is invisible to QTK's δ_inact check.
+
+- ### B. Your modified architecture (QTK + your ML trigger)
+
+```
+Behavioral Observation Module (unchanged from original paper)
+        │
+        ├──> HMM (solo, per-device) ──> Pc
+        ├──> Device Relationship Graph + Graph-LSTM ──> St_graph
+        ├──> Fusion Layer ──> R(d,t)  [unified trust-risk score]
+        │
+        ▼
+Modified QTK Trigger Condition:
+   OLD:  (e_i − e_pk) ≥ δ_inact                     → quarantine
+   NEW:  (e_i − e_pk) ≥ δ_inact   OR   R(d,t) ≥ θ_R  → quarantine
+        │
+        ▼
+QTK Quarantine Mechanism (UNCHANGED — inherit their proven crypto machinery)
+   (t,m)-threshold secret sharing on the flagged device's key material
+        │
+        ▼
+Recovery path: device must clear BOTH (a) reconnect check AND (b) R(d,t) drop
+   below θ_R before shares are reconstructed and device rejoins normally
+```
