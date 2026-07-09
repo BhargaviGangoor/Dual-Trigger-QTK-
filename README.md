@@ -357,3 +357,22 @@ QTK's original security proof assumes the trigger is deterministic and monotonic
 This is an honest, defensible position — it shows crypto maturity without overclaiming a proof you haven't done.
 
 ---
+
+## PART 3 — EXPERIMENTS TO RUN (in priority order)
+
+1. **QTK baseline vs. your modified trigger (the single most important experiment)**
+   Same simulated multi-device dataset. Run plain QTK (δ_inact only) vs. your modified version (δ_inact OR R(d,t)). Construct a specific test case: a ghost device that stays "active" (pings occasionally, avoids triggering the timer) but behaves anomalously. Show QTK misses it; show your version catches it. **This single result is your headline evidence.**
+
+2. **Full ablation ladder**
+   HMM-alone → LSTM-alone (solo) → Graph-LSTM-alone → Fused. Report accuracy, false positive rate, detection latency, verification rate for each.
+
+3. **Adversarial mimicry test**
+   Simulate a ghost device that adapts its timing to correlate with the user's real devices, specifically trying to fool the graph signal. Report detection accuracy under this attack vs. a naive (non-adaptive) ghost baseline.
+
+4. **False-lockout / DoS comparison**
+   Measure how often a legitimate-but-idle device gets wrongly quarantined under (a) QTK's fixed timer and (b) your ML trigger. If your trigger produces fewer false lockouts (because it can tell "idle but historically consistent" apart from "anomalous"), that's a strong secondary result worth highlighting.
+
+5. **Sensitivity analysis on θ_R and δ_inact**
+   Show how detection accuracy / false-positive rate trade off as you vary the two thresholds — gives reviewers confidence you understand the tuning space, not just a single lucky configuration.
+
+---
