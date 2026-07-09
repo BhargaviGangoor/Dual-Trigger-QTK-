@@ -376,3 +376,21 @@ This is an honest, defensible position — it shows crypto maturity without over
    Show how detection accuracy / false-positive rate trade off as you vary the two thresholds — gives reviewers confidence you understand the tuning space, not just a single lucky configuration.
 
 ---
+
+## PART 4 — NOVELTY TRACKING (for your own reference)
+
+| Stage | Novelty (top-tier scale) |
+|---|---|
+| Original paper (HMM + LSTM + FSM, no results) | ~3–3.5/10 |
+| + real evaluation metrics | ~4.5–5/10 |
+| + Graph-LSTM (relational signal) + learned fusion | ~5–5.5/10 |
+| + generic "decay-triggers-crypto-change" (pre-QTK-check) | ~6–6.5/10 |
+| + grounded against QTK, precise delta identified | ~6.5–7/10 |
+| + full experimentation incl. QTK head-to-head, adversarial test, DoS analysis | **~7.5–8/10** |
+
+**Realistic target venues at final stage:** ACSAC, RAID, DSN (strong, credible submissions); workshop tracks at CCS/USENIX/S&P/NDSS (plausible); main track at those top-4 (a stretch without a full formal security re-proof, but not unreasonable for a strong workshop or short paper).
+
+**The one sentence to remember if you forget everything else:**
+*"We don't invent new cryptography — we identify and close a specific, provable blind spot (behaviorally-active-but-anomalous ghost devices) in an existing, published, formally-secure protocol (Quarantined-TreeKEM), using a fused HMM + relational Graph-LSTM trust score as an additive trigger condition, and we prove this empirically against QTK's own baseline."*
+
+---
