@@ -347,3 +347,13 @@ The original inactivity-based trigger remains intact, while the proposed behavio
 
 ---
 
+
+### D. The security-proof caveat — address this explicitly, don't hide it
+
+QTK's original security proof assumes the trigger is deterministic and monotonic (a fixed counter that only increases). Your R(d,t) is learned and could in principle behave unpredictably. **Your informal security argument, to include in the paper:**
+
+> "Our modification is strictly additive: we OR a new quarantine condition onto QTK's original trigger, and never remove or weaken the original δ_inact check. Therefore, in the worst case where our ML trigger never fires, the protocol degrades exactly to original QTK, inheriting its proven security. Our trigger can only cause quarantine to happen *earlier or additionally*, never *later or less*. We do not claim a full re-proof of QTK's CGKA security game under our modified trigger; we argue informally that additive, non-weakening triggers preserve the original security properties, and we leave a full formal re-proof as future work."
+
+This is an honest, defensible position — it shows crypto maturity without overclaiming a proof you haven't done.
+
+---
