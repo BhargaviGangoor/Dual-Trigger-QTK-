@@ -1,404 +1,462 @@
-# Ghost Pairing Paper — Final Upgrade Plan (QTK-Integrated Version)
-## PART 1 — LAYMAN VERSION
+# Dual-Trigger QTK Experimental Testbed
 
-**The original problem:** Once a device is linked to a messaging account, it's trusted forever. A lost, sold, forgotten, or secretly-added device can silently keep reading your encrypted messages — "ghost pairing."
+A research prototype for evaluating whether Quarantined-TreeKEM (QTK) can be extended beyond inactivity-based quarantine to address both silent devices and active rogue devices in multi-device end-to-end encrypted group messaging.
 
-**Original solution:** Watch device behavior (logins, sync timing, idle time) with an HMM (statistical guesser) and LSTM (pattern-memory neural net), and move devices down a trust ladder (Trusted → Idle → Suspicious → Verification Required → Revoked).
+## Research Motivation
 
-**The upgrades  added, in order:**
+Quarantined-TreeKEM (QTK) addresses long-inactive members in MLS-based group communication by placing them into quarantine rather than immediately removing them. Its quarantine decision is based on inactivity: a member is quarantined once the age of its key update exceeds a configured threshold.
 
-1. **Watch the "friend group," not just the individual** — a Graph-based LSTM that looks at how your devices behave *relative to each other* (sync timing correlation, shared network patterns), not just each device alone. A ghost device sticks out because it doesn't "fit" with your other devices, even if its solo behavior looks fine.
+This works well for a device that goes silent. It does not directly address a rogue device that remains active enough to stay below the inactivity threshold.
 
-2. **Combine signals with a learned fusion layer** — instead of a crude "flag if EITHER signal looks bad" rule, a small learned model decides how much to trust each signal.
+This project studies whether behavioral evidence can provide a second path into the existing QTK quarantine process.
 
-3. **Make suspicion cost something real (this is the big one)** — instead of just flagging a device, you found that a real, published cryptographic protocol called **Quarantined-TreeKEM (QTK)**, from a 2024 top security conference (CCS), already does something like this inside real group-messaging encryption (MLS, the modern replacement for ad hoc protocols like Signal's). QTK quarantines "ghost users" (their actual term!) who've been *inactive* for too long, locking their encryption keys behind a system where other members have to cooperate to unlock them. But QTK's trigger is dumb — it only checks "how long since this device was last active," a plain timer. It **cannot** catch a ghost device that's sneaky and stays quietly active while behaving suspiciously.
+The proposed decision rule is:
 
-4. **Your real contribution:** swap QTK's dumb timer for your smart trust score (from #1 and #2 above). Now the system quarantines a device not just because it's been silent too long, but because it's *behaviorally or relationally* suspicious — catching the sneaky ghost devices QTK's timer completely misses.
-
-5. **Prove it, and stress-test it** — run real experiments comparing your smart trigger against QTK's plain timer, test whether a clever attacker could fake "normal" behavior to sneak past you, and check whether your own mechanism could be abused to falsely lock out a real device (a legitimate laptop that's just been idle).
-
-**Why this is a good final-year paper now:** You're no longer proposing something vague. You're making a precise, provable claim against a specific, real, respected paper (QTK, CCS 2024): "your timer misses this threat class, ours catches it — here's the proof." That's exactly the shape of a strong, fundable, publishable contribution.
-
----
-
-## PART 2 — TECHNICAL VERSION: THE QTK-GROUNDED ARCHITECTURE
-
-### A. What QTK actually does (know this cold — it's your direct comparison point)
-
-- QTK = a TreeKEM-based Continuous Group Key Agreement (CGKA) protocol, fully compatible with the MLS standard (RFC 9420), associated with a **(t,m)-perfect secret sharing scheme**.
-- ## PART 2 — TECHNICAL VERSION: THE QTK-GROUNDED ARCHITECTURE
-
-### A. What QTK actually does (know this cold — it's your direct comparison point)
-
-- QTK = a TreeKEM-based Continuous Group Key Agreement (CGKA) protocol, fully compatible with the MLS standard (RFC 9420), associated with a **(t,m)-perfect secret sharing scheme**.
-- It implements a **quarantine mechanism for inactive users**, which the paper literally calls **"ghost users."**
-- **Trigger condition (the weak point you're targeting):** at each commit, the committer checks whether a user's encryption key age exceeds a fixed parameter δ_inact:
-  `e_i − e_pk ≥ δ_inact  →  declare "ghost user"  →  quarantine`
-  where e_i = current epoch, e_pk = epoch of that user's last path/key update.
-
- **Quarantine mechanism:** the ghost user's key material is updated *on their behalf* and locked behind a (t,m) threshold secret-sharing scheme — t of m other members must cooperate to reconstruct it.
-- **Recovery:** if the quarantined user reconnects before full expulsion, quarantine lifts and they can recover messages sent during their offline period.
-- **The gap:** this trigger is purely time-based. A device that stays technically active (still pinging, still syncing occasionally) but is behaviorally anomalous — the actual ghost-pairing threat model — is invisible to QTK's δ_inact check.
-
-- ### B. Your modified architecture (QTK + your ML trigger)
-
-```
-Behavioral Observation Module (unchanged from original paper)
-        │
-        ├──> HMM (solo, per-device) ──> Pc
-        ├──> Device Relationship Graph + Graph-LSTM ──> St_graph
-        ├──> Fusion Layer ──> R(d,t)  [unified trust-risk score]
-        │
-        ▼
-Modified QTK Trigger Condition:
-   OLD:  (e_i − e_pk) ≥ δ_inact                     → quarantine
-   NEW:  (e_i − e_pk) ≥ δ_inact   OR   R(d,t) ≥ θ_R  → quarantine
-        │
-        ▼
-QTK Quarantine Mechanism (UNCHANGED — inherit their proven crypto machinery)
-   (t,m)-threshold secret sharing on the flagged device's key material
-        │
-        ▼
-Recovery path: device must clear BOTH (a) reconnect check AND (b) R(d,t) drop
-
-**Key design principle:** you are NOT replacing QTK's crypto. You are ADDING a second, ML-driven trigger condition alongside their original epoch-based one. This is important for your security argument (see below).
-   below θ_R before shares are reconstructed and device rejoins normally
-```
-
-# Mathematical Formulation
-
-This section presents the mathematical foundation of the proposed **Behavior-Aware Ghost Pairing Detection Framework** integrated with **Quarantined-TreeKEM (QTK)**.
-
-The framework continuously evaluates the trustworthiness of paired devices using behavioral analysis, graph-based relational learning, and a modified quarantine trigger that extends the original QTK protocol.
-
----
-
-# 1. Device Trust Evolution
-
-Each paired device maintains a dynamic trust score that evolves over time based on historical trust and newly observed behavioral evidence.
-
-$$
-T_{t+1}=\alpha T_t+(1-\alpha)B_t
-$$
-
-where
-
-| Symbol | Description |
-|---------|-------------|
-| $T_t$ | Trust score at time $t$ |
-| $B_t$ | Behavioral trust score |
-| $\alpha$ | Trust retention coefficient ($0 \leq \alpha \leq 1$) |
-
-The behavioral score is generated by the Hidden Markov Model (HMM):
-
-$$
-B_t=f_{HMM}(X_t)
-$$
-
-where
-
-- $X_t$ represents behavioral observations collected at time $t$.
-- $f_{HMM}$ denotes the Hidden Markov Model.
-
-Typical behavioral observations include:
-
-- Login frequency
-- Device synchronization intervals
-- Network transitions
-- Idle duration
-- Session activity
-- Message synchronization patterns
-
----
-
-# 2. Dynamic Device Relationship Graph
-
-Instead of evaluating devices independently, the framework models relationships among all trusted devices.
-
-Each device is represented as a node, while the similarity between two devices is represented as a weighted edge.
-
-The edge weight evolves over time according to
-
-$$
-w_{ij}^{t+1}
-=
-\beta w_{ij}^{t}
-+
-(1-\beta)S_{ij}(t)
-$$
-
-where
-
-| Symbol | Description |
-|---------|-------------|
-| $w_{ij}^{t}$ | Previous edge weight |
-| $\beta$ | Edge memory coefficient |
-| $S_{ij}(t)$ | Behavioral similarity between devices |
-
-The similarity score is computed as
-
-$$
-S_{ij}(t)
-=
-\lambda_1Sync
-+
-\lambda_2Network
-+
-\lambda_3Location
-+
-\lambda_4Time
-$$
-
-where
-
-- **Sync** represents synchronization similarity.
-- **Network** represents similarity in network usage.
-- **Location** captures geographical consistency.
-- **Time** measures temporal behavioral similarity.
-
-This allows trusted relationships to strengthen or weaken naturally over time.
-
----
-
-# 3. Decay-Weighted Graph Convolution
-
-The dynamic device graph is processed using a **Decay-Weighted Graph Neural Network (DW-GNN)**.
-
-For each node, the embedding is updated as
-
-$$
-h_i^{(l+1)}
-=
-\sigma
-\left(
-\sum_{j\in N(i)}
-\frac{w_{ij}}
-{\sqrt{D_iD_j}}
-W^{(l)}
-h_j^{(l)}
-\right)
-$$
-
-where
-
-| Symbol | Description |
-|---------|-------------|
-| $h_i^{(l)}$ | Node embedding at layer $l$ |
-| $N(i)$ | Neighboring devices |
-| $w_{ij}$ | Dynamic edge weight |
-| $D_i$ | Degree of node $i$ |
-| $W^{(l)}$ | Trainable weight matrix |
-| $\sigma$ | Activation function |
-
-The resulting embeddings capture the behavioral consistency of each device relative to all other trusted devices.
-
-These embeddings are then processed by a Graph-LSTM to produce the relational anomaly score.
-
----
-
-# 4. Behavioral Risk Fusion
-
-The framework combines multiple sources of evidence into a single behavioral risk score.
-
-The input feature vector is
-
-$$
-z=
-\begin{bmatrix}
-P_c\\
-S_{graph}\\
-T_t
-\end{bmatrix}
-$$
-
-where
-
-| Symbol | Description |
-|---------|-------------|
-| $P_c$ | HMM anomaly probability |
-| $S_{graph}$ | Graph-LSTM anomaly score |
-| $T_t$ | Current trust score |
-
-The unified behavioral risk is computed using either Logistic Regression or a lightweight Multi-Layer Perceptron (MLP).
-
-### Logistic Regression
-
-$$
-R(d,t)
-=
-\sigma(W_fz+b)
-$$
-
-or
-
-### Multi-Layer Perceptron
-
-$$
-R(d,t)
-=
-MLP(z;\theta)
-$$
-
-where
-
-| Symbol | Description |
-|---------|-------------|
-| $R(d,t)$ | Unified behavioral risk score |
-| $\theta$ | Learnable model parameters |
-
-The output represents the probability that a paired device behaves anomalously.
-
----
-
-# 5. Modified Quarantined-TreeKEM (QTK) Trigger
-
-The original QTK protocol quarantines a device **only when it remains inactive for a predefined number of epochs**.
-
-The original condition is
-
-$$
-e_i-e_{pk}(d)\ge\delta_{inact}
-$$
-
-where
-
-| Symbol | Description |
-|---------|-------------|
-| $e_i$ | Current epoch |
-| $e_{pk}(d)$ | Last key update epoch of device $d$ |
-| $\delta_{inact}$ | Inactivity threshold |
-
-This approach cannot detect **behaviorally active ghost-paired devices** that remain synchronized while behaving suspiciously.
-
-To address this limitation, we introduce an additional behavioral trigger.
-
-A device is quarantined if **either**
-
-- it exceeds the inactivity threshold, or
-- its behavioral risk exceeds the acceptable threshold.
-
-The modified trigger becomes
-
-$$
-Quarantine(d)
+[
+\operatorname{Quarantine}(d)
 \iff
-(e_i-e_{pk}(d)\ge\delta_{inact})
-\;\lor\;
-(R(d,t)\ge\theta_R)
-$$
+\left(e_i-e_{pk}(d)\geq\delta_{\text{inact}}\right)
+\lor
+\left(R(d,t)\geq\theta_R\right)
+]
 
-where
+The first condition is QTK's original inactivity trigger. The second is a behavior-based risk trigger.
 
-| Symbol | Description |
-|---------|-------------|
-| $R(d,t)$ | Behavioral risk score |
-| $\theta_R$ | Risk threshold |
-
-This modification **extends** QTK without altering its cryptographic mechanisms.
-
-The original inactivity-based trigger remains intact, while the proposed behavioral trigger enables earlier detection of stealthy ghost-paired devices.
+The project does not replace QTK's cryptographic quarantine mechanism. It focuses on extending the decision that determines when quarantine is invoked.
 
 ---
 
-# Complete Computational Pipeline
+## System Model
+
+Each device is modeled as a separate MLS client. Multiple clients may belong to the same application-level user.
 
 ```text
-                 Behavioral Observations (Xt)
-                            │
-                            ▼
-                    Hidden Markov Model
-                            │
-                            ▼
-                  Behavioral Score Bt
-                            │
-                            ▼
-                Device Trust Evolution
-       T(t+1) = αT(t) + (1-α)Bt
-                            │
-                            ▼
-              Device Relationship Graph
-                            │
-                            ▼
-             Dynamic Edge Weight Update
-                            │
-                            ▼
-        Decay-Weighted Graph Convolution
-                            │
-                            ▼
-                     Graph-LSTM
-                            │
-                            ▼
-                Relational Anomaly Score
-                            │
-                            ▼
-                 Behavioral Risk Fusion
-                            │
-                            ▼
-                 Unified Risk Score R(d,t)
-                            │
-                            ▼
-              Modified QTK Trigger Decision
-                            │
-                            ▼
-         ┌───────────────────────────────┐
-         │ Quarantine      Continue Trust │
-         └───────────────────────────────┘
+User u
+|
++-- Phone d1          Legitimate MLS client
++-- Laptop d2         Legitimate MLS client
++-- Tablet d3         Legitimate MLS client
++-- Rogue device dr   Attacker-controlled MLS client
+```
+
+The rogue device has been successfully enrolled and admitted to the target MLS group. From the protocol's perspective, it is therefore a valid group member. The challenge is to determine whether its behavior provides enough evidence to invoke quarantine.
+
+---
+
+## Architecture
+
+The system evaluates devices through two independent paths.
+
+```text
+                         Device Activity
+                               |
+              +----------------+----------------+
+              |                                 |
+        QTK Inactivity                    Behavioral Analysis
+              |                                 |
+       Key-update age                  +--------+--------+
+              |                        |                 |
+      delta_inact check               HMM        Dynamic Device Graph
+              |                        |                 |
+              |                 Individual Risk    Weighted GNN
+              |                                          |
+              |                                      Graph-LSTM
+              |                                          |
+              |                                  Relational Risk
+              |                                          |
+              |                        +-----------------+
+              |                        |
+              |                   Risk Fusion
+              |                        |
+              |                     R(d,t)
+              |                        |
+              +----------- OR --------+
+                          |
+                    QTK Quarantine
 ```
 
 ---
 
+## 1. QTK Baseline
 
-### D. The security-proof caveat — address this explicitly, don't hide it
+The baseline models the QTK inactivity decision using MLS epochs.
 
-QTK's original security proof assumes the trigger is deterministic and monotonic (a fixed counter that only increases). Your R(d,t) is learned and could in principle behave unpredictably. **Your informal security argument, to include in the paper:**
+For each device, the simulator tracks:
 
-> "Our modification is strictly additive: we OR a new quarantine condition onto QTK's original trigger, and never remove or weaken the original δ_inact check. Therefore, in the worst case where our ML trigger never fires, the protocol degrades exactly to original QTK, inheriting its proven security. Our trigger can only cause quarantine to happen *earlier or additionally*, never *later or less*. We do not claim a full re-proof of QTK's CGKA security game under our modified trigger; we argue informally that additive, non-weakening triggers preserve the original security properties, and we leave a full formal re-proof as future work."
+* current epoch (e_i)
+* epoch of the device's most recent key update (e_{pk}(d))
+* inactivity threshold (\delta_{\text{inact}})
 
-This is an honest, defensible position — it shows crypto maturity without overclaiming a proof you haven't done.
+The baseline quarantine condition is:
 
----
+[
+e_i-e_{pk}(d)\geq\delta_{\text{inact}}
+]
 
-## PART 3 — EXPERIMENTS TO RUN (in priority order)
-
-1. **QTK baseline vs. your modified trigger (the single most important experiment)**
-   Same simulated multi-device dataset. Run plain QTK (δ_inact only) vs. your modified version (δ_inact OR R(d,t)). Construct a specific test case: a ghost device that stays "active" (pings occasionally, avoids triggering the timer) but behaves anomalously. Show QTK misses it; show your version catches it. **This single result is your headline evidence.**
-
-2. **Full ablation ladder**
-   HMM-alone → LSTM-alone (solo) → Graph-LSTM-alone → Fused. Report accuracy, false positive rate, detection latency, verification rate for each.
-
-3. **Adversarial mimicry test**
-   Simulate a ghost device that adapts its timing to correlate with the user's real devices, specifically trying to fool the graph signal. Report detection accuracy under this attack vs. a naive (non-adaptive) ghost baseline.
-
-4. **False-lockout / DoS comparison**
-   Measure how often a legitimate-but-idle device gets wrongly quarantined under (a) QTK's fixed timer and (b) your ML trigger. If your trigger produces fewer false lockouts (because it can tell "idle but historically consistent" apart from "anomalous"), that's a strong secondary result worth highlighting.
-
-5. **Sensitivity analysis on θ_R and δ_inact**
-   Show how detection accuracy / false-positive rate trade off as you vary the two thresholds — gives reviewers confidence you understand the tuning space, not just a single lucky configuration.
+This provides the direct comparison point for all experiments.
 
 ---
 
-## PART 4 — NOVELTY TRACKING (for your own reference)
+## 2. Device Behavior Simulation
 
-| Stage | Novelty (top-tier scale) |
-|---|---|
-| Original paper (HMM + LSTM + FSM, no results) | ~3–3.5/10 |
-| + real evaluation metrics | ~4.5–5/10 |
-| + Graph-LSTM (relational signal) + learned fusion | ~5–5.5/10 |
-| + generic "decay-triggers-crypto-change" (pre-QTK-check) | ~6–6.5/10 |
-| + grounded against QTK, precise delta identified | ~6.5–7/10 |
-| + full experimentation incl. QTK head-to-head, adversarial test, DoS analysis | **~7.5–8/10** |
+Each simulated device generates a sequence of behavioral observations.
 
-**Realistic target venues at final stage:** ACSAC, RAID, DSN (strong, credible submissions); workshop tracks at CCS/USENIX/S&P/NDSS (plausible); main track at those top-4 (a stretch without a full formal security re-proof, but not unreasonable for a strong workshop or short paper).
+Example features include:
 
-**The one sentence to remember if you forget everything else:**
-*"We don't invent new cryptography — we identify and close a specific, provable blind spot (behaviorally-active-but-anomalous ghost devices) in an existing, published, formally-secure protocol (Quarantined-TreeKEM), using a fused HMM + relational Graph-LSTM trust score as an additive trigger condition, and we prove this empirically against QTK's own baseline."*
+* synchronization interval
+* idle duration
+* session activity
+* network transitions
+* message synchronization patterns
+* temporal activity patterns
+* coarse location context, where available
+
+The simulator supports five main scenarios.
+
+### Normal Device
+
+A legitimate device with behavior consistent with its established history.
+
+### Silent Device
+
+A legitimate or abandoned device that stops participating and eventually crosses QTK's inactivity threshold.
+
+### Active Rogue Device
+
+An attacker-controlled device that deliberately updates often enough to remain below QTK's inactivity threshold while exhibiting different behavioral patterns.
+
+### Mimicking Rogue Device
+
+An adaptive attacker that attempts to imitate the timing and activity patterns of legitimate devices.
+
+### Irregular Legitimate Device
+
+A legitimate device whose behavior changes because of travel, network changes, unusual working hours, or long idle periods. This scenario is used to measure false quarantine.
 
 ---
 
-## PART 5 — RELATED WORK TO CITE (don't skip these)
+## 3. Per-Device Behavioral Model
 
-- **Chevalier, Lebrun, Martinelli, Taleb — "Quarantined-TreeKEM"** (CCS 2024 / IACR ePrint 2023/1903) — your direct comparison point and the protocol you're extending.
-- **MLS / RFC 9420** — the standard your work sits inside; cite for TreeKEM/CGKA background.
-- **GNN-based trust propagation + certificate revocation for IoT (2026, Scientific Reports)** — nearest prior art for "graph + decay + credential revocation," different domain (IoT certs vs. E2EE messaging sessions) — cite and explicitly differentiate.
-- **"Trusted device" patent family** (retention-probability decay triggering re-authentication) — prior art for device-level decay-triggers-reauth; cite to show you're aware the general pattern isn't new, only your specific graph+CGKA combination is.
-- Standard UEBA / behavioral anomaly detection literature (for HMM/LSTM positioning, as already noted in earlier notes).
+Each device is modeled using a Hidden Markov Model with four behavioral states:
+
+```text
+Normal
+Idle
+Suspicious
+High-Risk
+```
+
+The HMM estimates a device-level anomaly score from its observed behavioral history.
+
+The model is intended to answer:
+
+> Does this device behave differently from its own established pattern?
+
+---
+
+## 4. Dynamic Device Relationship Graph
+
+Per-device analysis may miss a rogue device whose individual behavior appears plausible.
+
+The system therefore creates a dynamic graph over the devices belonging to the same application-level user.
+
+```text
+Phone -------- Laptop
+  |               |
+  |               |
+Tablet -------- Rogue
+```
+
+Each device is represented as a node. Edge weights represent behavioral similarity and evolve over time.
+
+The graph is intended to answer:
+
+> Does this device behave consistently with the user's other devices?
+
+A weighted GNN captures the current relational structure, while a Graph-LSTM models how these relationships change over time.
+
+The output is a device-specific relational anomaly score.
+
+---
+
+## 5. Behavioral Risk Fusion
+
+The system combines:
+
+* HMM anomaly score
+* graph-based relational anomaly score
+* accumulated device trust
+
+into a unified risk score:
+
+[
+R(d,t)\in[0,1]
+]
+
+This score does not directly replace QTK. It acts as an additional trigger for the QTK quarantine decision.
+
+---
+
+## 6. Dual-Trigger QTK Decision
+
+A device is sent to the QTK quarantine process when either:
+
+1. it exceeds QTK's original inactivity threshold, or
+2. its behavioral risk exceeds the configured risk threshold.
+
+```text
+QTK inactivity trigger
+          |
+          +------+
+                 |
+                 OR ----> QTK Quarantine
+                 |
+          +------+
+          |
+Behavioral risk trigger
+```
+
+The experimental prototype focuses on the quarantine decision. QTK's cryptographic quarantine and recovery mechanisms are treated as the downstream protocol mechanism and are not redesigned by the behavioral model.
+
+---
+
+# Experimental Questions
+
+The project is designed around the following research questions.
+
+## RQ1: Can the behavioral trigger detect an active rogue device that remains below QTK's inactivity threshold?
+
+This is the primary experiment.
+
+```text
+Active Rogue
+     |
+Updates before delta_inact
+     |
+QTK trigger = false
+     |
+Behavioral risk evaluated
+     |
+Does R(d,t) reach theta_R?
+```
+
+The experiment compares:
+
+```text
+QTK Baseline
+vs.
+Dual-Trigger QTK
+```
+
+---
+
+## RQ2: Which behavioral component contributes most to detection?
+
+The following configurations are compared:
+
+```text
+HMM only
+Temporal model only
+Graph-LSTM only
+Full fused model
+```
+
+This ablation study determines whether the graph-based relational component provides useful information beyond simpler per-device models.
+
+---
+
+## RQ3: Can an adaptive rogue device evade behavioral detection?
+
+A mimicry attacker gradually changes its behavior to resemble legitimate devices.
+
+The experiment compares:
+
+```text
+Naive Rogue
+vs.
+Adaptive Mimicking Rogue
+```
+
+This tests the limits of the behavioral assumption rather than only evaluating the model against an easy attacker.
+
+---
+
+## RQ4: What is the cost in false quarantine?
+
+Legitimate devices may behave unusually without being compromised.
+
+The system therefore evaluates:
+
+* irregular legitimate devices
+* long-idle legitimate devices
+* network changes
+* temporal routine changes
+
+The goal is to measure whether improved rogue-device detection comes at an unacceptable availability cost.
+
+---
+
+## RQ5: How sensitive is the system to its thresholds?
+
+The experiments jointly vary:
+
+[
+\delta_{\text{inact}}
+\quad\text{and}\quad
+\theta_R
+]
+
+and measure the trade-off between detection, false positives, and detection latency.
+
+---
+
+# Evaluation Metrics
+
+The primary metrics are:
+
+* Rogue-device detection rate
+* False-positive rate
+* False-quarantine rate
+* Detection latency
+* Precision, recall, and F1-score
+
+A QTK-specific metric is also included:
+
+## QTK Evasion Duration
+
+QTK Evasion Duration measures how long a rogue device retains access while remaining below the inactivity threshold.
+
+The main comparison is:
+
+```text
+Evasion duration under QTK
+vs.
+Evasion duration under Dual-Trigger QTK
+```
+
+This directly measures whether the additional behavioral trigger reduces the period during which an active rogue device can remain outside quarantine.
+
+---
+
+# Suggested Project Structure
+
+```text
+dual-trigger-qtk/
+|
++-- simulator/
+|   +-- device.py
+|   +-- legitimate_device.py
+|   +-- silent_device.py
+|   +-- rogue_device.py
+|   +-- mimicry_attacker.py
+|   +-- telemetry_generator.py
+|
++-- qtk/
+|   +-- epoch_tracker.py
+|   +-- inactivity_trigger.py
+|   +-- dual_trigger.py
+|   +-- quarantine_state.py
+|
++-- models/
+|   +-- hmm.py
+|   +-- dynamic_graph.py
+|   +-- weighted_gnn.py
+|   +-- graph_lstm.py
+|   +-- trust_score.py
+|   +-- risk_fusion.py
+|
++-- experiments/
+|   +-- baseline_vs_dual.py
+|   +-- ablation.py
+|   +-- mimicry.py
+|   +-- false_quarantine.py
+|   +-- sensitivity.py
+|
++-- evaluation/
+|   +-- metrics.py
+|   +-- plots.py
+|   +-- results.py
+|
++-- configs/
+|   +-- simulation.yaml
+|   +-- thresholds.yaml
+|
++-- data/
+|   +-- generated/
+|   +-- processed/
+|
++-- README.md
++-- requirements.txt
+```
+
+---
+
+# Implementation Roadmap
+
+## Phase 1: QTK-Aware Simulator
+
+Implement:
+
+* multiple devices per user
+* MLS-style epoch progression
+* per-device key-update epochs
+* QTK inactivity threshold
+* normal, silent, and active-rogue scenarios
+
+At the end of this phase, the project should already demonstrate the motivating case:
+
+```text
+Silent device
+    -> QTK catches it
+
+Active rogue
+    -> remains below delta_inact
+    -> QTK does not quarantine it
+```
+
+## Phase 2: HMM Baseline
+
+Add per-device behavioral modeling and measure whether the HMM can distinguish normal, silent, irregular, and rogue behavior.
+
+## Phase 3: Relational Model
+
+Build the dynamic device graph and add the weighted GNN and Graph-LSTM.
+
+Compare the relational model against the HMM baseline.
+
+## Phase 4: Risk Fusion
+
+Combine individual anomaly, relational anomaly, and trust history into (R(d,t)).
+
+Integrate the risk threshold with the QTK decision:
+
+```text
+inactivity_trigger OR behavioral_trigger
+```
+
+## Phase 5: Adversarial Evaluation
+
+Add:
+
+* mimicry attacker
+* irregular legitimate behavior
+* false-quarantine analysis
+* threshold sensitivity analysis
+
+## Phase 6: Optional MLS Integration
+
+If time permits, connect the decision engine to an existing MLS implementation.
+
+This is an optional systems extension. The core research experiment evaluates the QTK quarantine-trigger decision and does not require reimplementing the full MLS or QTK cryptographic protocol from scratch.
+
+---
+
+# Scope
+
+This project is a protocol-aware experimental testbed, not a new cryptographic implementation of QTK.
+
+The core research question is:
+
+> Can behavioral and relational evidence provide a useful additional trigger for QTK quarantine when a rogue device remains active enough to avoid the original inactivity threshold?
+
+The project does not assume that the answer is yes. Its purpose is to test that hypothesis against the QTK baseline, adaptive attackers, and legitimate behavioral variation.
