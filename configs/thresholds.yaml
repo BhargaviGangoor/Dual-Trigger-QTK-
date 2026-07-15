@@ -1,0 +1,19 @@
+qtk:
+  delta_inact: 5
+  theta_R: 0.65
+
+trust:
+  base_alpha: 0.8
+  critical_revocation_threshold: 0.2
+  suspicious_threshold: 0.8
+  verification_threshold: 0.5
+  recovery_threshold: 0.85
+  verification_success_threshold: 0.9
+
+models:
+  hmm_n_components: 4
+  lstm_sequence_length: 12
+  gcn_hidden_dim: 16
+  beta_graph_decay: 0.8
+  fusion_weights: [1.5, 2.0, -1.0]
+  fusion_bias: 0.2

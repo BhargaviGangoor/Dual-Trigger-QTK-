@@ -1,0 +1,63 @@
+Student:
+  active_hours: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+  activity_prob_by_hour:
+    0: 0.4
+    1: 0.2
+    2: 0.1
+    8: 0.2
+  avg_messages_per_hour: 15
+  std_messages_per_hour: 6
+  networks: ["WiFi", "Cellular"]
+  countries: ["United States"]
+  timezones: ["America/New_York"]
+  ip_prefix: "172.16.23."
+  max_battery_drain: 5
+  avg_sync_delay_sec: 0.8
+  allowed_devices: ["Macbook", "Android Phone", "iPad"]
+
+Corporate Employee:
+  active_hours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  activity_prob_by_hour:
+    12: 0.9
+    13: 0.5
+    18: 0.2
+    20: 0.1
+    21: 0.05
+    22: 0.02
+  avg_messages_per_hour: 6
+  std_messages_per_hour: 2
+  networks: ["WiFi", "Ethernet"]
+  countries: ["United States"]
+  timezones: ["America/Chicago"]
+  ip_prefix: "10.200.45."
+  max_battery_drain: 2
+  avg_sync_delay_sec: 0.3
+  allowed_devices: ["Windows Laptop", "iPhone"]
+
+Traveler:
+  active_hours: [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+  avg_messages_per_hour: 8
+  std_messages_per_hour: 4
+  networks: ["Cellular", "WiFi"]
+  countries: ["Germany", "France", "United Kingdom", "Italy"]
+  timezones: ["Europe/Berlin", "Europe/London", "Europe/Rome"]
+  ip_prefix: "82.102.15."
+  max_battery_drain: 6
+  avg_sync_delay_sec: 2.5
+  allowed_devices: ["iPhone", "Android Tablet"]
+
+Business Owner:
+  active_hours: [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  activity_prob_by_hour:
+    6: 0.5
+    21: 0.3
+    22: 0.2
+  avg_messages_per_hour: 25
+  std_messages_per_hour: 8
+  networks: ["WiFi", "Ethernet", "Cellular"]
+  countries: ["United States", "Canada"]
+  timezones: ["America/New_York", "America/Toronto"]
+  ip_prefix: "192.168.10."
+  max_battery_drain: 4
+  avg_sync_delay_sec: 0.5
+  allowed_devices: ["Windows Desktop", "iPhone", "Macbook Pro"]
