@@ -1,0 +1,17 @@
+# Dual-Trigger QTK Experiment Configuration
+
+simulation:
+  epochs: 40
+  delta_inact: 5
+  theta_R: 0.65
+  alpha: 0.8
+  profile_name: "Student"
+  num_users: 1
+  devices_per_user: 2
+  experiment_type: "dual_trigger"  # "baseline", "dual_trigger", "hmm_only", "graph_only", "ablation"
+
+attack:
+  scenario: "late_enrollment"      # "late_enrollment", "immediate_enrollment", "multiple_rogues"
+  strategy: "STEALTH"              # "STEALTH", "MIMIC", "BURST", "RANDOM"
+  injection_epoch: 10
+  rogue_count: 1
