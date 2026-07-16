@@ -1,0 +1,19 @@
+# Dual-Trigger QTK RQ3 Mimicry Experiment Configuration
+
+simulation:
+  epochs: 40
+  num_trials: 10   # Run 10 trials for statistical validity
+  delta_inact: 5
+  theta_R: 0.65
+  alpha: 0.8
+  profile_name: "Student"
+  num_users: 1
+  devices_per_user: 2
+  injection_epoch: 10
+
+attack:
+  strategies:
+    - "STEALTH"
+    - "MIMIC"
+    - "BURST"
+    - "RANDOM"
