@@ -1,0 +1,52 @@
+# Dual-Trigger QTK Availability & False Quarantine Analysis Configuration
+
+simulation:
+  epochs: 40
+  num_trials: 10   # Run 10 trials for statistical validity
+  delta_inact: 5
+  theta_R: 0.65
+  alpha: 0.8
+
+scenarios:
+  Scenario_A:
+    name: "Normal Usage"
+    profile: "Student"
+    travel: false
+    idle_epochs: 0
+    battery_failure: false
+    network_switching: false
+  Scenario_B:
+    name: "Legitimate Travel"
+    profile: "Traveler"
+    travel: true
+    idle_epochs: 0
+    battery_failure: false
+    network_switching: false
+  Scenario_C:
+    name: "Short Inactivity"
+    profile: "Student"
+    travel: false
+    idle_epochs: 4
+    battery_failure: false
+    network_switching: false
+  Scenario_D:
+    name: "Long Inactivity"
+    profile: "Student"
+    travel: false
+    idle_epochs: 8
+    battery_failure: false
+    network_switching: false
+  Scenario_E:
+    name: "Battery Failure"
+    profile: "Student"
+    travel: false
+    idle_epochs: 0
+    battery_failure: true
+    network_switching: false
+  Scenario_F:
+    name: "Network Instability"
+    profile: "Student"
+    travel: false
+    idle_epochs: 0
+    battery_failure: false
+    network_switching: true
