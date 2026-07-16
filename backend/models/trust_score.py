@@ -35,3 +35,56 @@ class TrustScore:
             alpha += 0.02
             
         return max(0.1, min(0.99, alpha))
+
+    @staticmethod
+    def update(device, evidence_score: float, alpha: float = 0.8):
+        """
+        Calculates trust decay for a device and updates its trust_score and current_trust_state.
+        Loads thresholds dynamically from backend/configs/thresholds.yaml.
+        """
+        device_type = getattr(device, "device_type", "linked")
+        network_type = getattr(device, "network_type", "WiFi")
+        
+        dev_alpha = TrustScore.get_dynamic_alpha(device_type, network_type, alpha)
+        prev_score = getattr(device, "trust_score", 1.0)
+        new_score = TrustScore.calculate_decay(prev_score, evidence_score, dev_alpha)
+        
+        if hasattr(device, "update_trust"):
+            device.update_trust(new_score)
+        else:
+            device.trust_score = new_score
+            
+        # Load thresholds dynamically
+        import os
+        import yaml
+        
+        config_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            "configs",
+            "thresholds.yaml"
+        )
+        critical_revocation = 0.2
+        suspicious_th = 0.8
+        
+        if os.path.exists(config_path):
+            try:
+                with open(config_path, "r") as f:
+                    cfg = yaml.safe_load(f)
+                trust_cfg = cfg.get("trust", {})
+                critical_revocation = trust_cfg.get("critical_revocation_threshold", 0.2)
+                suspicious_th = trust_cfg.get("suspicious_threshold", 0.8)
+            except Exception:
+                pass
+
+        if new_score < critical_revocation:
+            state = "Revoked"
+        elif new_score < suspicious_th:
+            state = "Suspicious"
+        else:
+            state = "Trusted"
+            
+        if hasattr(device, "update_trust_state"):
+            device.update_trust_state(state)
+        else:
+            device.current_trust_state = state
+        return new_score
