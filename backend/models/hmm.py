@@ -2,16 +2,15 @@ import numpy as np
 from typing import List, Tuple, Dict, Any
 
 class HMMDetector:
+    """
+    Implements the Hidden Markov Model (HMM) behavioral detector described in Section IV-A.
+    Uses four hidden states defined in Equation 2:
+    S = {Normal, Idle, Suspicious, High-Risk}
+    
+    Translates observed telemetry histories into anomaly likelihood scores Pc(d, t) using Equation 3:
+    Pc(d, t) = P(St = Suspicious | X_1:t) + P(St = High-Risk | X_1:t)
+    """
     def __init__(self, n_components: int = 4):
-        """
-        NumPy-based Gaussian Hidden Markov Model (HMM).
-        
-        4 Hidden States:
-        0 - Legitimate / Normal User
-        1 - Compromised Session (Session Hijacking)
-        2 - Ghost Device (Silent paired device)
-        3 - Network Anomaly / Transient state
-        """
         self.n_components = n_components
         self.is_trained = True
         
@@ -134,3 +133,41 @@ class HMMDetector:
             "emission_means": self.means_.tolist(),
             "start_probabilities": self.startprob_.tolist()
         }
+
+    def predict(self, device) -> Tuple[str, float]:
+        """
+        Runs Viterbi decoding on the device's telemetry history, updates
+        the device's hmm_state and behavioral_risk, and returns them.
+        """
+        from simulator.device import HMMState
+        
+        records = getattr(device, "telemetry_history", [])
+        state_idx, confidence = self.evaluate_device(records)
+        
+        # Map state index to HMMState enum
+        if state_idx == 0:
+            hmm_state = HMMState.NORMAL
+            p_c = (1.0 - confidence) * 0.15
+        elif state_idx == 3:
+            hmm_state = HMMState.IDLE
+            p_c = (1.0 - confidence) * 0.25
+        elif state_idx == 1:
+            hmm_state = HMMState.SUSPICIOUS
+            p_c = 0.5 + (confidence * 0.2)
+        else: # 2
+            hmm_state = HMMState.HIGH_RISK
+            p_c = 0.7 + (confidence * 0.25)
+            
+        p_c = max(0.0, min(1.0, float(round(p_c, 4))))
+        
+        if hasattr(device, "update_hmm_state"):
+            device.update_hmm_state(hmm_state)
+        else:
+            device.hmm_state = hmm_state
+            
+        if hasattr(device, "update_behavioral_risk"):
+            device.update_behavioral_risk(p_c)
+        else:
+            device.behavioral_risk = p_c
+            
+        return hmm_state, p_c
