@@ -1,14 +1,17 @@
+import numpy as np
 from typing import Dict, Any
 
 class DecisionFusionEngine:
     @staticmethod
     def fuse(fsm_state: str, trust_score: float, hmm_state: int, hmm_confidence: float,
-             anomaly_score: float, anomaly_threshold: float, device_metadata: Dict[str, Any]) -> Dict[str, Any]:
+             anomaly_score: float, anomaly_threshold: float, device_metadata: Dict[str, Any],
+             relational_anomaly_score: float = 0.0) -> Dict[str, Any]:
         """
         Combines multiple trust signals and generates:
         1. An evidence score (0.0 = completely suspicious/malicious, 1.0 = normal/trusted)
         2. A confidence score (0.0 to 1.0)
         3. An explainability report (reasoning breakdown)
+        4. A unified behavioral risk score R(d,t) using a learned fusion layer (Logistic Regression/MLP).
         """
         # HMM State Map: 0: Normal, 1: Hijacked Session, 2: Ghost Device, 3: Network Anomaly
         hmm_state_names = {
@@ -50,7 +53,17 @@ class DecisionFusionEngine:
             evidence_score += 0.05
             feature_importance["lstm_sequence_normal"] = +0.05
 
-        # 3. Static metadata anomalies
+        # 3. Graph-LSTM Relational Anomaly influence
+        if relational_anomaly_score > 0.4:
+            penalty = min(0.50, relational_anomaly_score * 0.6)
+            evidence_score -= penalty
+            reasons.append(f"Graph-LSTM flagged relationship anomaly (Score: {relational_anomaly_score:.2f}). Device does not fit with others.")
+            feature_importance["graph_relation_deviation"] = -penalty
+        else:
+            evidence_score += 0.05
+            feature_importance["graph_relation_normal"] = +0.05
+
+        # 4. Static metadata anomalies
         if device_metadata.get("network_type") == "VPN":
             evidence_score -= 0.10
             reasons.append("Device connected via a virtual private network (VPN).")
@@ -67,7 +80,6 @@ class DecisionFusionEngine:
         evidence_score = max(0.0, min(1.0, evidence_score))
 
         # Compute fusion confidence (how much the trust scores agree)
-        # Confidence decays if HMM and LSTM disagree severely
         if (hmm_state in [1, 2]) and (anomaly_score < anomaly_threshold):
             confidence = 0.50
             reasons.append("Warning: Model disagreement. HMM indicates abuse, but LSTM shows normal sequencing.")
@@ -76,6 +88,26 @@ class DecisionFusionEngine:
             reasons.append("Warning: Model disagreement. LSTM indicates sequence anomaly, HMM indicates standard user pattern.")
         else:
             confidence = 0.85 + (0.15 * hmm_confidence)
+
+        # 5. Learned Behavioral Risk Fusion Layer (Logistic Regression Model)
+        # z = [P_c, S_graph, T_t]
+        # P_c is estimated as (hmm_confidence if hmm_state != 0 else 0.0)
+        P_c = hmm_confidence if hmm_state in [1, 2] else 0.0
+        S_graph = relational_anomaly_score
+        T_t = trust_score
+        
+        # Features vector
+        z = np.array([P_c, S_graph, T_t])
+        
+        # Logistic Regression Weights: risk increases with high anomaly probability (P_c) and high relational anomaly (S_graph)
+        # and decreases with high trust (T_t)
+        W_f = np.array([1.5, 2.0, -1.0])
+        b = 0.2
+        
+        # Compute R(d,t) = sigmoid( W_f . z + b )
+        logit = np.dot(W_f, z) + b
+        R_d_t = 1.0 / (1.0 + np.exp(-np.clip(logit, -50, 50)))
+        R_d_t = float(round(R_d_t, 4))
 
         # Write the explainability summary paragraph
         if evidence_score > 0.8:
@@ -94,5 +126,7 @@ class DecisionFusionEngine:
             "reasons": reasons,
             "feature_importance": feature_importance,
             "hmm_classification": hmm_state_names.get(hmm_state, "Unknown"),
-            "lstm_anomaly_score": anomaly_score
+            "lstm_anomaly_score": anomaly_score,
+            "relational_anomaly_score": relational_anomaly_score,
+            "behavioral_risk_score": R_d_t
         }
