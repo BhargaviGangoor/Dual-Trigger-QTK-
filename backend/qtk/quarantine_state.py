@@ -21,10 +21,16 @@ def mod_inverse(a: int, m: int) -> int:
     return t
 
 class ShamirSecretSharing:
+    """
+    Implements Shamir's (t, m) Threshold Secret Sharing scheme over a finite field
+    using prime SHAMIR_PRIME = 2147483647 as defined in the research paper to protect
+    a quarantined device's key material.
+    """
     @staticmethod
     def split_secret(secret: int, t: int, m: int, prime: int = SHAMIR_PRIME) -> List[Tuple[int, int]]:
         """
-        Splits a secret integer into m shares. Any t shares can reconstruct the secret.
+        Splits a secret integer into m shares. Any t shares can reconstruct the secret
+        via Lagrange interpolation.
         """
         if t > m:
             raise ValueError("Threshold t cannot be greater than total shares m")
@@ -71,12 +77,15 @@ class QuarantineManager:
     """
     Manages the quarantine containment actions: splitting/reconstructing key material
     using Shamir's Secret Sharing.
+    
+    When a device enters quarantine, its key seed is split among the remaining active devices.
+    Majority threshold t = ceil(m/2) + 1 is used, as detailed in Section IV.
     """
     @staticmethod
     def quarantine_device(target_device: Device, other_devices: List[Device]) -> Dict[str, Any]:
         """
         Quarantines a device by splitting its key material among other devices.
-        Threshold t = ceil(m/2) + 1.
+        Threshold t = ceil(m/2) + 1 (majority threshold).
         """
         m = len(other_devices)
         if m == 0:
