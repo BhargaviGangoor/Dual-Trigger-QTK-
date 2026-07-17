@@ -87,3 +87,22 @@ body {
 .pulsing-node-revoked {
   animation: pulse-revoked 2s infinite;
 }
+
+@keyframes pulse-quarantined {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(168, 85, 247, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+  }
+}
+
+.pulsing-node-quarantined {
+  animation: pulse-quarantined 2s infinite;
+}
