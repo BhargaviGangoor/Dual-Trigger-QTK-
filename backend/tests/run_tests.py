@@ -4,7 +4,15 @@ import os
 # Adjust path to import backend modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from tests.test_trust import test_fsm_transitions, test_adaptive_trust_decay, test_hmm_initialization, test_decision_fusion
+from tests.test_trust import (
+    test_fsm_transitions, 
+    test_adaptive_trust_decay, 
+    test_hmm_initialization, 
+    test_decision_fusion,
+    test_shamir_secret_sharing,
+    test_device_relationship_graph,
+    test_qtk_trigger
+)
 
 def run():
     print("==================================================")
@@ -28,7 +36,19 @@ def run():
         test_decision_fusion()
         print("PASSED")
         
-        print("\nAll tests completed successfully! (4/4 passed)")
+        print("5. Running Shamir (t,m) Secret Sharing Math Validation... ", end="")
+        test_shamir_secret_sharing()
+        print("PASSED")
+        
+        print("6. Running Decay-Weighted GCN & Graph-LSTM... ", end="")
+        test_device_relationship_graph()
+        print("PASSED")
+        
+        print("7. Running Behavior-Aware QTK Trigger Decisions... ", end="")
+        test_qtk_trigger()
+        print("PASSED")
+        
+        print("\nAll tests completed successfully! (7/7 passed)")
         print("==================================================")
         sys.exit(0)
     except AssertionError as e:
