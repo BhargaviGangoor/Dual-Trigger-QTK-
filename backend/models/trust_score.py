@@ -1,13 +1,21 @@
 class TrustScore:
+    """
+    Manages the calculation and propagation of long-term behavioral trust scores (Tt(d))
+    as described in Section IV-A of the research paper.
+    
+    Formula:
+    Bt(d) = 1 - Pc(d, t)  (Equation 4)
+    Tt+1(d) = alpha * Tt(d) + (1 - alpha) * Bt(d)  (Equation 5)
+    """
     @staticmethod
     def calculate_decay(prev_score: float, evidence_score: float, alpha: float = 0.8) -> float:
         """
-        Computes the adaptive trust score.
+        Computes the adaptive trust score (Equation 5).
         Formula: Trust_t = alpha * Trust_{t-1} + (1 - alpha) * Evidence_t
         Args:
-            prev_score (float): Previous trust score (0.0 to 1.0)
-            evidence_score (float): Behavior evidence score (0.0 = malicious, 1.0 = normal)
-            alpha (float): Decay factor (0.0 to 1.0)
+            prev_score (float): Previous trust score T_t(d)
+            evidence_score (float): Behavioral evidence trust Bt(d) (1.0 = normal/trusted, 0.0 = malicious/suspicious)
+            alpha (float): Decay factor alpha (0.0 to 1.0)
         """
         prev_score = max(0.0, min(1.0, prev_score))
         evidence_score = max(0.0, min(1.0, evidence_score))
