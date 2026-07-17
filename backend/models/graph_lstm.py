@@ -4,6 +4,11 @@ from .dynamic_graph import DynamicGraph
 from .weighted_gnn import WeightedGNN
 
 class GraphLSTM:
+    """
+    Implements the Graph-LSTM temporal-relational model described in Section IV-C of the research paper.
+    Tracks the evolution of normalized GCN device embeddings over time, computing reconstruction
+    errors to evaluate how well each device fits the collective relationship structure.
+    """
     def __init__(self, feature_dim: int = 5, hidden_dim: int = 16, beta: float = 0.8, seed: int = 42):
         self.feature_dim = feature_dim
         self.hidden_dim = hidden_dim
