@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from typing import List, Dict, Any
 
-from .database import engine, Base, get_db
+from .database import engine, Base, get_db, SessionLocal
 from .models import User, Device, Message, MetadataRecord, SimulationEvent, SimulationRun
 from .schemas import SimulationConfig, UserSchema, DeviceSchema, MessageSchema, SimulationEventSchema
 from .simulator.engine import SimulationEngine
@@ -242,7 +242,10 @@ async def websocket_endpoint(websocket: WebSocket):
                             "network": dev.network_type,
                             "country": dev.country,
                             "timezone": dev.timezone,
-                            "battery": dev.battery_level
+                            "battery": dev.battery_level,
+                            "last_key_update_epoch": dev.last_key_update_epoch,
+                            "quarantined_at_epoch": dev.quarantined_at_epoch,
+                            "qtk_shares": dev.qtk_shares
                         })
                         
                     event_list = [{
