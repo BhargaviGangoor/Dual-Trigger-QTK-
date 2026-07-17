@@ -309,25 +309,59 @@ function App() {
           evidence = 0.95 - (randomVal() * noise);
         }
 
-        // Apply trust decay formula: score = alpha * prev_score + (1-alpha) * evidence
+        // Apply trust decay formula: score = alpha * d.trust_score + (1-alpha) * evidence
         const newScore = alpha * d.trust_score + (1.0 - alpha) * evidence;
         
         // Determine state transition
         let nextState = d.state;
         let transitionReason = "";
+        let lastKeyEpoch = (d as any).last_key_update_epoch || 0;
+        let qatEpoch = (d as any).quarantined_at_epoch || null;
+        let shares = (d as any).qtk_shares || null;
         
-        if (newScore < 0.20) {
-          nextState = "Revoked";
-          transitionReason = "Trust score fell below critical threshold.";
-        } else if (newScore < 0.50) {
-          nextState = "Verification Required";
-          transitionReason = "Severe trust drop detected.";
-        } else if (newScore < threshold) {
-          nextState = "Suspicious";
-          transitionReason = "Moderate behavioral deviations.";
-        } else if (newScore >= 0.80 && d.state === "Suspicious") {
-          nextState = "Trusted";
-          transitionReason = "Consistent standard behavior restored.";
+        const isDeviceActive = !isAttackerDevice;
+        if (isDeviceActive && d.state !== "Quarantined" && d.state !== "Revoked") {
+          lastKeyEpoch = day;
+        }
+        
+        const epochGap = day - lastKeyEpoch;
+        const R_dt = isAttackerDevice ? 0.75 : 0.15;
+        const shouldQuarantine = (epochGap >= 5) || (R_dt >= threshold);
+        
+        if (shouldQuarantine && d.state !== "Quarantined" && d.state !== "Revoked") {
+          nextState = "Quarantined";
+          transitionReason = `Quarantined-TreeKEM (QTK) quarantine triggered (Epoch Gap: ${epochGap}, Risk: ${R_dt.toFixed(2)}).`;
+          qatEpoch = day;
+          shares = { "pri-01": [1, 54321], "web-02": [2, 98765] };
+        } else if (d.state === "Quarantined") {
+          if (isDeviceActive && R_dt < threshold) {
+            nextState = "Trusted";
+            transitionReason = "QTK key reconstructed from active members' secret shares. Quarantine lifted.";
+            qatEpoch = null;
+            shares = null;
+            lastKeyEpoch = day;
+          } else {
+            const qDuration = day - (qatEpoch || day);
+            if (qDuration >= 5) {
+              nextState = "Revoked";
+              transitionReason = "Quarantine timeout expired. Device expelled from continuous group key agreement.";
+            }
+          }
+        } else {
+          // Standard FSM
+          if (newScore < 0.20) {
+            nextState = "Revoked";
+            transitionReason = "Trust score fell below critical threshold.";
+          } else if (newScore < 0.50) {
+            nextState = "Verification Required";
+            transitionReason = "Severe trust drop detected.";
+          } else if (newScore < threshold) {
+            nextState = "Suspicious";
+            transitionReason = "Moderate behavioral deviations.";
+          } else if (newScore >= 0.80 && d.state === "Suspicious") {
+            nextState = "Trusted";
+            transitionReason = "Consistent standard behavior restored.";
+          }
         }
 
         if (nextState !== d.state) {
@@ -344,8 +378,11 @@ function App() {
         return {
           ...d,
           trust_score: parseFloat(newScore.toFixed(4)),
-          state: nextState
-        };
+          state: nextState,
+          last_key_update_epoch: lastKeyEpoch,
+          quarantined_at_epoch: qatEpoch,
+          qtk_shares: shares
+        } as SimulatedDevice;
       });
 
       // Update events timeline
