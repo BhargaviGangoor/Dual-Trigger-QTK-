@@ -309,6 +309,29 @@ class SimulationEngine:
             
             # Evaluate ML Models on all devices for this day
             all_devices = self.db.query(Device).filter(Device.user_id == user_id).all()
+            
+            # Extract metadata histories for all devices to run DeviceRelationshipGraph
+            devices_records = []
+            valid_devices = []
+            for dev in all_devices:
+                records = self.db.query(MetadataRecord).filter(
+                    MetadataRecord.device_id == dev.id,
+                    MetadataRecord.timestamp <= current_date.replace(hour=23, minute=59, second=59)
+                ).order_by(MetadataRecord.timestamp.desc()).limit(24).all()
+                if records:
+                    devices_records.append(list(reversed(records)))
+                    valid_devices.append(dev)
+                    
+            seq_len = min(len(r) for r in devices_records) if devices_records else 0
+            relational_scores = {}
+            if seq_len > 0:
+                from ..trust.graph import DeviceRelationshipGraph
+                graph_detector = DeviceRelationshipGraph()
+                truncated_histories = [history[-seq_len:] for history in devices_records]
+                _, scores = graph_detector.evaluate_devices(truncated_histories)
+                for idx, dev in enumerate(valid_devices):
+                    relational_scores[dev.id] = scores[idx]
+            
             for dev in all_devices:
                 # Fetch recent metadata records for this device
                 records = self.db.query(MetadataRecord).filter(
@@ -330,6 +353,9 @@ class SimulationEngine:
                     r.anomaly_score = lstm_anomaly_score
                     r.is_anomaly = lstm_anomaly_score > detection_threshold
                 
+                # Get relational anomaly score
+                rel_score = relational_scores.get(dev.id, 0.0)
+                
                 # Decision Fusion
                 fusion_results = DecisionFusionEngine.fuse(
                     fsm_state=dev.current_trust_state,
@@ -344,7 +370,8 @@ class SimulationEngine:
                         "timezone": dev.timezone,
                         "country": dev.country,
                         "pairing_age_days": (current_date - dev.pairing_timestamp).days
-                    }
+                    },
+                    relational_anomaly_score=rel_score
                 )
                 
                 evidence = fusion_results["evidence_score"]
@@ -354,23 +381,108 @@ class SimulationEngine:
                 new_score = TrustDecay.calculate_decay(score_before, evidence, alpha)
                 dev.trust_score = new_score
                 
-                # Update FSM Trust State
+                # Get current FSM state and reasons
                 state_before = dev.current_trust_state
-                state_after, state_reason = TrustFSM.transition(state_before, new_score)
-                dev.current_trust_state = state_after
                 
-                # Log state transition if it changes
-                if state_before != state_after:
+                # 6. QTK Quarantine Check
+                from ..trust.qtk import QuarantinedTreeKEM
+                qtk = QuarantinedTreeKEM(delta_inact=5, theta_R=detection_threshold)
+                
+                e_i = day
+                e_pk = dev.last_key_update_epoch
+                R_dt = fusion_results["behavioral_risk_score"]
+                
+                # Update key update epoch if active
+                is_active = len([r for r in records if (r.message_count_sent > 0 or r.sync_frequency > 0.5)]) > 0
+                if is_active and dev.current_trust_state not in ["Quarantined", "Revoked"]:
+                    dev.last_key_update_epoch = e_i
+                    e_pk = e_i
+                    
+                should_quarantine, qtk_reason = qtk.evaluate_trigger(e_i, e_pk, R_dt)
+                
+                if should_quarantine and dev.current_trust_state not in ["Quarantined", "Revoked"]:
+                    # Transition to Quarantined state
+                    dev.current_trust_state = "Quarantined"
+                    dev.quarantined_at_epoch = e_i
+                    
+                    other_active_devs = [d.id for d in all_devices if d.id != dev.id and d.current_trust_state in ["Trusted", "Idle"]]
+                    qtk_info = qtk.quarantine_device(dev.id, other_active_devs)
+                    dev.qtk_shares = qtk_info["shares"]
+                    
                     self.log_event(
-                        event_type="trust_decay" if new_score < score_before else "trust_recovery",
+                        event_type="qtk_quarantine",
                         device_id=dev.id,
-                        description=f"Trust state transitioned for {dev.name} to {state_after} (Score: {new_score:.2f}). Reason: {state_reason}",
+                        description=f"QTK Quarantine triggered. Reason: {qtk_reason}",
                         score_before=score_before,
                         score_after=new_score,
                         state_before=state_before,
-                        state_after=state_after,
-                        reason=state_reason
+                        state_after="Quarantined",
+                        reason=qtk_reason
                     )
+                elif dev.current_trust_state == "Quarantined":
+                    # Check recovery conditions: active reconnection and risk score below threshold
+                    is_reconnected = len([r for r in records if r.message_count_sent > 0]) > 0
+                    risk_dropped = R_dt < qtk.theta_R
+                    
+                    if is_reconnected and risk_dropped:
+                        other_active_devs = [d.id for d in all_devices if d.id != dev.id and d.current_trust_state in ["Trusted", "Idle"]]
+                        t = max(1, (len(other_active_devs) // 2) + 1)
+                        
+                        shares_dict = dev.qtk_shares if dev.qtk_shares else {}
+                        success, secret, rec_reason = qtk.recover_device(dev.id, shares_dict, other_active_devs, t)
+                        
+                        if success:
+                            dev.current_trust_state = "Trusted"
+                            dev.last_key_update_epoch = e_i
+                            dev.quarantined_at_epoch = None
+                            dev.qtk_shares = None
+                            dev.trust_score = 0.90
+                            
+                            self.log_event(
+                                event_type="qtk_recovery",
+                                device_id=dev.id,
+                                description=f"QTK Recovery successful: {rec_reason}",
+                                score_before=score_before,
+                                score_after=0.90,
+                                state_before=state_before,
+                                state_after="Trusted",
+                                reason=rec_reason
+                            )
+                    else:
+                        # Expel device if quarantine timeout exceeded (e.g. 5 days)
+                        quarantine_duration = e_i - (dev.quarantined_at_epoch or e_i)
+                        if quarantine_duration >= 5:
+                            dev.current_trust_state = "Revoked"
+                            dev.is_active = False
+                            dev.trust_score = 0.0
+                            
+                            self.log_event(
+                                event_type="qtk_expulsion",
+                                device_id=dev.id,
+                                description=f"QTK Expulsion triggered after {quarantine_duration} days of quarantine.",
+                                score_before=score_before,
+                                score_after=0.0,
+                                state_before=state_before,
+                                state_after="Revoked",
+                                reason="Quarantine period expired without recovery."
+                            )
+                else:
+                    # Run standard FSM transitions for non-quarantined devices
+                    state_after, state_reason = TrustFSM.transition(state_before, new_score)
+                    dev.current_trust_state = state_after
+                    
+                    # Log state transition if it changes
+                    if state_before != state_after:
+                        self.log_event(
+                            event_type="trust_decay" if new_score < score_before else "trust_recovery",
+                            device_id=dev.id,
+                            description=f"Trust state transitioned for {dev.name} to {state_after} (Score: {new_score:.2f}). Reason: {state_reason}",
+                            score_before=score_before,
+                            score_after=new_score,
+                            state_before=state_before,
+                            state_after=state_after,
+                            reason=state_reason
+                        )
             self.db.commit()
 
         # Compute simulation run metrics
