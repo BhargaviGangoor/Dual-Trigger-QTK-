@@ -1,6 +1,10 @@
 import numpy as np
 
 class WeightedGNN:
+    """
+    Implements the Decay-Weighted Graph Neural Network (DW-GNN) layer described in Section IV-C.
+    Propagates device feature representations through normalized adjacency weights.
+    """
     def __init__(self, feature_dim: int = 5, hidden_dim: int = 16, seed: int = 42):
         self.feature_dim = feature_dim
         self.hidden_dim = hidden_dim
@@ -11,8 +15,13 @@ class WeightedGNN:
 
     def run_gcn(self, X: np.ndarray, adj: np.ndarray) -> np.ndarray:
         """
-        Runs one layer of Decay-Weighted Graph Convolution:
-        H = relu(D^-1/2 * W_tilde * D^-1/2 * X * W_gcn)
+        Runs one layer of Decay-Weighted Graph Convolution (Equation 8):
+        H = relu( D^-1/2 * W_tilde * D^-1/2 * X * W_gcn )
+        
+        Where:
+        - W_tilde is the adjacency matrix with self-loops added.
+        - D is the degree matrix.
+        - X contains device feature representations.
         """
         # Add self-loops
         W_tilde = adj + np.eye(adj.shape[0])
