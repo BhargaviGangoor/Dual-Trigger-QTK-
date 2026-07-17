@@ -33,8 +33,13 @@ class Device(Base):
     os_version = Column(String, default="Windows 11")
     battery_level = Column(Integer, default=100)
     trust_score = Column(Float, default=1.0)
-    current_trust_state = Column(String, default="Trusted")  # Trusted, Idle, Suspicious, Verification Required, Revoked
+    current_trust_state = Column(String, default="Trusted")  # Trusted, Idle, Suspicious, Verification Required, Revoked, Quarantined
     is_active = Column(Boolean, default=True)
+    
+    # QTK protocol state variables
+    last_key_update_epoch = Column(Integer, default=0)
+    quarantined_at_epoch = Column(Integer, nullable=True)
+    qtk_shares = Column(JSON, nullable=True)
     
     user = relationship("User", back_populates="devices")
     metadata_records = relationship("MetadataRecord", back_populates="device", cascade="all, delete-orphan")
