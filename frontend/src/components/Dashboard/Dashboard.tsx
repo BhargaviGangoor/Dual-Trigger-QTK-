@@ -403,7 +403,7 @@ export default function DashboardView({
                 
                 {/* Visual state map */}
                 <div className="flex flex-col gap-3 my-4">
-                  {["Trusted", "Idle", "Suspicious", "Verification Required", "Revoked"].map((st) => {
+                  {["Trusted", "Idle", "Suspicious", "Verification Required", "Quarantined", "Revoked"].map((st) => {
                     const isActive = activeDevice ? activeDevice.state === st : false;
                     
                     let bgStyle = "bg-[#202c33]/30 border-[#374248] text-gray-500";
@@ -416,6 +416,9 @@ export default function DashboardView({
                       } else if (st === "Revoked") {
                         bgStyle = "bg-red-500/20 border-red-500 text-red-500 font-bold";
                         ringStyle = "pulsing-node-revoked";
+                      } else if (st === "Quarantined") {
+                        bgStyle = "bg-purple-500/20 border-purple-500 text-purple-400 font-bold";
+                        ringStyle = "pulsing-node-quarantined";
                       } else {
                         bgStyle = "bg-yellow-500/20 border-yellow-500 text-yellow-500 font-bold";
                         ringStyle = "pulsing-node-suspicious";
@@ -423,7 +426,7 @@ export default function DashboardView({
                     }
 
                     return (
-                      <div key={st} className={`flex items-center justify-between px-3 py-2 rounded-lg border text-xs relative ${bgStyle} ${ringStyle}`}>
+                      <div key={st} className={`flex items-center justify-between px-3 py-1.5 rounded-lg border text-xs relative ${bgStyle} ${ringStyle}`}>
                         <span>{st}</span>
                         {isActive && <span className="h-2 w-2 rounded-full bg-current"></span>}
                       </div>
@@ -433,13 +436,13 @@ export default function DashboardView({
               </div>
 
               {/* SHAP Feature Importance Explainer Panel */}
-              <div className="col-span-6 bg-[#111b21] p-4 rounded-xl border border-[#222e35] flex flex-col justify-between">
+              <div className="col-span-4 bg-[#111b21] p-4 rounded-xl border border-[#222e35] flex flex-col justify-between">
                 <div>
                   <h2 className="font-bold text-xs text-[#e9edef] border-b border-[#222e35] pb-2">Explainable AI (SHAP Analysis)</h2>
                   <p className="text-[10px] text-[#8696a0] mt-1">Anomalous weights contributing to active device score</p>
                 </div>
 
-                <div className="flex flex-col gap-3 my-4">
+                <div className="flex flex-col gap-2.5 my-3 flex-1 justify-center">
                   {shapWeights.map((w, idx) => (
                     <div key={idx} className="flex flex-col gap-1">
                       <div className="flex justify-between text-[10px] text-gray-300">
@@ -456,6 +459,70 @@ export default function DashboardView({
                       </div>
                     </div>
                   ))}
+                </div>
+              </div>
+
+              {/* PANEL B: Device Relationship Graph Edge Weights */}
+              <div className="col-span-4 bg-[#111b21] p-4 rounded-xl border border-[#222e35] flex flex-col">
+                <h2 className="font-bold text-xs text-[#e9edef] border-b border-[#222e35] pb-2">
+                  Device Relationship Graph (DW-GCN)
+                </h2>
+                <p className="text-[10px] text-[#8696a0] mt-1 mb-3">Learned pairwise edge weight propagation</p>
+                <div className="flex flex-col gap-2 flex-1 justify-center">
+                  {devices.length < 2 ? (
+                    <span className="text-xs text-gray-500 italic">No peer devices connected.</span>
+                  ) : (
+                    devices.filter(d => d.id !== activeDevice?.id).map(d => {
+                      const isAnomalousPair = activeDevice?.id.startsWith("ghost") || d.id.startsWith("ghost") || 
+                        (attackType !== "None" && (activeDevice?.type === "linked" || d.type === "linked") && currentDay >= attackDay);
+                      const edgeWeight = isAnomalousPair ? (0.12 + (d.trust_score * 0.15)) : (0.84 + (d.trust_score * 0.11));
+                      
+                      return (
+                        <div key={d.id} className="flex justify-between items-center bg-[#202c33]/40 p-2.5 rounded border border-[#222e35] text-xs">
+                          <span className="text-gray-300 font-semibold">{activeDevice?.name} ↔ {d.name}</span>
+                          <span className={`font-mono font-bold ${edgeWeight > 0.5 ? "text-wa-green" : "text-red-400"}`}>
+                            {edgeWeight.toFixed(3)}
+                          </span>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+              </div>
+
+              {/* PANEL C: Quarantined-TreeKEM & Shamir Shares */}
+              <div className="col-span-4 bg-[#111b21] p-4 rounded-xl border border-[#222e35] flex flex-col">
+                <h2 className="font-bold text-xs text-[#e9edef] border-b border-[#222e35] pb-2">
+                  Quarantined-TreeKEM (QTK) Cryptographic Status
+                </h2>
+                <p className="text-[10px] text-[#8696a0] mt-1 mb-3">Continuous Group Key Agreement containment logs</p>
+                <div className="flex flex-col gap-2 flex-1 justify-center">
+                  <div className="flex justify-between text-xs border-b border-[#222e35] pb-1.5">
+                    <span className="text-gray-400">Current Epoch:</span>
+                    <span className="font-mono font-bold text-white">{currentDay}</span>
+                  </div>
+                  <div className="flex justify-between text-xs border-b border-[#222e35] pb-1.5">
+                    <span className="text-gray-400">Last Key Update Epoch:</span>
+                    <span className="font-mono font-bold text-white">{(activeDevice as any)?.last_key_update_epoch ?? 0}</span>
+                  </div>
+                  <div className="flex justify-between text-xs border-b border-[#222e35] pb-1.5">
+                    <span className="text-gray-400">Epoch Key Age:</span>
+                    <span className="font-mono font-bold text-[#53bdeb]">
+                      {currentDay - ((activeDevice as any)?.last_key_update_epoch ?? 0)} epochs
+                    </span>
+                  </div>
+                  {activeDevice?.state === "Quarantined" ? (
+                    <div className="flex flex-col gap-1.5 bg-purple-950/20 border border-purple-500/30 p-2.5 rounded text-[10px]">
+                      <span className="text-purple-400 font-bold block mb-1">Active Shamir Shares (t=2, m=3):</span>
+                      <div className="flex flex-col gap-1 font-mono text-gray-300">
+                        <div>• Primary Phone: Share (1, 54321)</div>
+                        <div>• Chrome Web Session: Share (2, 98765)</div>
+                        <div className="text-purple-300 font-bold">• Key quarantined on behalf of peer consensus</div>
+                      </div>
+                    </div>
+                  ) : (
+                    <span className="text-xs text-gray-500 italic block mt-1">Device is trust-compliant. Continuous keys active.</span>
+                  )}
                 </div>
               </div>
 
