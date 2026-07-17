@@ -2,18 +2,25 @@ import numpy as np
 from typing import List, Dict, Any
 
 class DynamicGraph:
+    """
+    Manages the dynamic device relationship graph as described in Section IV-B of the research paper.
+    Nodes represent devices, and edge weights represent their similarity over time.
+    """
     def __init__(self, beta: float = 0.8):
         """
-        Manages the dynamic device relationship graph.
-        beta: Memory coefficient for edge weight evolution:
-              w_ij^{t+1} = beta * w_ij^t + (1 - beta) * S_ij(t)
+        beta: Memory coefficient determining how much of the previous relationship weight
+              is retained versus updated by the current similarity:
+              w_ij^{t+1} = beta * w_ij^t + (1 - beta) * S_ij(t)  (Equation 6)
         """
         self.beta = beta
 
     def calculate_similarity(self, dev_i: Dict[str, Any], dev_j: Dict[str, Any]) -> float:
         """
-        Computes similarity S_ij(t) based on features: Sync, Network, Location, Timezone.
-        dev_i and dev_j are dicts of device metadata.
+        Computes the current similarity S_ij(t) using Equation 7:
+        S_ij(t) = sum_{k=1}^K lambda_k s_k(i, j, t)
+        
+        Evaluates features: Synchronization interval, network IP prefix, network type,
+        location country, and timezone.
         """
         # 1. Sync frequency similarity
         sync_i = dev_i.get("sync_frequency", 1.0)
