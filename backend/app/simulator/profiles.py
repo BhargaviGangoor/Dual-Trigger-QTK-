@@ -50,7 +50,8 @@ class BehaviorProfile:
 
     def sample_sync_delay(self) -> float:
         """Simulates synchronization delay in seconds."""
-        return max(0.1, random.exponential(self.config.get("avg_sync_delay_sec", 1.0)))
+        mean = self.config.get("avg_sync_delay_sec", 1.0)
+        return max(0.1, random.expovariate(1.0 / mean if mean > 0 else 1.0))
 
 
 PROFILES: Dict[str, Dict[str, Any]] = {

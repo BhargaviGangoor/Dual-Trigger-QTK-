@@ -225,6 +225,10 @@ async def websocket_endpoint(websocket: WebSocket):
                 
                 db = SessionLocal()
                 try:
+                    # Run simulation day updates
+                    engine_sim = SimulationEngine(db)
+                    engine_sim.simulate_day(user_id, day_index, config)
+                    
                     # Fetch devices, metadata anomalies, and transmit stats
                     devices = db.query(Device).filter(Device.user_id == user_id).all()
                     events = db.query(SimulationEvent).order_by(SimulationEvent.timestamp.desc()).limit(15).all()

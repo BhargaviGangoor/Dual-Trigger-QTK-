@@ -69,6 +69,7 @@ function App() {
   
   // WebSocket setup
   const [backendConnected, setBackendConnected] = useState<boolean>(false);
+  const [simUserId, setSimUserId] = useState<number | null>(null);
   const ws = useRef<WebSocket | null>(null);
 
   // Initialize DB reset and sample devices on start
@@ -94,7 +95,11 @@ function App() {
       
       ws.current.onmessage = (event) => {
         const data = JSON.parse(event.data);
-        if (data.status === "update") {
+        if (data.status === "ready") {
+          setSimUserId(data.user.id);
+          setCurrentDay(0);
+          setTrustHistory([]);
+        } else if (data.status === "update") {
           setCurrentDay(data.day);
           setDevices(data.devices);
           setEvents(data.events);
@@ -111,6 +116,59 @@ function App() {
       setBackendConnected(false);
     }
   };
+
+  // Trigger server-side simulation start when simRunning becomes true in Server Mode
+  useEffect(() => {
+    if (simRunning && backendConnected && ws.current && ws.current.readyState === WebSocket.OPEN) {
+      setSimUserId(null); // Reset user ID for new session
+      ws.current.send(JSON.stringify({
+        action: "start",
+        config: {
+          user_profile: profile,
+          attack_type: attackType,
+          attack_day: attackDay,
+          noise_level: noise,
+          alpha: alpha,
+          detection_threshold: threshold
+        }
+      }));
+    }
+  }, [simRunning, backendConnected, profile, attackType, attackDay, noise, alpha, threshold]);
+
+  // Run server-side timeline simulation loop when active and connected to FastAPI
+  useEffect(() => {
+    if (!simRunning || !backendConnected || simUserId === null) return;
+
+    const interval = setInterval(() => {
+      setCurrentDay(prevDay => {
+        const nextDay = prevDay + 1;
+        if (nextDay >= 30) {
+          setSimRunning(false);
+          clearInterval(interval);
+          return 30;
+        }
+
+        // Dispatch tick to backend
+        if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+          ws.current.send(JSON.stringify({
+            action: "tick",
+            user_id: simUserId,
+            day: nextDay,
+            config: {
+              attack_type: attackType,
+              attack_day: attackDay,
+              noise_level: noise,
+              alpha: alpha,
+              detection_threshold: threshold
+            }
+          }));
+        }
+        return nextDay;
+      });
+    }, 1200 / simSpeed);
+
+    return () => clearInterval(interval);
+  }, [simRunning, simSpeed, backendConnected, simUserId, profile, attackType, attackDay, alpha, threshold, noise]);
 
   // Re-run fallback client simulation loop when active and FastAPI is not available
   useEffect(() => {
@@ -135,6 +193,7 @@ function App() {
   const resetSimulation = () => {
     setSimRunning(false);
     setCurrentDay(0);
+    setSimUserId(null);
     setTrustHistory([]);
     
     // Default initial devices (Primary Phone + Chrome Web Session)

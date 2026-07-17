@@ -1,138 +1,142 @@
 Epoch,Scenario,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reason,Quarantined
-1,Normal Usage,phone,Idle,0.98,0.0665,0.0609,False,trust-compliant,False
-1,Normal Usage,laptop,Normal,1.0,0.0685,0.0665,False,trust-compliant,False
+1,Normal Usage,phone,Idle,0.98,0.0686,0.0726,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.0719,0.0702,False,trust-compliant,False
+2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.5804,1.0,0.9545,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.4982,1.0,0.958,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.3889,1.0,0.9622,False,trust-compliant,False
+6,Normal Usage,laptop,High-Risk,0.3833,1.0,0.9624,False,trust-compliant,False
+7,Normal Usage,laptop,High-Risk,0.365,1.0,0.963,False,trust-compliant,False
+8,Normal Usage,laptop,Suspicious,0.394,1.0,0.9456,False,trust-compliant,False
+9,Normal Usage,laptop,High-Risk,0.3864,1.0,0.9623,False,trust-compliant,False
+10,Normal Usage,laptop,High-Risk,0.3818,1.0,0.9624,False,trust-compliant,False
+11,Normal Usage,laptop,High-Risk,0.3191,1.0,0.9646,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
+1,Normal Usage,phone,Idle,0.98,0.0358,0.0852,False,trust-compliant,False
+1,Normal Usage,laptop,Normal,1.0,0.0649,0.0354,False,trust-compliant,False
 2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Normal Usage,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
 3,Normal Usage,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5257,1.0,0.9569,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.4624,1.0,0.9594,True,Inactivity timer expired,True
+1,Normal Usage,phone,Idle,0.98,0.0122,0.0417,False,trust-compliant,False
+1,Normal Usage,laptop,Normal,1.0,0.0394,0.0311,False,trust-compliant,False
+2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
 4,Normal Usage,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
+5,Normal Usage,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
 5,Normal Usage,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.0209,0.0851,False,trust-compliant,False
-1,Normal Usage,laptop,Idle,0.98,0.0218,0.0976,False,trust-compliant,False
-2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.4655,1.0,0.9593,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.044,0.0567,False,trust-compliant,False
-1,Normal Usage,laptop,Idle,0.98,0.0682,0.0961,False,trust-compliant,False
-2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.0331,0.0683,False,trust-compliant,False
-1,Normal Usage,laptop,Idle,0.98,0.0304,0.0577,False,trust-compliant,False
-2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Normal Usage,phone,Normal,1.0,0.0668,0.0621,False,trust-compliant,False
-1,Normal Usage,laptop,Normal,1.0,0.058,0.0449,False,trust-compliant,False
+1,Normal Usage,phone,Normal,1.0,0.0606,0.0443,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.0734,0.0823,False,trust-compliant,False
 2,Normal Usage,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Normal Usage,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.6264,1.0,0.9525,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.5926,1.0,0.954,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.0374,0.0459,False,trust-compliant,False
-1,Normal Usage,laptop,Suspicious,0.92,0.0654,0.3534,False,trust-compliant,False
-2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7053,1.0,0.9488,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.5731,1.0,0.9549,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.4916,1.0,0.9582,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.4414,1.0,0.9602,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.1956,0.142,False,trust-compliant,False
-1,Normal Usage,laptop,Idle,0.98,0.041,0.0707,False,trust-compliant,False
-2,Normal Usage,phone,High-Risk,0.7684,1.0,0.9457,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Normal Usage,phone,Suspicious,0.6395,1.0,0.9315,False,trust-compliant,False
 3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.5369,1.0,0.9564,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
 4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.5351,1.0,0.9565,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.4039,1.0,0.9616,True,Inactivity timer expired,True
+1,Normal Usage,phone,Idle,0.98,0.0102,0.072,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.0513,0.0912,False,trust-compliant,False
+2,Normal Usage,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7698,1.0,0.9456,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6924,1.0,0.9494,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5211,1.0,0.9571,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6385,1.0,0.952,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.4596,1.0,0.9595,True,Inactivity timer expired,True
+1,Normal Usage,phone,Idle,0.98,0.0425,0.0981,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.0467,0.0749,False,trust-compliant,False
+2,Normal Usage,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6803,1.0,0.95,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6301,1.0,0.9523,True,Inactivity timer expired,True
 5,Normal Usage,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-6,Normal Usage,phone,High-Risk,0.5339,1.0,0.9565,False,trust-compliant,False
-7,Normal Usage,phone,High-Risk,0.5331,1.0,0.9566,False,trust-compliant,False
-8,Normal Usage,phone,High-Risk,0.4645,1.0,0.9593,False,trust-compliant,False
-9,Normal Usage,phone,High-Risk,0.4859,1.0,0.9585,False,trust-compliant,False
-10,Normal Usage,phone,High-Risk,0.5004,1.0,0.9579,False,trust-compliant,False
-11,Normal Usage,phone,High-Risk,0.5103,1.0,0.9575,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
-1,Normal Usage,phone,Idle,0.98,0.0696,0.0733,False,trust-compliant,False
-1,Normal Usage,laptop,Idle,0.98,0.0367,0.0532,False,trust-compliant,False
+1,Normal Usage,phone,Idle,0.98,0.0424,0.0719,False,trust-compliant,False
+1,Normal Usage,laptop,Normal,1.0,0.0654,0.0343,False,trust-compliant,False
+2,Normal Usage,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6977,1.0,0.9492,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6422,1.0,0.9518,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Normal Usage,phone,Idle,0.98,0.0287,0.0983,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.0756,0.1,False,trust-compliant,False
 2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.5211,1.0,0.9571,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.4596,1.0,0.9595,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.0249,0.0661,False,trust-compliant,False
-1,Normal Usage,laptop,Idle,0.98,0.0569,0.1096,False,trust-compliant,False
-2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
 3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.6207,1.0,0.9528,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
 4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.5364,1.0,0.9564,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
 5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.469,1.0,0.9591,True,Inactivity timer expired,True
-1,Normal Usage,phone,Idle,0.98,0.0223,0.0932,False,trust-compliant,False
-1,Normal Usage,laptop,Normal,1.0,0.0485,0.0563,False,trust-compliant,False
+5,Normal Usage,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
+1,Normal Usage,phone,Idle,0.98,0.0181,0.0444,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.0612,0.0678,False,trust-compliant,False
 2,Normal Usage,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
-2,Normal Usage,laptop,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
-3,Normal Usage,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
-3,Normal Usage,laptop,High-Risk,0.6,1.0,0.9537,False,trust-compliant,False
-4,Normal Usage,phone,High-Risk,0.6803,1.0,0.95,False,trust-compliant,False
-4,Normal Usage,laptop,High-Risk,0.45,1.0,0.9599,False,trust-compliant,False
-5,Normal Usage,phone,High-Risk,0.6301,1.0,0.9523,True,Inactivity timer expired,True
-5,Normal Usage,laptop,High-Risk,0.42,1.0,0.961,False,trust-compliant,False
-6,Normal Usage,laptop,High-Risk,0.402,1.0,0.9617,False,trust-compliant,False
-7,Normal Usage,laptop,High-Risk,0.3912,1.0,0.9621,False,trust-compliant,False
-8,Normal Usage,laptop,High-Risk,0.3847,1.0,0.9623,False,trust-compliant,False
-9,Normal Usage,laptop,High-Risk,0.3808,1.0,0.9625,False,trust-compliant,False
-10,Normal Usage,laptop,High-Risk,0.3785,1.0,0.9625,False,trust-compliant,False
-11,Normal Usage,laptop,High-Risk,0.3171,1.0,0.9647,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
-1,Legitimate Travel,phone,Idle,0.98,0.0718,0.1085,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.0482,0.061,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7698,1.0,0.9456,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6924,1.0,0.9494,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6385,1.0,0.952,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Normal Usage,phone,Idle,0.98,0.0362,0.0768,False,trust-compliant,False
+1,Normal Usage,laptop,Idle,0.98,0.012,0.0742,False,trust-compliant,False
+2,Normal Usage,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Normal Usage,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Normal Usage,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Normal Usage,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Normal Usage,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Normal Usage,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Normal Usage,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Normal Usage,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0646,0.1074,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0568,0.0564,False,trust-compliant,False
+2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Legitimate Travel,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Legitimate Travel,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
+5,Legitimate Travel,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
+5,Legitimate Travel,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0673,0.0702,False,trust-compliant,False
+1,Legitimate Travel,laptop,Normal,1.0,0.0364,0.0465,False,trust-compliant,False
+2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Legitimate Travel,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Legitimate Travel,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Legitimate Travel,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
+5,Legitimate Travel,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0162,0.0513,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0527,0.0797,False,trust-compliant,False
 2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Legitimate Travel,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Normal,1.0,0.0371,0.0303,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.0425,0.0497,False,trust-compliant,False
-2,Legitimate Travel,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Legitimate Travel,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
-3,Legitimate Travel,laptop,High-Risk,0.5497,1.0,0.9559,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.696,1.0,0.9493,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.4772,1.0,0.9588,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.641,1.0,0.9518,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.448,1.0,0.96,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.0693,0.0671,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.0586,0.0884,False,trust-compliant,False
+3,Legitimate Travel,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Legitimate Travel,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
+5,Legitimate Travel,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0666,0.1156,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0247,0.0994,False,trust-compliant,False
 2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
@@ -140,95 +144,81 @@ Epoch,Scenario,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reaso
 4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
 4,Legitimate Travel,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.4655,1.0,0.9593,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.0743,0.0891,False,trust-compliant,False
-1,Legitimate Travel,laptop,Normal,1.0,0.0697,0.0636,False,trust-compliant,False
-2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+5,Legitimate Travel,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0667,0.0915,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0171,0.037,False,trust-compliant,False
+2,Legitimate Travel,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Legitimate Travel,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
+3,Legitimate Travel,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.6803,1.0,0.95,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Legitimate Travel,phone,High-Risk,0.6301,1.0,0.9523,True,Inactivity timer expired,True
+5,Legitimate Travel,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Normal,1.0,0.1561,0.0734,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0706,0.0889,False,trust-compliant,False
+2,Legitimate Travel,phone,High-Risk,0.85,1.0,0.9413,False,trust-compliant,False
+2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Legitimate Travel,phone,Suspicious,0.763,1.0,0.9232,False,trust-compliant,False
+3,Legitimate Travel,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.6208,1.0,0.9528,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Legitimate Travel,phone,High-Risk,0.5921,1.0,0.954,False,trust-compliant,False
+5,Legitimate Travel,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+6,Legitimate Travel,phone,High-Risk,0.5726,1.0,0.9549,False,trust-compliant,False
+7,Legitimate Travel,phone,High-Risk,0.5594,1.0,0.9555,False,trust-compliant,False
+8,Legitimate Travel,phone,High-Risk,0.5504,1.0,0.9558,False,trust-compliant,False
+9,Legitimate Travel,phone,High-Risk,0.5273,1.0,0.9568,False,trust-compliant,False
+10,Legitimate Travel,phone,High-Risk,0.4606,1.0,0.9595,False,trust-compliant,False
+11,Legitimate Travel,phone,High-Risk,0.4152,1.0,0.9612,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
+1,Legitimate Travel,phone,Normal,1.0,0.1032,0.0889,False,trust-compliant,False
+1,Legitimate Travel,laptop,Normal,1.0,0.016,0.0208,False,trust-compliant,False
+2,Legitimate Travel,phone,High-Risk,0.85,1.0,0.9413,False,trust-compliant,False
 2,Legitimate Travel,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
-3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Legitimate Travel,phone,High-Risk,0.68,1.0,0.95,False,trust-compliant,False
 3,Legitimate Travel,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.5257,1.0,0.9569,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.4624,1.0,0.9594,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.0285,0.0542,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.0501,0.0818,False,trust-compliant,False
-2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Legitimate Travel,laptop,High-Risk,0.5954,1.0,0.9539,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.4472,1.0,0.96,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.4183,1.0,0.9611,False,trust-compliant,False
-6,Legitimate Travel,laptop,High-Risk,0.401,1.0,0.9617,False,trust-compliant,False
-7,Legitimate Travel,laptop,High-Risk,0.3906,1.0,0.9621,False,trust-compliant,False
-8,Legitimate Travel,laptop,Suspicious,0.3494,1.0,0.9479,False,trust-compliant,False
-9,Legitimate Travel,laptop,High-Risk,0.3446,1.0,0.9638,False,trust-compliant,False
-10,Legitimate Travel,laptop,High-Risk,0.3568,1.0,0.9633,False,trust-compliant,False
-11,Legitimate Travel,laptop,High-Risk,0.3041,1.0,0.9651,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True
-1,Legitimate Travel,phone,Idle,0.98,0.0563,0.1037,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.0544,0.0544,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.6324,1.0,0.9522,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Legitimate Travel,phone,High-Risk,0.6,1.0,0.9537,False,trust-compliant,False
+5,Legitimate Travel,laptop,High-Risk,0.4067,1.0,0.9615,True,Inactivity timer expired,True
+6,Legitimate Travel,phone,High-Risk,0.51,1.0,0.9575,False,trust-compliant,False
+7,Legitimate Travel,phone,High-Risk,0.4488,1.0,0.9599,False,trust-compliant,False
+8,Legitimate Travel,phone,High-Risk,0.4752,1.0,0.9589,False,trust-compliant,False
+9,Legitimate Travel,phone,High-Risk,0.4251,1.0,0.9608,False,trust-compliant,False
+10,Legitimate Travel,phone,High-Risk,0.3911,1.0,0.9621,False,trust-compliant,False
+11,Legitimate Travel,phone,High-Risk,0.4359,1.0,0.9604,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
+1,Legitimate Travel,phone,Idle,0.98,0.0101,0.0793,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0514,0.0938,False,trust-compliant,False
 2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
 3,Legitimate Travel,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
 4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.5211,1.0,0.9571,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.4596,1.0,0.9595,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.0624,0.1067,False,trust-compliant,False
-1,Legitimate Travel,laptop,Suspicious,0.92,0.0486,0.2941,False,trust-compliant,False
-2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Legitimate Travel,laptop,High-Risk,0.7053,1.0,0.9488,False,trust-compliant,False
-3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Legitimate Travel,laptop,High-Risk,0.5269,1.0,0.9568,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.4632,1.0,0.9594,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.4239,1.0,0.9609,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.016,0.0475,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.044,0.1063,False,trust-compliant,False
+5,Legitimate Travel,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0372,0.0487,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0684,0.0974,False,trust-compliant,False
 2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Legitimate Travel,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
+3,Legitimate Travel,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
 4,Legitimate Travel,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
+4,Legitimate Travel,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Legitimate Travel,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.0102,0.0656,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.049,0.0615,False,trust-compliant,False
-2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+5,Legitimate Travel,laptop,High-Risk,0.4655,1.0,0.9593,True,Inactivity timer expired,True
+1,Legitimate Travel,phone,Idle,0.98,0.0226,0.0527,False,trust-compliant,False
+1,Legitimate Travel,laptop,Idle,0.98,0.0574,0.0603,False,trust-compliant,False
+2,Legitimate Travel,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
 2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Legitimate Travel,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Legitimate Travel,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Legitimate Travel,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Legitimate Travel,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-1,Legitimate Travel,phone,Idle,0.98,0.0274,0.0915,False,trust-compliant,False
-1,Legitimate Travel,laptop,Idle,0.98,0.0766,0.0821,False,trust-compliant,False
-2,Legitimate Travel,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Legitimate Travel,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Legitimate Travel,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Legitimate Travel,phone,High-Risk,0.7698,1.0,0.9456,False,trust-compliant,False
 3,Legitimate Travel,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Legitimate Travel,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
+4,Legitimate Travel,phone,High-Risk,0.6402,1.0,0.9519,False,trust-compliant,False
 4,Legitimate Travel,laptop,High-Risk,0.5211,1.0,0.9571,False,trust-compliant,False
-5,Legitimate Travel,phone,High-Risk,0.6501,1.0,0.9514,True,Inactivity timer expired,True
+5,Legitimate Travel,phone,High-Risk,0.6022,1.0,0.9536,True,Inactivity timer expired,True
 5,Legitimate Travel,laptop,High-Risk,0.4596,1.0,0.9595,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0616,0.0983,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0302,0.072,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4537,1.0,0.9597,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0652,0.059,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0351,0.0809,False,trust-compliant,False
+1,Short Inactivity,phone,Idle,0.98,0.0102,0.0738,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0618,0.1102,False,trust-compliant,False
 2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
@@ -236,109 +226,115 @@ Epoch,Scenario,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reaso
 4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
 4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Normal,1.0,0.04,0.0292,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0166,0.0675,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0311,0.0911,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0491,0.0651,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0151,0.0447,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0665,0.0945,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0333,0.093,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0782,0.0823,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6501,1.0,0.9514,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4537,1.0,0.9597,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0476,0.0508,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0307,0.0655,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.572,1.0,0.9549,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0636,0.0964,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0393,0.0483,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Normal,1.0,0.0102,0.0209,False,trust-compliant,False
-1,Short Inactivity,laptop,Idle,0.98,0.0336,0.0686,False,trust-compliant,False
-2,Short Inactivity,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Short Inactivity,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Short Inactivity,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.5211,1.0,0.9571,False,trust-compliant,False
-5,Short Inactivity,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4596,1.0,0.9595,True,Inactivity timer expired,True
-1,Short Inactivity,phone,Idle,0.98,0.0155,0.0727,False,trust-compliant,False
-1,Short Inactivity,laptop,Normal,1.0,0.0381,0.0292,False,trust-compliant,False
+5,Short Inactivity,laptop,High-Risk,0.4655,1.0,0.9593,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Idle,0.98,0.0239,0.0607,False,trust-compliant,False
+1,Short Inactivity,laptop,Normal,1.0,0.0389,0.0243,False,trust-compliant,False
 2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Short Inactivity,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Idle,0.98,0.0698,0.0891,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0569,0.1033,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Idle,0.98,0.0482,0.1007,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0729,0.1175,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Short Inactivity,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Short Inactivity,laptop,High-Risk,0.5572,1.0,0.9555,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
 4,Short Inactivity,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
-4,Short Inactivity,laptop,High-Risk,0.4818,1.0,0.9586,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Short Inactivity,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
-5,Short Inactivity,laptop,High-Risk,0.4354,1.0,0.9604,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Normal,1.0,0.0483,0.057,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0778,0.0681,False,trust-compliant,False
-2,Long Inactivity,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Long Inactivity,phone,High-Risk,0.7674,1.0,0.9457,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.6907,1.0,0.9495,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.6373,1.0,0.952,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4714,1.0,0.9591,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0228,0.0866,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0597,0.0937,False,trust-compliant,False
+5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Idle,0.98,0.0474,0.0508,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0104,0.0884,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.4056,1.0,0.9616,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.3884,1.0,0.9622,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Normal,1.0,0.0581,0.0482,False,trust-compliant,False
+1,Short Inactivity,laptop,Normal,1.0,0.0361,0.0551,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.696,1.0,0.9493,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.641,1.0,0.9518,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Normal,1.0,0.0609,0.0534,False,trust-compliant,False
+1,Short Inactivity,laptop,Suspicious,0.92,0.1668,0.3399,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.642,1.0,0.9518,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
+3,Short Inactivity,laptop,Suspicious,0.5602,1.0,0.9364,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.4861,1.0,0.9585,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4417,1.0,0.9602,False,trust-compliant,False
+6,Short Inactivity,laptop,High-Risk,0.355,1.0,0.9634,False,trust-compliant,False
+7,Short Inactivity,laptop,High-Risk,0.363,1.0,0.9631,False,trust-compliant,False
+8,Short Inactivity,laptop,High-Risk,0.3678,1.0,0.9629,False,trust-compliant,False
+9,Short Inactivity,laptop,High-Risk,0.3707,1.0,0.9628,False,trust-compliant,False
+10,Short Inactivity,laptop,High-Risk,0.278,1.0,0.966,False,trust-compliant,False
+11,Short Inactivity,laptop,High-Risk,0.2085,1.0,0.9682,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True
+1,Short Inactivity,phone,Idle,0.98,0.0673,0.0745,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0762,0.1171,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4655,1.0,0.9593,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Idle,0.98,0.0507,0.0869,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0723,0.104,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6803,1.0,0.95,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6301,1.0,0.9523,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Short Inactivity,phone,Idle,0.98,0.0659,0.1133,False,trust-compliant,False
+1,Short Inactivity,laptop,Idle,0.98,0.0251,0.0809,False,trust-compliant,False
+2,Short Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Short Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Short Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Short Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
+4,Short Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Short Inactivity,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
+5,Short Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Short Inactivity,laptop,High-Risk,0.4691,1.0,0.9591,True,Inactivity timer expired,True
+1,Long Inactivity,phone,Idle,0.98,0.0386,0.0573,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0514,0.0549,False,trust-compliant,False
 2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Long Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.6196,1.0,0.9528,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.5878,1.0,0.9542,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4537,1.0,0.9597,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0528,0.0609,False,trust-compliant,False
-1,Long Inactivity,laptop,Normal,1.0,0.0292,0.0383,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
+5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Long Inactivity,phone,Idle,0.98,0.0377,0.0609,False,trust-compliant,False
+1,Long Inactivity,laptop,Normal,1.0,0.0776,0.0715,False,trust-compliant,False
 2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Long Inactivity,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
 3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
@@ -347,124 +343,170 @@ Epoch,Scenario,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reaso
 4,Long Inactivity,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
 5,Long Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
 5,Long Inactivity,laptop,High-Risk,0.4683,1.0,0.9592,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.064,0.0935,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0106,0.0471,False,trust-compliant,False
-2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0132,0.0704,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0713,0.0848,False,trust-compliant,False
-2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Suspicious,0.92,0.0421,0.3323,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0583,0.0711,False,trust-compliant,False
-2,Long Inactivity,phone,High-Risk,0.8143,1.0,0.9433,False,trust-compliant,False
-2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Long Inactivity,phone,High-Risk,0.7234,1.0,0.9479,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.6601,1.0,0.951,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.616,1.0,0.953,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0235,0.0909,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0711,0.0976,False,trust-compliant,False
-2,Long Inactivity,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+1,Long Inactivity,phone,Normal,1.0,0.0921,0.0576,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0454,0.0902,False,trust-compliant,False
+2,Long Inactivity,phone,Suspicious,0.865,1.0,0.9157,False,trust-compliant,False
 2,Long Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Long Inactivity,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
+3,Long Inactivity,phone,High-Risk,0.6902,1.0,0.9495,False,trust-compliant,False
 3,Long Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.6803,1.0,0.95,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.6393,1.0,0.9519,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5269,1.0,0.9568,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.6047,1.0,0.9535,False,trust-compliant,False
+5,Long Inactivity,laptop,High-Risk,0.4632,1.0,0.9594,True,Inactivity timer expired,True
+6,Long Inactivity,phone,High-Risk,0.5812,1.0,0.9545,False,trust-compliant,False
+7,Long Inactivity,phone,High-Risk,0.5652,1.0,0.9552,False,trust-compliant,False
+8,Long Inactivity,phone,High-Risk,0.5543,1.0,0.9557,False,trust-compliant,False
+9,Long Inactivity,phone,Suspicious,0.5619,1.0,0.9363,False,trust-compliant,False
+10,Long Inactivity,phone,High-Risk,0.5521,1.0,0.9558,False,trust-compliant,False
+11,Long Inactivity,phone,High-Risk,0.4774,1.0,0.9588,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
+1,Long Inactivity,phone,Suspicious,0.92,0.0137,0.3332,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0508,0.0987,False,trust-compliant,False
+2,Long Inactivity,phone,High-Risk,0.7969,1.0,0.9442,False,trust-compliant,False
+2,Long Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Long Inactivity,phone,High-Risk,0.7112,1.0,0.9485,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.6516,1.0,0.9514,False,trust-compliant,False
 4,Long Inactivity,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.6301,1.0,0.9523,True,Inactivity timer expired,True
+5,Long Inactivity,phone,High-Risk,0.6101,1.0,0.9532,True,Inactivity timer expired,True
 5,Long Inactivity,laptop,High-Risk,0.4537,1.0,0.9597,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0439,0.0529,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0103,0.0486,False,trust-compliant,False
+1,Long Inactivity,phone,Idle,0.98,0.0204,0.0742,False,trust-compliant,False
+1,Long Inactivity,laptop,Normal,1.0,0.063,0.0455,False,trust-compliant,False
+2,Long Inactivity,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Long Inactivity,laptop,High-Risk,0.77,1.0,0.9456,False,trust-compliant,False
+3,Long Inactivity,phone,High-Risk,0.6841,1.0,0.9498,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.6129,1.0,0.9531,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.5672,1.0,0.9551,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5161,1.0,0.9573,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.5557,1.0,0.9556,False,trust-compliant,False
+5,Long Inactivity,laptop,High-Risk,0.4565,1.0,0.9596,True,Inactivity timer expired,True
+6,Long Inactivity,phone,High-Risk,0.5479,1.0,0.9559,False,trust-compliant,False
+7,Long Inactivity,phone,High-Risk,0.5426,1.0,0.9562,False,trust-compliant,False
+8,Long Inactivity,phone,High-Risk,0.471,1.0,0.9591,False,trust-compliant,False
+9,Long Inactivity,phone,High-Risk,0.4223,1.0,0.9609,False,trust-compliant,False
+10,Long Inactivity,phone,High-Risk,0.4572,1.0,0.9596,False,trust-compliant,False
+11,Long Inactivity,phone,High-Risk,0.4809,1.0,0.9587,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
+1,Long Inactivity,phone,Idle,0.98,0.0746,0.11,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0678,0.0929,False,trust-compliant,False
 2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
 3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
 4,Long Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5211,1.0,0.9571,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4596,1.0,0.9595,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0615,0.0676,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.052,0.0612,False,trust-compliant,False
-2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Long Inactivity,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Long Inactivity,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
-4,Long Inactivity,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.4653,1.0,0.9593,False,trust-compliant,False
-5,Long Inactivity,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.4252,1.0,0.9608,True,Inactivity timer expired,True
-1,Long Inactivity,phone,Idle,0.98,0.0726,0.0653,False,trust-compliant,False
-1,Long Inactivity,laptop,Idle,0.98,0.0283,0.0561,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Long Inactivity,phone,Idle,0.98,0.0543,0.0971,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0672,0.0839,False,trust-compliant,False
 2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Long Inactivity,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
 4,Long Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Long Inactivity,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
+5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Long Inactivity,phone,Idle,0.98,0.0791,0.0997,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0181,0.0565,False,trust-compliant,False
+2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.5587,1.0,0.9555,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.5455,1.0,0.956,True,Inactivity timer expired,True
+5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Long Inactivity,phone,Idle,0.98,0.0453,0.0921,False,trust-compliant,False
+1,Long Inactivity,laptop,Idle,0.98,0.0709,0.0701,False,trust-compliant,False
+2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Long Inactivity,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Long Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Long Inactivity,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-1,Battery Failure,phone,Normal,1.0,0.0348,0.0508,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0763,0.0637,False,trust-compliant,False
-2,Battery Failure,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
-3,Battery Failure,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
-4,Battery Failure,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
-5,Battery Failure,laptop,High-Risk,0.4714,1.0,0.9591,True,Inactivity timer expired,True
-1,Battery Failure,phone,Idle,0.98,0.036,0.1001,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0489,0.0497,False,trust-compliant,False
+5,Long Inactivity,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Long Inactivity,phone,Idle,0.98,0.0148,0.0527,False,trust-compliant,False
+1,Long Inactivity,laptop,Normal,1.0,0.0646,0.0674,False,trust-compliant,False
+2,Long Inactivity,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Long Inactivity,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Long Inactivity,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Long Inactivity,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Long Inactivity,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Long Inactivity,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Long Inactivity,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Long Inactivity,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.0758,0.0851,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0591,0.0791,False,trust-compliant,False
 2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
 3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6054,1.0,0.9535,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
 4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.5817,1.0,0.9545,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
 5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-6,Battery Failure,phone,High-Risk,0.4976,1.0,0.958,False,trust-compliant,False
-7,Battery Failure,phone,High-Risk,0.5084,1.0,0.9576,False,trust-compliant,False
-8,Battery Failure,phone,High-Risk,0.5157,1.0,0.9573,False,trust-compliant,False
-9,Battery Failure,phone,High-Risk,0.5207,1.0,0.9571,False,trust-compliant,False
-10,Battery Failure,phone,High-Risk,0.5071,1.0,0.9576,False,trust-compliant,False
-11,Battery Failure,phone,Suspicious,0.4618,1.0,0.942,True,Behavioral anomaly detected (Risk: 0.94 >= 0.65),True
-1,Battery Failure,phone,Idle,0.98,0.0534,0.0788,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0348,0.0865,False,trust-compliant,False
+1,Battery Failure,phone,Idle,0.98,0.0684,0.1063,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0385,0.0822,False,trust-compliant,False
+2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Battery Failure,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
+3,Battery Failure,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
+4,Battery Failure,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
+5,Battery Failure,laptop,High-Risk,0.4537,1.0,0.9597,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.0799,0.0787,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.021,0.0422,False,trust-compliant,False
+2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.0613,0.0819,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0123,0.0453,False,trust-compliant,False
+2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
+5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.06,0.0868,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0745,0.0763,False,trust-compliant,False
+2,Battery Failure,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
+2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
+3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.6803,1.0,0.95,False,trust-compliant,False
+4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6301,1.0,0.9523,True,Inactivity timer expired,True
+5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.0268,0.0622,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0644,0.0561,False,trust-compliant,False
+2,Battery Failure,phone,High-Risk,0.7865,1.0,0.9447,False,trust-compliant,False
+2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.704,1.0,0.9489,False,trust-compliant,False
+3,Battery Failure,laptop,High-Risk,0.5497,1.0,0.9559,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.664,1.0,0.9508,False,trust-compliant,False
+4,Battery Failure,laptop,High-Risk,0.4772,1.0,0.9588,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6187,1.0,0.9529,True,Inactivity timer expired,True
+5,Battery Failure,laptop,High-Risk,0.4326,1.0,0.9605,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.0161,0.058,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0358,0.0495,False,trust-compliant,False
 2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Battery Failure,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
 3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
 3,Battery Failure,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
 4,Battery Failure,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
 4,Battery Failure,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
+5,Battery Failure,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
 5,Battery Failure,laptop,High-Risk,0.4537,1.0,0.9597,True,Inactivity timer expired,True
-1,Battery Failure,phone,Normal,1.0,0.0447,0.0337,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0691,0.0582,False,trust-compliant,False
-2,Battery Failure,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
-2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.6978,1.0,0.9492,False,trust-compliant,False
-3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6597,1.0,0.951,False,trust-compliant,False
-4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.6158,1.0,0.953,True,Inactivity timer expired,True
-5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Battery Failure,phone,Idle,0.98,0.0384,0.0985,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0604,0.0871,False,trust-compliant,False
+1,Battery Failure,phone,Idle,0.98,0.0595,0.0805,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0552,0.0542,False,trust-compliant,False
 2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
@@ -473,74 +515,78 @@ Epoch,Scenario,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reaso
 4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Battery Failure,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
 5,Battery Failure,laptop,High-Risk,0.4655,1.0,0.9593,True,Inactivity timer expired,True
-1,Battery Failure,phone,Idle,0.98,0.024,0.0913,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0365,0.068,False,trust-compliant,False
+1,Battery Failure,phone,Normal,1.0,0.0757,0.0613,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0388,0.0554,False,trust-compliant,False
+2,Battery Failure,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
+2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
+3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
+4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Battery Failure,phone,High-Risk,0.6463,1.0,0.9516,True,Inactivity timer expired,True
+5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Battery Failure,phone,Idle,0.98,0.0459,0.1001,False,trust-compliant,False
+1,Battery Failure,laptop,Idle,0.98,0.0702,0.1028,False,trust-compliant,False
 2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Battery Failure,phone,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
 3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Battery Failure,phone,High-Risk,0.684,1.0,0.9498,False,trust-compliant,False
 4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Battery Failure,laptop,High-Risk,0.4039,1.0,0.9616,True,Inactivity timer expired,True
-1,Battery Failure,phone,Idle,0.98,0.0143,0.0744,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0632,0.1023,False,trust-compliant,False
-2,Battery Failure,phone,High-Risk,0.8364,1.0,0.9421,False,trust-compliant,False
-2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.6708,1.0,0.9505,False,trust-compliant,False
-3,Battery Failure,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6261,1.0,0.9525,False,trust-compliant,False
-4,Battery Failure,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.5957,1.0,0.9539,False,trust-compliant,False
-5,Battery Failure,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-6,Battery Failure,phone,High-Risk,0.5071,1.0,0.9576,False,trust-compliant,False
-7,Battery Failure,phone,High-Risk,0.4468,1.0,0.96,False,trust-compliant,False
-8,Battery Failure,phone,High-Risk,0.4058,1.0,0.9616,False,trust-compliant,False
-9,Battery Failure,phone,High-Risk,0.3779,1.0,0.9626,False,trust-compliant,False
-10,Battery Failure,phone,High-Risk,0.427,1.0,0.9608,False,trust-compliant,False
-11,Battery Failure,phone,High-Risk,0.4604,1.0,0.9595,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
-1,Battery Failure,phone,Idle,0.98,0.0529,0.0966,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0495,0.0524,False,trust-compliant,False
-2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.572,1.0,0.9549,True,Inactivity timer expired,True
+5,Battery Failure,phone,High-Risk,0.6327,1.0,0.9522,True,Inactivity timer expired,True
 5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Battery Failure,phone,Idle,0.98,0.0168,0.0661,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.0399,0.0708,False,trust-compliant,False
-2,Battery Failure,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Battery Failure,phone,Idle,0.98,0.0432,0.0867,False,trust-compliant,False
-1,Battery Failure,laptop,Idle,0.98,0.041,0.0776,False,trust-compliant,False
-2,Battery Failure,phone,High-Risk,0.7865,1.0,0.9447,False,trust-compliant,False
-2,Battery Failure,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Battery Failure,phone,High-Risk,0.704,1.0,0.9489,False,trust-compliant,False
-3,Battery Failure,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Battery Failure,phone,High-Risk,0.6466,1.0,0.9516,False,trust-compliant,False
-4,Battery Failure,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Battery Failure,phone,High-Risk,0.6066,1.0,0.9534,True,Inactivity timer expired,True
-5,Battery Failure,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Network Instability,phone,Idle,0.98,0.0223,0.0697,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0447,0.0495,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.7865,1.0,0.9447,False,trust-compliant,False
+1,Network Instability,phone,Idle,0.98,0.0656,0.0733,False,trust-compliant,False
+1,Network Instability,laptop,Normal,1.0,0.0303,0.0242,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Network Instability,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
+5,Network Instability,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Network Instability,phone,Idle,0.98,0.0739,0.0823,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.0533,0.0696,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
 2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.704,1.0,0.9489,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
 3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6466,1.0,0.9516,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
 4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.6066,1.0,0.9534,True,Inactivity timer expired,True
+5,Network Instability,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
 5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Network Instability,phone,Normal,1.0,0.025,0.033,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0753,0.0669,False,trust-compliant,False
+1,Network Instability,phone,Idle,0.98,0.0399,0.0748,False,trust-compliant,False
+1,Network Instability,laptop,Suspicious,0.92,0.0409,0.2978,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7053,1.0,0.9488,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.5731,1.0,0.9549,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
+4,Network Instability,laptop,High-Risk,0.4916,1.0,0.9582,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
+5,Network Instability,laptop,High-Risk,0.4568,1.0,0.9596,True,Inactivity timer expired,True
+1,Network Instability,phone,Suspicious,0.92,0.0435,0.2514,False,trust-compliant,False
+1,Network Instability,laptop,Normal,1.0,0.0402,0.0407,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.7969,1.0,0.9442,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7546,1.0,0.9464,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7112,1.0,0.9485,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.6034,1.0,0.9535,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6516,1.0,0.9514,False,trust-compliant,False
+4,Network Instability,laptop,High-Risk,0.5103,1.0,0.9575,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6101,1.0,0.9532,True,Inactivity timer expired,True
+5,Network Instability,laptop,High-Risk,0.4529,1.0,0.9598,True,Inactivity timer expired,True
+1,Network Instability,phone,Idle,0.98,0.054,0.0597,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.0561,0.1108,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6537,1.0,0.9513,True,Inactivity timer expired,True
+5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Network Instability,phone,Normal,1.0,0.0368,0.0349,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.0357,0.1002,False,trust-compliant,False
 2,Network Instability,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
 2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Network Instability,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
@@ -549,101 +595,43 @@ Epoch,Scenario,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reaso
 4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Network Instability,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
 5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Network Instability,phone,Idle,0.98,0.0617,0.0741,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0473,0.0616,False,trust-compliant,False
+1,Network Instability,phone,Idle,0.98,0.0101,0.0381,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.0548,0.0996,False,trust-compliant,False
 2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.738,1.0,0.9472,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
 3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.5928,1.0,0.954,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
+5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Network Instability,phone,Idle,0.98,0.0497,0.0701,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.0686,0.0911,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
+4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
+5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Network Instability,phone,Idle,0.98,0.0691,0.0891,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.027,0.0995,False,trust-compliant,False
+2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
+2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
+3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
 4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
 4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
 5,Network Instability,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.4534,1.0,0.9598,False,trust-compliant,False
-6,Network Instability,laptop,High-Risk,0.422,1.0,0.9609,False,trust-compliant,False
-7,Network Instability,laptop,High-Risk,0.4032,1.0,0.9616,False,trust-compliant,False
-8,Network Instability,laptop,High-Risk,0.3919,1.0,0.9621,False,trust-compliant,False
-9,Network Instability,laptop,High-Risk,0.3251,1.0,0.9644,False,trust-compliant,False
-10,Network Instability,laptop,High-Risk,0.3451,1.0,0.9637,False,trust-compliant,False
-11,Network Instability,laptop,Suspicious,0.3821,1.0,0.9462,True,Behavioral anomaly detected (Risk: 0.95 >= 0.65),True
-1,Network Instability,phone,Idle,0.98,0.053,0.0824,False,trust-compliant,False
-1,Network Instability,laptop,Normal,1.0,0.1385,0.0859,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.69,1.0,0.9495,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.504,1.0,0.9578,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Network Instability,laptop,High-Risk,0.4524,1.0,0.9598,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.6416,1.0,0.9518,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.4214,1.0,0.961,False,trust-compliant,False
-6,Network Instability,laptop,High-Risk,0.4028,1.0,0.9617,False,trust-compliant,False
-7,Network Instability,laptop,High-Risk,0.3917,1.0,0.9621,False,trust-compliant,False
-8,Network Instability,laptop,High-Risk,0.385,1.0,0.9623,False,trust-compliant,False
-9,Network Instability,laptop,High-Risk,0.321,1.0,0.9646,False,trust-compliant,False
-10,Network Instability,laptop,High-Risk,0.2826,1.0,0.9659,False,trust-compliant,False
-11,Network Instability,laptop,High-Risk,0.3196,1.0,0.9646,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
-1,Network Instability,phone,Normal,1.0,0.0507,0.0326,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0573,0.0951,False,trust-compliant,False
+5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
+1,Network Instability,phone,Normal,1.0,0.0332,0.029,False,trust-compliant,False
+1,Network Instability,laptop,Idle,0.98,0.0661,0.0735,False,trust-compliant,False
 2,Network Instability,phone,High-Risk,0.8526,1.0,0.9412,False,trust-compliant,False
 2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7328,1.0,0.9475,False,trust-compliant,False
+3,Network Instability,phone,High-Risk,0.75,1.0,0.9466,False,trust-compliant,False
 3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6003,1.0,0.9537,False,trust-compliant,False
+4,Network Instability,phone,High-Risk,0.6786,1.0,0.9501,False,trust-compliant,False
 4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.5782,1.0,0.9546,False,trust-compliant,False
+5,Network Instability,phone,High-Risk,0.6289,1.0,0.9524,True,Inactivity timer expired,True
 5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-6,Network Instability,phone,High-Risk,0.5632,1.0,0.9553,False,trust-compliant,False
-7,Network Instability,phone,High-Risk,0.553,1.0,0.9557,False,trust-compliant,False
-8,Network Instability,phone,Suspicious,0.561,1.0,0.9364,False,trust-compliant,False
-9,Network Instability,phone,High-Risk,0.5515,1.0,0.9558,False,trust-compliant,False
-10,Network Instability,phone,High-Risk,0.545,1.0,0.9561,False,trust-compliant,False
-11,Network Instability,phone,High-Risk,0.5406,1.0,0.9562,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True
-1,Network Instability,phone,Idle,0.98,0.0589,0.0536,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0337,0.0793,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Network Instability,phone,Idle,0.98,0.027,0.0418,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0534,0.1011,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Network Instability,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.6242,1.0,0.9526,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-1,Network Instability,phone,Idle,0.98,0.0584,0.0668,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0449,0.0903,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.5959,1.0,0.9539,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6718,1.0,0.9504,False,trust-compliant,False
-4,Network Instability,laptop,High-Risk,0.5057,1.0,0.9577,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.572,1.0,0.9549,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.4501,1.0,0.9599,True,Inactivity timer expired,True
-1,Network Instability,phone,Idle,0.98,0.0507,0.081,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0515,0.0614,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.8561,1.0,0.941,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.7423,1.0,0.947,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7524,1.0,0.9465,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.6113,1.0,0.9532,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6977,1.0,0.9492,False,trust-compliant,False
-4,Network Instability,laptop,High-Risk,0.5152,1.0,0.9573,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.6422,1.0,0.9518,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.456,1.0,0.9597,True,Inactivity timer expired,True
-1,Network Instability,phone,Idle,0.98,0.0788,0.0864,False,trust-compliant,False
-1,Network Instability,laptop,Idle,0.98,0.0413,0.103,False,trust-compliant,False
-2,Network Instability,phone,High-Risk,0.8387,1.0,0.9419,False,trust-compliant,False
-2,Network Instability,laptop,High-Risk,0.7577,1.0,0.9462,False,trust-compliant,False
-3,Network Instability,phone,High-Risk,0.7403,1.0,0.9471,False,trust-compliant,False
-3,Network Instability,laptop,High-Risk,0.6053,1.0,0.9535,False,trust-compliant,False
-4,Network Instability,phone,High-Risk,0.6892,1.0,0.9496,False,trust-compliant,False
-4,Network Instability,laptop,High-Risk,0.5115,1.0,0.9574,False,trust-compliant,False
-5,Network Instability,phone,High-Risk,0.6363,1.0,0.9521,True,Inactivity timer expired,True
-5,Network Instability,laptop,High-Risk,0.4691,1.0,0.9591,True,Inactivity timer expired,True
