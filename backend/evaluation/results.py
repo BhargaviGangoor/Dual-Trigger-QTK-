@@ -1,5 +1,19 @@
+"""
+Evaluation pipeline runner that orchestrates and executes all experiments defined in Section VI:
+- baseline_vs_dual (Section VI-A / RQ1): Baseline QTK vs Dual-Trigger QTK.
+- ablation (Section VI-B / RQ2): Ablation of HMM, temporal-only, Graph-LSTM-only, and full model.
+- mimicry (Section VI-C / RQ3): Adversarial mimicry attack testing under stealth/mimic strategies.
+- false_quarantine (Section VI-D / RQ4): Availability analysis & false lockout under normal/travel/failure states.
+- sensitivity (Section VI-E / RQ5): Threshold tuning sweep for delta_inact and theta_R.
+"""
+
+import sys
 import os
 import json
+
+# Adjust path to import backend modules
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from experiments import baseline_vs_dual, ablation, mimicry, false_quarantine, sensitivity
 from evaluation.plots import save_plots
 
