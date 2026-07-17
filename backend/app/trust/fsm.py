@@ -49,4 +49,12 @@ class TrustFSM:
             else:
                 return "Verification Required", "Awaiting verification check."
                 
+        elif current_state == "Quarantined":
+            if trust_score >= 0.8:
+                return "Trusted", f"Quarantine lifted. Group secret shares reconstructed successfully ({trust_score:.2f})."
+            elif trust_score < 0.25:
+                return "Revoked", f"Device expelled from group key agreement due to critical trust drop ({trust_score:.2f})."
+            else:
+                return "Quarantined", "Device remains quarantined in key containment."
+                
         return current_state, "No state change."
