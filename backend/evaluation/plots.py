@@ -1,3 +1,9 @@
+"""
+Generates the performance evaluation charts as defined in Section VI (Experimental Design) of the paper:
+1. qtk_evasion_comparison.png: Baseline QTK vs Dual-Trigger QTK Rogue Evasion Duration (Section VI-A).
+2. ablation_latency.png: Ablation Study Anomaly Detection Latency comparison across model configs (Section VI-B).
+"""
+
 import os
 import matplotlib
 # Use non-interactive backend for headless environments
@@ -6,7 +12,7 @@ import matplotlib.pyplot as plt
 from typing import Dict, Any, List
 
 def save_plots(baseline_vs_dual_results: Dict[str, Any], ablation_results: Dict[str, Any], output_dir: str):
-    """Generates and saves performance charts to the output directory."""
+    """Generates and saves performance charts corresponding to Section VI evaluation scenarios."""
     os.makedirs(output_dir, exist_ok=True)
     
     # 1. Baseline vs Dual-Trigger Evasion Comparison Plot
@@ -39,7 +45,7 @@ def save_plots(baseline_vs_dual_results: Dict[str, Any], ablation_results: Dict[
     # 2. Ablation Detection Latency Plot
     fig, ax = plt.subplots(figsize=(8, 5))
     configs = list(ablation_results.keys())
-    latencies = [ablation_results[cfg]['latency_epochs'] for cfg in configs]
+    latencies = [max(0.0, ablation_results[cfg].get('avg_latency_mean', 0.0)) for cfg in configs]
     
     # Capitalize for labels
     labels = [cfg.replace('_', ' ').title() for cfg in configs]
