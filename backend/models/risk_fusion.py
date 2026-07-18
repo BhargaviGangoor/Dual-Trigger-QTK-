@@ -10,13 +10,11 @@ class RiskFusion:
     z(d, t) = [P_c(d, t), S_graph(d, t), 1 - T_t(d)]^T  (Equation 9)
     R(d, t) = sigmoid( W_f . z(d, t) + b )               (Equation 10)
     
-    Note: To optimize numerical computation and avoid unnecessary subtractions, this implementation 
-    substitutes (1 - T_t) with T_t directly by assigning a negative weight (e.g., -1.0 instead of +1.0) 
-    to the third element of the feature vector, which is mathematically equivalent under a constant 
-    bias shift.
+    Note: This implementation strictly follows Equation 8:
+    z(d, t) = [P_c(d, t), S_graph(d, t), 1 - T_t(d)]^T
     """
     def __init__(self, weights: List[float] = None, bias: float = 0.2):
-        self.weights = np.array(weights if weights else [1.5, 2.0, -1.0])
+        self.weights = np.array(weights if weights else [1.5, 2.0, 1.0])
         self.bias = bias
 
     @classmethod
@@ -31,7 +29,7 @@ class RiskFusion:
                 cfg = yaml.safe_load(f)
             model_cfg = cfg.get("models", {})
             return cls(
-                weights=model_cfg.get("fusion_weights", [1.5, 2.0, -1.0]),
+                weights=model_cfg.get("fusion_weights", [1.5, 2.0, 1.0]),
                 bias=model_cfg.get("fusion_bias", 0.2)
             )
         return cls()
@@ -52,7 +50,8 @@ class RiskFusion:
         S_graph = relational_anomaly_score
         T_t = trust_score
 
-        z = np.array([P_c, S_graph, T_t])
+        # Exact implementation of Equation 8
+        z = np.array([P_c, S_graph, 1.0 - T_t])
         
         # Compute R_d_t
         logit = np.dot(self.weights, z) + self.bias
@@ -69,7 +68,8 @@ class RiskFusion:
         S_graph = getattr(device, "graph_risk", 0.0)
         T_t = getattr(device, "trust_score", 1.0)
 
-        z = np.array([P_c, S_graph, T_t])
+        # Exact implementation of Equation 8
+        z = np.array([P_c, S_graph, 1.0 - T_t])
         logit = np.dot(self.weights, z) + self.bias
         R_d_t = 1.0 / (1.0 + np.exp(-np.clip(logit, -50, 50)))
         
