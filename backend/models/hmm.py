@@ -35,7 +35,7 @@ class HMMDetector:
 
         # Covariances for each state's features (diagonal representation, as variances)
         self.covars_ = np.array([
-            [50.0**2,  2.0**2,  3.0**2,  0.1**2, 0.05**2], # Legitimate
+            [50.0**2,  2.0**2,  3.0**2,  0.5**2, 0.5**2], # Legitimate (increased std for binary indicators)
             [300.0**2, 5.0**2,  1.0**2,  0.2**2, 0.2**2],  # Compromised
             [600.0**2, 6.0**2,  0.1**2,  0.1**2, 0.1**2],  # Ghost Device
             [5.0**2,   0.2**2,  0.5**2,  0.3**2, 0.1**2]   # Network Anomaly

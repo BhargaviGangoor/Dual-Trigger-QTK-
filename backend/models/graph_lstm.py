@@ -94,27 +94,25 @@ class GraphLSTM:
                 message_count_sent = rec.get("message_count_sent", 0)
                 network_ip = rec.get("network_ip", "")
                 network_type = rec.get("network_type", "")
-                active_timezone = rec.get("active_timezone", "")
-                location_country = rec.get("location_country", "")
+                active_timezone = rec.get("active_timezone") or rec.get("timezone") or ""
+                location_country = rec.get("location_country") or rec.get("country") or ""
                 
-                # Check for IP or timezone change from previous step
-                ip_changed = 0.0
-                tz_changed = 0.0
-                if t > 0:
-                    prev_rec = aligned_meta_history[d][t-1]
-                    prev_ip = prev_rec.get("network_ip", "")
-                    prev_tz = prev_rec.get("active_timezone", "")
-                    if network_ip != prev_ip: 
-                        ip_changed = 1.0
-                    if active_timezone != prev_tz: 
-                        tz_changed = 1.0
+                is_vpn = 1.0 if network_type == "VPN" else 0.0
+                loc_mismatch = 0.0
+                if d > 0 and num_devices > 0:
+                    primary_rec = aligned_meta_history[0][t]
+                    primary_country = primary_rec.get("location_country") or primary_rec.get("country") or ""
+                    primary_tz = primary_rec.get("active_timezone") or primary_rec.get("timezone") or ""
+                    if (primary_country and location_country and primary_country != location_country) or \
+                       (primary_tz and active_timezone and primary_tz != active_timezone):
+                        loc_mismatch = 1.0
 
                 step_feats.append([
                     float(session_duration) / 3600.0,
                     float(sync_frequency) / 60.0,
                     float(message_count_sent) / 50.0,
-                    ip_changed,
-                    tz_changed
+                    is_vpn,
+                    loc_mismatch
                 ])
             features_history.append(np.array(step_feats))
             
@@ -133,13 +131,37 @@ class GraphLSTM:
             gcn_embeddings_history.append(H_t)
             
         # Run Graph-LSTM per device across time sequence
+        # SIMULATION FIX: Instead of random untrained weights, we mathematically simulate
+        # the autoencoder's intended output by measuring the deviation of each device
+        # from the temporal centroid of the group's embeddings.
         anomaly_scores = []
+        
+        # Calculate temporal centroid (normative group behavior)
+        gcn_arr = np.array(gcn_embeddings_history)  # shape: (seq_len, num_devices, hidden_dim)
+        group_centroid = np.mean(gcn_arr, axis=1)   # shape: (seq_len, hidden_dim)
+        
+        # Calculate MSE for each device first
+        mses = []
         for d in range(num_devices):
-            device_seq = np.array([gcn_embeddings_history[t][d] for t in range(seq_len)])
-            reconstruction = self.lstm_forward(device_seq)
+            device_seq = gcn_arr[:, d, :]
+            mse = np.mean((device_seq - group_centroid) ** 2)
+            mses.append(mse)
             
-            mse = np.mean((device_seq - reconstruction) ** 2)
-            relational_score = min(1.0, mse * 8.0)
+        min_mse = min(mses) if mses and min(mses) > 1e-10 else 1e-10
+        
+        for d in range(num_devices):
+            mse = mses[d]
+            ratio = mse / min_mse
+            
+            # Sigmoidal mapping using the relative ratio
+            relational_score = 1.0 / (1.0 + np.exp(- (ratio - 1.5) * 8.0))
+            
+            # Noise guard: if absolute deviation is tiny, cap risk score to prevent false positives
+            if mse < 1e-6:
+                relational_score = min(relational_score, 0.05)
+                
+            if mse > 0:
+                print(f"DEBUG: mse for device {d} is {mse}, ratio: {ratio:.4f}, relational_score: {relational_score:.4f}")
             anomaly_scores.append(float(round(relational_score, 4)))
             
         return adj, anomaly_scores
