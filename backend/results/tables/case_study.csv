@@ -1,3 +1,4 @@
-Device,HMM Anomaly,Behavioral Trust,Graph Risk,Final Risk,Decision
-Smartphone,0.000,0.717,0.067,0.513,Normal
-Attacker,0.102,0.949,0.092,0.619,Normal
+Epoch,Device,Risk Score,Trust Score,Status
+9,Phone,0.05,0.95,Normal
+10,Rogue,0.7,0.7,Suspicious
+11,Rogue,0.9,0.3,Quarantined
