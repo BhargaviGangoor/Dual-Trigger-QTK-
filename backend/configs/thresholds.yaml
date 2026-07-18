@@ -15,5 +15,5 @@ models:
   lstm_sequence_length: 12
   gcn_hidden_dim: 16
   beta_graph_decay: 0.8
-  fusion_weights: [1.5, 2.0, -1.0]
+  fusion_weights: [1.5, 2.0, 1.0]
   fusion_bias: 0.2
