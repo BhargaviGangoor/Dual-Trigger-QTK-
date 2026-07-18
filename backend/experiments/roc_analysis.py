@@ -122,9 +122,11 @@ def run_experiment() -> Dict[str, Any]:
                     
                     hmm_scores.append(getattr(dev, "behavioral_risk", 0.0))
                     
-                    # Temporal score: raw inactivity gap
+                    # Temporal score: raw inactivity gap mapped to a probability [0, 1]
+                    # Centered around delta_inact = 5 (default QTK threshold)
                     epoch_gap = current_epoch - dev.epoch_last_key_update
-                    temporal_scores.append(float(epoch_gap))
+                    temporal_risk = 1.0 / (1.0 + np.exp(-(epoch_gap - 5.0)))
+                    temporal_scores.append(float(temporal_risk))
                     
                     graph_scores.append(dev.graph_risk)
                     fused_scores.append(dev.final_risk)

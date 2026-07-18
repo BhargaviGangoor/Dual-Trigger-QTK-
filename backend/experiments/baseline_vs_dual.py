@@ -226,9 +226,9 @@ class ExperimentRunner:
                     TrustScore.update(dev, evidence, self.cfg.alpha)
 
             # 5. Relational GNN Graph evaluation
-            # Gather telemetry histories for all active user_0 devices
-            u0_devs = [d for d in self.devices if d.owner_id == "user_0"]
-            if all(len(d.telemetry_history) >= 2 for d in u0_devs) and len(u0_devs) >= 2:
+            # Gather telemetry histories for all active user_0 devices with at least 2 telemetry records
+            u0_devs = [d for d in self.devices if d.owner_id == "user_0" and len(d.telemetry_history) >= 2]
+            if len(u0_devs) >= 2:
                 u0_histories = [d.telemetry_history for d in u0_devs]
                 adj, rel_scores = self.graph_lstm.evaluate_devices(u0_histories, prev_adj)
                 prev_adj = adj
@@ -238,13 +238,13 @@ class ExperimentRunner:
             # 6. Risk Fusion Layer
             for dev in self.devices:
                 if len(dev.telemetry_history) >= 2:
-                    # Ablation overrides before fusion
+                    # Ablation overrides bypass fusion entirely to prevent score suppression
                     if self.cfg.experiment_type == ExperimentType.HMM_ONLY:
-                        dev.update_graph_risk(0.0)
+                        dev.update_final_risk(getattr(dev, "behavioral_risk", 0.0))
                     elif self.cfg.experiment_type == ExperimentType.GRAPH_ONLY:
-                        dev.update_behavioral_risk(0.0)
-                        
-                    self.fusion.predict(dev)
+                        dev.update_final_risk(dev.graph_risk)
+                    else:
+                        self.fusion.predict(dev)
 
             # 7. QTK Trigger Evaluations
             for dev in self.devices:
@@ -393,7 +393,7 @@ class ExperimentRunner:
             json.dump(self.epoch_logs, f, indent=4)
 
 def run_experiment(config: Optional[ExperimentConfig] = None) -> Dict[str, Any]:
-    """Exposes run_experiment pipeline with optional config injection."""
+    """Exposes run_experiment pipeline running both baseline and dual-trigger over multiple trials."""
     if config is None:
         config_path = os.path.join(
             os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -401,8 +401,116 @@ def run_experiment(config: Optional[ExperimentConfig] = None) -> Dict[str, Any]:
             "experiment.yaml"
         )
         config = ExperimentConfig.from_yaml(config_path)
-    runner = ExperimentRunner(config)
-    return runner.run()
+    
+    num_trials = 10
+    print(f"\nRunning Baseline vs Dual-Trigger Comparison ({num_trials} trials each)...")
+    
+    # 1. Run Baseline trials
+    baseline_metrics = []
+    baseline_logs = []
+    for trial in range(num_trials):
+        random.seed(42 + trial)
+        np.random.seed(42 + trial)
+        
+        trial_config = ExperimentConfig(
+            epochs=config.epochs,
+            delta_inact=config.delta_inact,
+            theta_R=config.theta_R,
+            alpha=config.alpha,
+            profile_name=config.profile_name,
+            num_users=config.num_users,
+            devices_per_user=config.devices_per_user,
+            experiment_type=ExperimentType.BASELINE,
+            attack_scenario=config.attack_scenario,
+            attack_strategy=config.attack_strategy,
+            injection_epoch=config.injection_epoch,
+            rogue_count=config.rogue_count
+        )
+        runner = ExperimentRunner(trial_config)
+        metrics = runner.run()
+        baseline_metrics.append(metrics)
+        baseline_logs.extend(runner.epoch_logs)
+        
+    # 2. Run Dual-Trigger trials
+    dual_metrics = []
+    dual_logs = []
+    for trial in range(num_trials):
+        random.seed(42 + trial)
+        np.random.seed(42 + trial)
+        
+        trial_config = ExperimentConfig(
+            epochs=config.epochs,
+            delta_inact=config.delta_inact,
+            theta_R=config.theta_R,
+            alpha=config.alpha,
+            profile_name=config.profile_name,
+            num_users=config.num_users,
+            devices_per_user=config.devices_per_user,
+            experiment_type=ExperimentType.DUAL_TRIGGER,
+            attack_scenario=config.attack_scenario,
+            attack_strategy=config.attack_strategy,
+            injection_epoch=config.injection_epoch,
+            rogue_count=config.rogue_count
+        )
+        runner = ExperimentRunner(trial_config)
+        metrics = runner.run()
+        dual_metrics.append(metrics)
+        dual_logs.extend(runner.epoch_logs)
+
+    # Average metrics
+    dr_base = np.mean([m["detection_rate"] for m in baseline_metrics]) * 100.0
+    fpr_base = np.mean([m["false_positive_rate"] for m in baseline_metrics]) * 100.0
+    lat_base = np.mean([m["avg_latency"] for m in baseline_metrics if m["avg_latency"] != -1.0]) if any(m["avg_latency"] != -1.0 for m in baseline_metrics) else 30.0
+    f1_base = np.mean([m["f1_score"] for m in baseline_metrics])
+    
+    dr_dual = np.mean([m["detection_rate"] for m in dual_metrics]) * 100.0
+    fpr_dual = np.mean([m["false_positive_rate"] for m in dual_metrics]) * 100.0
+    lat_dual = np.mean([m["avg_latency"] for m in dual_metrics if m["avg_latency"] != -1.0]) if any(m["avg_latency"] != -1.0 for m in dual_metrics) else 30.0
+    f1_dual = np.mean([m["f1_score"] for m in dual_metrics])
+    
+    # Export dual trigger logs as default for the logs check
+    data_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "data"
+    )
+    os.makedirs(data_dir, exist_ok=True)
+    
+    csv_path = os.path.join(data_dir, "experiment_results.csv")
+    json_path = os.path.join(data_dir, "experiment_results.json")
+    
+    if dual_logs:
+        keys = dual_logs[0].keys()
+        with open(csv_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=keys)
+            writer.writeheader()
+            writer.writerows(dual_logs)
+            
+    with open(json_path, "w") as f:
+        json.dump(dual_logs, f, indent=4)
+        
+    print("\n==================================================")
+    print("Aggregate Baseline vs Dual-Trigger Results")
+    print("==================================================")
+    print(f"Baseline QTK:  DR={dr_base:.2f}%, FPR={fpr_base:.2f}%, Latency={lat_base:.2f} epochs, F1={f1_base:.4f}")
+    print(f"Dual-Trigger:  DR={dr_dual:.2f}%, FPR={fpr_dual:.2f}%, Latency={lat_dual:.2f} epochs, F1={f1_dual:.4f}")
+    print("==================================================")
+    
+    return {
+        "dr_baseline": dr_base,
+        "fpr_baseline": fpr_base,
+        "avg_latency_baseline": lat_base,
+        "f1_baseline": f1_base,
+        "dr_dual": dr_dual,
+        "fpr_dual": fpr_dual,
+        "avg_latency_dual": lat_dual,
+        "f1_dual": f1_dual,
+        
+        # Compatibility fields
+        "detection_rate": dr_dual / 100.0,
+        "false_positive_rate": fpr_dual / 100.0,
+        "avg_latency": lat_dual,
+        "f1_score": f1_dual
+    }
 
 if __name__ == "__main__":
     run_experiment()

@@ -133,11 +133,12 @@ class FalseQuarantineRunner:
                     TrustScore.update(dev, evidence, self.alpha)
                     
             # 3. Relational Graph Prediction
-            if all(len(d.telemetry_history) >= 2 for d in self.devices):
-                histories = [d.telemetry_history for d in self.devices]
+            active_devs = [d for d in self.devices if len(d.telemetry_history) >= 2]
+            if len(active_devs) >= 2:
+                histories = [d.telemetry_history for d in active_devs]
                 adj, rel_scores = self.graph_lstm.evaluate_devices(histories, prev_adj)
                 prev_adj = adj
-                for idx, dev in enumerate(self.devices):
+                for idx, dev in enumerate(active_devs):
                     dev.update_graph_risk(rel_scores[idx])
 
             # 4. Risk Fusion Layer
@@ -186,19 +187,30 @@ class FalseQuarantineRunner:
                     "DetectionEpoch": dev.quarantined_epoch if dev.is_quarantined else None
                 })
                 
-        # Compute trial metrics
-        false_quarantine_rate = incorrect_behavioral_quarantines / len(self.devices)
-        
-        # Availability loss: sum of epochs devices were quarantined incorrectly divided by total active epochs
-        avail_epochs = 0
+        # Compute standard evaluation metrics based on device states
+        tp, fp, fn, tn = 0, 0, 0, 0
         loss_epochs = 0
+        avail_epochs = 0
+        
         for dev in self.devices:
-            if dev.device_id == "laptop" and params.idle_epochs >= self.delta_inact:
-                # Expected to be quarantined, skip availability loss
-                continue
+            # laptop in idle scenario is essentially a legitimate device designed to trigger the inactivity baseline (True Positive for inactivity, but True Negative for behavioral). 
+            # Wait, since there are NO ROGUES in this experiment, True Positives for behavioral attacks is inherently 0.
+            # So ANY behavioral quarantine is a False Positive.
+            # ANY non-quarantine is a True Negative.
+            
+            expected_inactivity_quarantine = (dev.device_id == "laptop" and params.idle_epochs >= self.delta_inact)
+            
+            if expected_inactivity_quarantine:
+                continue # Skip for FQR calculation, as this is a correct baseline protocol quarantine
+                
             avail_epochs += self.epochs
-            if dev.device_id in quarantine_epochs:
-                loss_epochs += (self.epochs - quarantine_epochs[dev.device_id] + 1)
+            if dev.is_quarantined:
+                fp += 1
+                loss_epochs += (self.epochs - dev.quarantined_epoch + 1)
+            else:
+                tn += 1
+                
+        false_quarantine_rate = fp / (fp + tn) if (fp + tn) > 0 else 0.0
         availability_loss = loss_epochs / avail_epochs if avail_epochs > 0 else 0.0
         
         # MTTFQ
@@ -213,8 +225,9 @@ class FalseQuarantineRunner:
             "false_quarantine_rate": false_quarantine_rate,
             "availability_loss": availability_loss,
             "mttf": mttf,
-            "correct_qtk": correct_qtk_quarantines,
-            "incorrect_behavioral": incorrect_behavioral_quarantines
+            "fp": fp,
+            "tn": tn,
+            "correct_qtk": correct_qtk_quarantines
         }
 
 def run_experiment() -> Dict[str, Any]:
@@ -274,7 +287,7 @@ def run_experiment() -> Dict[str, Any]:
         print(f"  Mean Availability Loss:                 {agg['availability_loss_mean']:.2%}")
         print(f"  Mean Time to False Quarantine (MTTFQ):  {agg['mttf_mean']:.2f} epochs")
         print(f"  Correct QTK Inactivity Quarantines:     {agg['correct_qtk_mean']:.2f}")
-        print(f"  Incorrect Behavioral Quarantines:       {agg['incorrect_behavioral_mean']:.2f}")
+        print(f"  False Positives (Incorrect Quarantines):{agg['fp_mean']:.2f}")
         print("--------------------------------------------------")
         
     # Export logs

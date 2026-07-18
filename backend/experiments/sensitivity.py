@@ -123,8 +123,8 @@ class SensitivityTrialRunner:
                     TrustScore.update(dev, evidence, self.alpha)
                     
             # 3. Relational Graph Prediction
-            u0_devs = [d for d in self.devices if d.owner_id == "user_0"]
-            if all(len(d.telemetry_history) >= 2 for d in u0_devs) and len(u0_devs) >= 2:
+            u0_devs = [d for d in self.devices if d.owner_id == "user_0" and len(d.telemetry_history) >= 2]
+            if len(u0_devs) >= 2:
                 u0_histories = [d.telemetry_history for d in u0_devs]
                 adj, rel_scores = self.graph_lstm.evaluate_devices(u0_histories, prev_adj)
                 prev_adj = adj

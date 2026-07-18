@@ -197,8 +197,8 @@ class AblationTrialRunner:
                     TrustScore.update(dev, evidence, self.cfg.alpha)
                         
             # 3. Relational Graph Prediction
-            u0_devs = [d for d in self.devices if d.owner_id == "user_0"]
-            if all(len(d.telemetry_history) >= 2 for d in u0_devs) and len(u0_devs) >= 2:
+            u0_devs = [d for d in self.devices if d.owner_id == "user_0" and len(d.telemetry_history) >= 2]
+            if len(u0_devs) >= 2:
                 u0_histories = [d.telemetry_history for d in u0_devs]
                 
                 # Check for temporal configuration (Identity Adjacency)
@@ -212,21 +212,17 @@ class AblationTrialRunner:
                 for idx, dev in enumerate(u0_devs):
                     dev.update_graph_risk(rel_scores[idx])
                     
-            # Apply GNN overrides if HMM Only configuration
-            if self.ablation_type == AblationType.HMM_ONLY:
-                for dev in self.devices:
-                    dev.update_graph_risk(0.0)
-                    
+            # (GNN override removed as fusion is bypassed)
             # 4. Risk Fusion Layer
             for dev in self.devices:
                 if len(dev.telemetry_history) >= 2:
                     # Ablation modulations in prediction weights
                     if self.ablation_type == AblationType.HMM_ONLY:
-                        dev.update_graph_risk(0.0)
+                        dev.update_final_risk(getattr(dev, "behavioral_risk", 0.0))
                     elif self.ablation_type == AblationType.GRAPH_LSTM_ONLY:
-                        dev.update_behavioral_risk(0.0)
-                        
-                    self.fusion.predict(dev)
+                        dev.update_final_risk(dev.graph_risk)
+                    else:
+                        self.fusion.predict(dev)
                     
             # 5. Dual Trigger evaluate
             for dev in self.devices:
@@ -339,7 +335,12 @@ def run_experiment(config: Optional[AblationConfig] = None) -> Dict[str, Any]:
             else:
                 agg_results[f"{key}_mean"] = -1.0
                 agg_results[f"{key}_std"] = 0.0
-                
+
+        # Add aliases for compatibility with evaluation scripts
+        agg_results["dr_mean"] = agg_results.get("detection_rate_mean", 0.0) * 100.0
+        agg_results["fpr_mean"] = agg_results.get("false_positive_rate_mean", 0.0) * 100.0
+        agg_results["f1_mean"] = agg_results.get("f1_score_mean", 0.0)
+        
         results[ab_type.value] = agg_results
         
         print(f"  [{ab_type.value}] Mean Detection Rate: {agg_results['detection_rate_mean']:.2%}")
