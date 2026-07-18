@@ -83,6 +83,10 @@ class LegitimateDevice(Device):
                 # 90% chance to update immediately, or delay slightly (simulating normal delay/vacation)
                 if epoch_gap >= 4 or random.random() < 0.90:
                     self.update_key(current_epoch)
+        else:
+            # SLEEPING or IDLE: background processes update keys to prevent quarantine
+            if epoch_gap >= 4:
+                self.update_key(current_epoch)
 
         # 3. Telemetry Observation Generation
         import datetime
@@ -121,7 +125,7 @@ class LegitimateDevice(Device):
             telemetry.update({
                 "session_duration": round(random.uniform(5.0, 45.0), 2),
                 "idle_time": round(random.uniform(600, 1800), 2),
-                "sync_interval": round(random.uniform(60, 300), 2),
+                "sync_interval": round(random.uniform(600, 1200), 2),
                 "messages_sent": random.randint(0, 1),
                 "messages_received": random.randint(0, 3),
                 "login_frequency": 0.5
@@ -138,7 +142,7 @@ class LegitimateDevice(Device):
                 "country": "Germany",
                 "session_duration": round(random.uniform(10.0, 90.0), 2),
                 "idle_time": round(random.uniform(1200, 2400), 2),
-                "sync_interval": round(random.uniform(180, 600), 2),
+                "sync_interval": round(random.uniform(600, 1200), 2),
                 "messages_sent": random.randint(0, 3),
                 "messages_received": random.randint(1, 8),
                 "login_frequency": 0.8

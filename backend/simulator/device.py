@@ -105,9 +105,16 @@ class Device:
         normalized["idle_time"] = normalized.get("idle_time") or normalized.get("idle_time_sec") or 0.0
         normalized["idle_time_sec"] = normalized.get("idle_time_sec") or normalized.get("idle_time") or 0.0
         
-        # Synchronization frequency mappings
-        normalized["sync_interval"] = normalized.get("sync_interval") or normalized.get("sync_frequency") or 0.0
-        normalized["sync_frequency"] = normalized.get("sync_frequency") or normalized.get("sync_interval") or 0.0
+        # Synchronization frequency mappings (Inverse relationship: frequency = 3600 / interval)
+        if "sync_interval" in normalized and "sync_frequency" not in normalized:
+            interval = normalized["sync_interval"]
+            normalized["sync_frequency"] = round(3600.0 / max(0.1, interval), 2)
+        elif "sync_frequency" in normalized and "sync_interval" not in normalized:
+            freq = normalized["sync_frequency"]
+            normalized["sync_interval"] = round(3600.0 / max(0.1, freq), 2)
+        elif "sync_interval" not in normalized and "sync_frequency" not in normalized:
+            normalized["sync_interval"] = 3600.0
+            normalized["sync_frequency"] = 1.0
         
         # Message count mappings
         normalized["messages_sent"] = normalized.get("messages_sent") if normalized.get("messages_sent") is not None else normalized.get("message_count_sent", 0)

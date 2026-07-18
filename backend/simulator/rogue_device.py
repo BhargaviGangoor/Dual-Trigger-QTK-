@@ -77,25 +77,36 @@ class RogueDevice(Device):
         is_burst_active = False
         
         if self.strategy == AttackStrategy.STEALTH:
-            # Mostly normal, low anomaly, 20% VPN usage
-            vpn_use = random.random() < 0.20
-            self.network_type = "VPN" if vpn_use else "WiFi"
-            if vpn_use:
-                self.ip_address = base_meta["network_ip"].replace("192.168.", "10.0.")
-            else:
-                self.ip_address = base_meta["network_ip"]
-                
+            # Subtle deviations. Try to stay within Normal HMM profile but drift over time.
+            meta = normal_device_metadata if normal_device_metadata else base_meta
+            
+            # Modify IP slightly 20% of the time (subnet scanning)
+            ip_parts = meta.get("network_ip", "192.168.1.1").split(".")
+            ip_prefix = ".".join(ip_parts[:3]) + "." if len(ip_parts) == 4 else "192.168.1."
+            ip = ip_prefix + str(random.randint(2, 254)) if random.random() < 0.20 else meta.get("network_ip", "192.168.1.10")
+            
+            # Slowly drift sync_frequency and message_count over time
+            time_factor = min(1.0, current_epoch / 30.0)
+            drift_sync_freq = meta.get("sync_frequency", 4.0) * (1.0 + time_factor * 1.5)
+            drift_msgs = meta.get("message_count_sent", 5.0) + int(time_factor * 20)
+            
             telemetry.update({
                 "network_type": self.network_type,
-                "network_ip": self.ip_address,
-                "session_duration": base_meta["session_duration_sec"] * random.uniform(0.9, 1.2),
-                "idle_time": base_meta["idle_time_sec"],
-                "sync_interval": round(3600.0 / max(0.1, base_meta["sync_frequency"]), 2),
-                "messages_sent": base_meta["message_count_sent"],
-                "messages_received": random.randint(2, 8),
-                "login_frequency": 1.0
+                "network_ip": ip,
+                "session_duration": meta.get("session_duration_sec", 120.0) * random.uniform(0.9, 1.2),
+                "session_duration_sec": meta.get("session_duration_sec", 120.0) * random.uniform(0.9, 1.2),
+                "idle_time": meta.get("idle_time_sec", 300.0),
+                "idle_time_sec": meta.get("idle_time_sec", 300.0),
+                "sync_interval": round(3600.0 / max(0.1, drift_sync_freq), 2),
+                "sync_frequency": round(drift_sync_freq, 2),
+                "messages_sent": int(drift_msgs),
+                "message_count_sent": int(drift_msgs),
+                "messages_received": int(drift_msgs),
+                "message_count_received": int(drift_msgs),
+                "login_frequency": meta.get("login_frequency", 1.0)
             })
-            
+            self.ip_address = ip
+                
         elif self.strategy == AttackStrategy.MIMIC:
             # Mimic legitimate telemetry features but routing via VPN
             vpn_use = random.random() < 0.50
@@ -117,9 +128,13 @@ class RogueDevice(Device):
                 "network_type": self.network_type,
                 "network_ip": self.ip_address,
                 "session_duration": round(session_dur * random.uniform(0.95, 1.05), 2),
+                "session_duration_sec": round(session_dur * random.uniform(0.95, 1.05), 2),
                 "idle_time": round(idle * random.uniform(0.95, 1.05), 2),
+                "idle_time_sec": round(idle * random.uniform(0.95, 1.05), 2),
                 "sync_interval": round(sync_interval * random.uniform(0.95, 1.05), 2),
+                "sync_frequency": round(3600.0 / max(0.1, sync_interval * random.uniform(0.95, 1.05)), 2),
                 "messages_sent": max(0, int(messages_sent * random.uniform(0.8, 1.2))),
+                "message_count_sent": max(0, int(messages_sent * random.uniform(0.8, 1.2))),
                 "messages_received": random.randint(1, 10),
                 "login_frequency": 1.0
             })
@@ -135,18 +150,26 @@ class RogueDevice(Device):
                     "network_type": "VPN",
                     "network_ip": self.ip_address,
                     "session_duration": round(random.uniform(900.0, 1800.0), 2),
+                    "session_duration_sec": round(random.uniform(900.0, 1800.0), 2),
                     "idle_time": 0.0,
+                    "idle_time_sec": 0.0,
                     "sync_interval": round(random.uniform(2.0, 10.0), 2),
+                    "sync_frequency": round(3600.0 / random.uniform(2.0, 10.0), 2),
                     "messages_sent": random.randint(10, 30),
+                    "message_count_sent": random.randint(10, 30),
                     "messages_received": random.randint(50, 150),
                     "login_frequency": 5.0
                 })
             else:
                 telemetry.update({
                     "session_duration": 0.0,
+                    "session_duration_sec": 0.0,
                     "idle_time": 3600.0,
+                    "idle_time_sec": 3600.0,
                     "sync_interval": 3600.0,
+                    "sync_frequency": 1.0,
                     "messages_sent": 0,
+                    "message_count_sent": 0,
                     "messages_received": 0,
                     "login_frequency": 0.0
                 })
@@ -163,9 +186,13 @@ class RogueDevice(Device):
                 "timezone": self.timezone,
                 "country": self.country,
                 "session_duration": round(random.uniform(1.0, 7200.0), 2),
+                "session_duration_sec": round(random.uniform(1.0, 7200.0), 2),
                 "idle_time": round(random.uniform(0.0, 3600.0), 2),
+                "idle_time_sec": round(random.uniform(0.0, 3600.0), 2),
                 "sync_interval": round(random.uniform(1.0, 3600.0), 2),
+                "sync_frequency": round(3600.0 / random.uniform(1.0, 3600.0), 2),
                 "messages_sent": random.randint(0, 100),
+                "message_count_sent": random.randint(0, 100),
                 "messages_received": random.randint(0, 200),
                 "login_frequency": round(random.uniform(0.1, 10.0), 1)
             })

@@ -38,14 +38,14 @@ class TelemetryGenerator:
             TelemetryGenerator._profiles = {
                 "Student": {
                     "active_hours": list(range(9, 24)),
-                    "avg_messages_per_hour": 15,
-                    "std_messages_per_hour": 6,
+                    "avg_messages_per_hour": 5.0,
+                    "std_messages_per_hour": 2.0,
                     "networks": ["WiFi", "Cellular"],
                     "countries": ["United States"],
                     "timezones": ["America/New_York"],
                     "ip_prefix": "172.16.23.",
                     "max_battery_drain": 5,
-                    "avg_sync_delay_sec": 0.8
+                    "avg_sync_delay_sec": 900.0
                 }
             }
         return TelemetryGenerator._profiles
@@ -114,12 +114,13 @@ class TelemetryGenerator:
         )))
 
         # 3. Synchronisation parameters
-        avg_delay = prof.get("avg_sync_delay_sec", 1.0)
-        sync_interval = max(0.5, random.expovariate(1.0 / avg_delay))
-        sync_frequency = round(3600.0 / sync_interval, 2)
+        avg_delay = prof.get("avg_sync_delay_sec", 900.0)
+        target_freq = 3600.0 / avg_delay if avg_delay > 0 else 4.0
+        sync_frequency = round(max(0.5, random.normalvariate(target_freq, 1.5)), 2)
+        sync_interval = round(3600.0 / sync_frequency, 2)
         
         # 4. Session details
-        session_duration = max(5.0, random.normalvariate(180, 60))
+        session_duration = max(5.0, random.normalvariate(120, 40))
         idle_time = round(random.uniform(0, 300), 2)
         
         telemetry = {
