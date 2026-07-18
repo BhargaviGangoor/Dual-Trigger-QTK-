@@ -3,17 +3,17 @@
         {
             "Device": "Smartphone",
             "HMM Anomaly": "0.000",
-            "Behavioral Trust": "0.717",
-            "Graph Risk": "0.067",
-            "Final Risk": "0.513",
+            "Behavioral Trust": "1.000",
+            "Graph Risk": "0.011",
+            "Final Risk": "0.555",
             "Decision": "Normal"
         },
         {
             "Device": "Attacker",
-            "HMM Anomaly": "0.102",
-            "Behavioral Trust": "0.949",
-            "Graph Risk": "0.092",
-            "Final Risk": "0.619",
+            "HMM Anomaly": "0.000",
+            "Behavioral Trust": "0.997",
+            "Graph Risk": "0.083",
+            "Final Risk": "0.591",
             "Decision": "Normal"
         }
     ]
