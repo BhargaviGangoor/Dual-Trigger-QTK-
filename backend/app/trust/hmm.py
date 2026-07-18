@@ -83,29 +83,28 @@ class HMMDetector:
 
     def evaluate_device(self, records: List[Any]) -> Tuple[int, float]:
         """
-        Uses dynamic Viterbi decoding algorithm in log-space to infer the state sequence.
+        Uses the Forward algorithm in log-space to compute the filtered marginal 
+        probabilities P(S_t | X_1:t) at the current time step t.
         Returns:
-            predicted_state (int): The current state index (0 to 3)
-            confidence (float): Normalized likelihood score (0.0 to 1.0)
+            predicted_state (int): The most likely state index at time t (0 to 3)
+            p_c (float): The combined anomaly probability P(S_t=Suspicious | X_1:t) + P(S_t=HighRisk | X_1:t)
         """
         if len(records) < 2:
-            return 3, 0.5
+            return 0, 0.0
 
         try:
             X = self.extract_features(records)
             T = len(X)
             N = self.n_components
             
-            # Trellis table to store log-likelihoods
-            V = np.zeros((T, N))
-            # Backpointers matrix
-            B = np.zeros((T, N), dtype=int)
+            # Trellis table to store forward log-probabilities (alpha)
+            alpha = np.zeros((T, N))
             
             # 1. Initialization (t=0)
             log_start = np.log(np.clip(self.startprob_, 1e-12, None))
             for i in range(N):
                 log_emission = self.log_gaussian_pdf(X[0], self.means_[i], self.covars_[i])
-                V[0, i] = log_start[i] + log_emission
+                alpha[0, i] = log_start[i] + log_emission
                 
             # 2. Trellis updates (t > 0)
             log_trans = np.log(np.clip(self.transmat_, 1e-12, None))
@@ -113,28 +112,29 @@ class HMMDetector:
                 for j in range(N):
                     log_emission = self.log_gaussian_pdf(X[t], self.means_[j], self.covars_[j])
                     
-                    # Compute transit path probabilities
-                    probs = V[t-1, :] + log_trans[:, j]
-                    best_prev_state = np.argmax(probs)
+                    # Compute log-sum-exp for the transitions
+                    terms = alpha[t-1, :] + log_trans[:, j]
+                    max_term = np.max(terms)
+                    log_sum = max_term + np.log(np.sum(np.exp(terms - max_term)))
                     
-                    V[t, j] = probs[best_prev_state] + log_emission
-                    B[t, j] = best_prev_state
+                    alpha[t, j] = log_sum + log_emission
             
-            # 3. Path Backtracking
-            best_final_state = np.argmax(V[T-1, :])
+            # 3. Exact probabilities at the final time step
+            final_log_probs = alpha[T-1, :]
+            max_log_prob = np.max(final_log_probs)
+            norm_probs = np.exp(final_log_probs - max_log_prob)
+            norm_probs = norm_probs / np.sum(norm_probs)
             
-            # Normalize confidence using softmax over the final state log-probabilities
-            final_probs = V[T-1, :]
-            # Softmax stabilization
-            final_probs = final_probs - np.max(final_probs)
-            exp_probs = np.exp(final_probs)
-            softmax_probs = exp_probs / np.sum(exp_probs)
-            confidence = float(softmax_probs[best_final_state])
+            # State indices: 0: Normal, 1: Suspicious (Compromised), 2: HighRisk (Ghost), 3: Idle (Network Anomaly)
+            best_final_state = int(np.argmax(norm_probs))
             
-            return int(best_final_state), round(confidence, 4)
+            # Equation 2: Pc(d,t) = P(St = Suspicious | X_1:t) + P(St = High-Risk | X_1:t)
+            p_c = float(norm_probs[1] + norm_probs[2])
+            
+            return best_final_state, round(p_c, 4)
             
         except Exception as e:
-            return 3, 0.5
+            return 0, 0.0
 
     def get_matrices(self) -> Dict[str, Any]:
         """Returns HMM matrices for visualization."""

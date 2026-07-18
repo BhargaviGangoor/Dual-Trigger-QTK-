@@ -90,18 +90,16 @@ class DecisionFusionEngine:
             confidence = 0.85 + (0.15 * hmm_confidence)
 
         # 5. Learned Behavioral Risk Fusion Layer (Logistic Regression Model)
-        # z = [P_c, S_graph, T_t]
-        # P_c is estimated as (hmm_confidence if hmm_state != 0 else 0.0)
+        # z = [P_c, S_graph, 1 - T_t]
         P_c = hmm_confidence if hmm_state in [1, 2] else 0.0
         S_graph = relational_anomaly_score
         T_t = trust_score
         
-        # Features vector
-        z = np.array([P_c, S_graph, T_t])
+        # Exact implementation of Equation 8
+        z = np.array([P_c, S_graph, 1.0 - T_t])
         
-        # Logistic Regression Weights: risk increases with high anomaly probability (P_c) and high relational anomaly (S_graph)
-        # and decreases with high trust (T_t)
-        W_f = np.array([1.5, 2.0, -1.0])
+        # Logistic Regression Weights
+        W_f = np.array([1.5, 2.0, 1.0])
         b = 0.2
         
         # Compute R(d,t) = sigmoid( W_f . z + b )
