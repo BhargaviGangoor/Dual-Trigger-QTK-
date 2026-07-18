@@ -217,7 +217,15 @@ class ExperimentRunner:
                 if len(dev.telemetry_history) >= 2:
                     self.hmm_detector.predict(dev)
                     
-            # 4. Relational GNN Graph evaluation
+            # 4. Trust Updates (Equation 3 & 4)
+            for dev in self.devices:
+                if len(dev.telemetry_history) >= 2:
+                    # Behavioral Trust is strictly 1 - Pc
+                    p_c = getattr(dev, "behavioral_risk", 0.0)
+                    evidence = 1.0 - p_c
+                    TrustScore.update(dev, evidence, self.cfg.alpha)
+
+            # 5. Relational GNN Graph evaluation
             # Gather telemetry histories for all active user_0 devices
             u0_devs = [d for d in self.devices if d.owner_id == "user_0"]
             if all(len(d.telemetry_history) >= 2 for d in u0_devs) and len(u0_devs) >= 2:
@@ -226,27 +234,6 @@ class ExperimentRunner:
                 prev_adj = adj
                 for idx, dev in enumerate(u0_devs):
                     dev.update_graph_risk(rel_scores[idx])
-
-            # 5. Trust Updates & Ablation Modulators
-            for dev in self.devices:
-                if len(dev.telemetry_history) >= 2:
-                    hmm_st = dev.hmm_state
-                    # evidence mapping
-                    if hmm_st == HMMState.NORMAL:
-                        evidence = 1.0
-                    elif hmm_st == HMMState.IDLE:
-                        evidence = 0.90
-                    elif hmm_st == HMMState.SUSPICIOUS:
-                        evidence = 0.60
-                    else:
-                        evidence = 0.25
-                        
-                    # Modify evidence according to GNN score unless ablated
-                    if self.cfg.experiment_type != ExperimentType.HMM_ONLY:
-                        if dev.graph_risk > 0.4:
-                            evidence = max(0.0, evidence - (0.5 * dev.graph_risk))
-                            
-                    TrustScore.update(dev, evidence, self.cfg.alpha)
 
             # 6. Risk Fusion Layer
             for dev in self.devices:
@@ -283,12 +270,15 @@ class ExperimentRunner:
                     "DeviceID": dev.device_id,
                     "Type": dev.device_type.value if hasattr(dev.device_type, "value") else str(dev.device_type),
                     "HMM_State": dev.hmm_state.value if hasattr(dev.hmm_state, "value") else str(dev.hmm_state),
+                    "AnomalyScore": round(getattr(dev, "behavioral_risk", 0.0), 4),
+                    "BehavioralTrust": round(1.0 - getattr(dev, "behavioral_risk", 0.0), 4),
                     "TrustScore": round(dev.trust_score, 4),
                     "GraphRisk": round(dev.graph_risk, 4),
                     "FinalRisk": round(dev.final_risk, 4),
                     "Triggered": triggered,
-                    "Reason": reason,
-                    "Quarantined": dev.is_quarantined
+                    "TriggerReason": reason,
+                    "Quarantined": dev.is_quarantined,
+                    "DetectionEpoch": dev.quarantined_epoch if dev.is_quarantined else None
                 })
                 
         # 8. Compute final experimental metrics

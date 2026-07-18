@@ -1,619 +1,619 @@
-Epoch,AttackerStrategy,DeviceID,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Quarantined,DetectionTime
-1,STEALTH,user_0_phone,Idle,0.98,0.0761,0.0747,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0277,0.0868,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.6113,1.0,0.9532,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5152,1.0,0.9573,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.456,1.0,0.9597,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.0984,0.0855,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.885,1.0,0.7883,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.035,0.0699,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0729,0.061,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6416,1.0,0.9518,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,STEALTH,rogue_laptop,Idle,0.98,0.1319,0.1343,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.8727,1.0,0.7904,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0706,0.1077,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0241,0.0743,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.1029,0.0867,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.8696,1.0,0.7909,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0658,0.0672,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0467,0.0839,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.0907,0.1034,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.812,1.0,0.8003,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0327,0.0792,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.06,0.0736,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4655,1.0,0.9593,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.1132,0.1468,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.885,1.0,0.7883,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0184,0.059,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0475,0.0778,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.6053,1.0,0.9535,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5115,1.0,0.9574,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4691,1.0,0.9591,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.1443,0.0967,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.8157,1.0,0.7997,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0387,0.0789,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0522,0.0971,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5497,1.0,0.9559,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.4772,1.0,0.9588,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4326,1.0,0.9605,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.1126,0.1165,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.825,1.0,0.7982,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0768,0.1003,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0644,0.0648,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.6053,1.0,0.9535,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.684,1.0,0.9498,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5115,1.0,0.9574,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6327,1.0,0.9522,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4537,1.0,0.9597,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.0596,0.0957,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.885,1.0,0.7883,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0612,0.0709,False,False,-1
-1,STEALTH,user_0_laptop_1,Suspicious,0.92,0.0768,0.2565,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7053,1.0,0.9488,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5731,1.0,0.9549,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.4916,1.0,0.9582,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4414,1.0,0.9602,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.0993,0.1358,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.885,1.0,0.7883,True,True,1
-1,STEALTH,user_0_phone,Idle,0.98,0.0218,0.0425,False,False,-1
-1,STEALTH,user_0_laptop_1,Idle,0.98,0.0783,0.096,False,False,-1
-2,STEALTH,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,STEALTH,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,STEALTH,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,STEALTH,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,STEALTH,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,STEALTH,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,STEALTH,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,STEALTH,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,STEALTH,rogue_laptop,Normal,1.0,0.0704,0.1213,False,False,-1
-11,STEALTH,rogue_laptop,Normal,0.825,1.0,0.7982,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0578,0.0796,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0651,0.0825,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Idle,0.98,0.1445,0.2196,False,False,-1
-11,MIMIC,rogue_laptop,Normal,0.8727,1.0,0.7904,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0583,0.068,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0243,0.0974,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7524,1.0,0.9465,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6803,1.0,0.95,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6301,1.0,0.9523,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4655,1.0,0.9593,True,True,-1
-10,MIMIC,rogue_laptop,Normal,1.0,0.132,0.2148,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.777,1.0,0.8058,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0701,0.0974,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0629,0.0717,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Idle,0.98,0.1041,0.1663,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.7796,1.0,0.8054,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0649,0.109,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0403,0.0488,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6892,1.0,0.9496,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6363,1.0,0.9521,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Idle,0.98,0.1479,0.1522,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.7666,1.0,0.8074,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0327,0.0578,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0404,0.0768,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Normal,1.0,0.1816,0.1878,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.777,1.0,0.8058,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0373,0.0862,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0504,0.0677,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5211,1.0,0.9571,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4596,1.0,0.9595,True,True,-1
-10,MIMIC,rogue_laptop,Normal,1.0,0.138,0.132,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.777,1.0,0.8058,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0469,0.0986,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0138,0.0725,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.6053,1.0,0.9535,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5115,1.0,0.9574,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4537,1.0,0.9597,True,True,-1
-10,MIMIC,rogue_laptop,Idle,0.98,0.1988,0.1697,False,False,-1
-11,MIMIC,rogue_laptop,Normal,0.8573,1.0,0.793,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0714,0.0822,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0198,0.0631,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Suspicious,0.91,0.1008,0.157,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.7912,1.0,0.8139,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0386,0.0798,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0734,0.0705,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Idle,0.98,0.1835,0.1556,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.7796,1.0,0.8054,True,True,1
-1,MIMIC,user_0_phone,Idle,0.98,0.0102,0.0821,False,False,-1
-1,MIMIC,user_0_laptop_1,Idle,0.98,0.0574,0.1076,False,False,-1
-2,MIMIC,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,MIMIC,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,MIMIC,user_0_phone,High-Risk,0.7524,1.0,0.9465,False,False,-1
-3,MIMIC,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,MIMIC,user_0_phone,High-Risk,0.6977,1.0,0.9492,False,False,-1
-4,MIMIC,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,MIMIC,user_0_phone,High-Risk,0.6422,1.0,0.9518,True,True,-1
-5,MIMIC,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,MIMIC,rogue_laptop,Idle,0.98,0.1582,0.1762,False,False,-1
-11,MIMIC,rogue_laptop,Idle,0.8497,1.0,0.8015,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.078,0.1031,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0775,0.1177,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.6113,1.0,0.9532,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5152,1.0,0.9573,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.456,1.0,0.9597,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.1026,0.1075,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.6266,1.0,0.9525,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.023,0.0858,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0482,0.0777,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6892,1.0,0.9496,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6537,1.0,0.9513,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,BURST,rogue_laptop,High-Risk,0.84,0.7541,0.7114,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.5538,1.0,0.9557,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.0737,0.0726,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0276,0.0471,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.684,1.0,0.9498,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6327,1.0,0.9522,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4655,1.0,0.9593,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.7723,0.688,False,False,-1
-11,BURST,rogue_laptop,Suspicious,0.5706,1.0,0.9358,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.0439,0.053,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0446,0.0545,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7002,1.0,0.9491,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6439,1.0,0.9517,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6048,1.0,0.9535,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.0526,0.089,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.6266,1.0,0.9525,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.0218,0.0838,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.045,0.0636,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7524,1.0,0.9465,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6803,1.0,0.95,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6301,1.0,0.9523,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.1364,0.0842,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.6266,1.0,0.9525,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.0294,0.0907,False,False,-1
-1,BURST,user_0_laptop_1,Normal,1.0,0.0137,0.038,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7546,1.0,0.9464,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.6034,1.0,0.9535,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.7014,1.0,0.949,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5103,1.0,0.9575,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6448,1.0,0.9517,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4529,1.0,0.9598,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.095,0.0808,False,False,-1
-11,BURST,rogue_laptop,Suspicious,0.5706,1.0,0.9358,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.0711,0.1161,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0308,0.0864,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6416,1.0,0.9518,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.1172,0.0819,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.6266,1.0,0.9525,True,True,1
-1,BURST,user_0_phone,Suspicious,0.92,0.0351,0.2587,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0213,0.081,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8143,1.0,0.9433,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7408,1.0,0.9471,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6722,1.0,0.9504,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6245,1.0,0.9526,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.0501,0.0689,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.6266,1.0,0.9525,True,True,1
-1,BURST,user_0_phone,Idle,0.98,0.0648,0.0563,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0321,0.0934,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4039,1.0,0.9616,True,True,-1
-10,BURST,rogue_laptop,Idle,0.98,0.0652,0.0594,False,False,-1
-11,BURST,rogue_laptop,High-Risk,0.6266,1.0,0.9525,True,True,1
-1,BURST,user_0_phone,Suspicious,0.92,0.0548,0.2376,False,False,-1
-1,BURST,user_0_laptop_1,Idle,0.98,0.0635,0.1145,False,False,-1
-2,BURST,user_0_phone,High-Risk,0.7969,1.0,0.9442,False,False,-1
-2,BURST,user_0_laptop_1,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,BURST,user_0_phone,High-Risk,0.6439,1.0,0.9517,False,False,-1
-3,BURST,user_0_laptop_1,High-Risk,0.6207,1.0,0.9528,False,False,-1
-4,BURST,user_0_phone,High-Risk,0.5399,1.0,0.9563,False,False,-1
-4,BURST,user_0_laptop_1,High-Risk,0.521,1.0,0.9571,False,False,-1
-5,BURST,user_0_phone,High-Risk,0.4691,1.0,0.9591,False,False,-1
-5,BURST,user_0_laptop_1,High-Risk,0.4026,1.0,0.9617,False,False,-1
-6,BURST,user_0_phone,High-Risk,0.489,1.0,0.9584,False,False,-1
-6,BURST,user_0_laptop_1,High-Risk,0.3316,1.0,0.9642,False,False,-1
-7,BURST,user_0_phone,High-Risk,0.5025,1.0,0.9578,False,False,-1
-7,BURST,user_0_laptop_1,High-Risk,0.349,1.0,0.9636,False,False,-1
-8,BURST,user_0_phone,High-Risk,0.5117,1.0,0.9574,False,False,-1
-8,BURST,user_0_laptop_1,High-Risk,0.3594,1.0,0.9632,False,False,-1
-9,BURST,user_0_phone,High-Risk,0.45,1.0,0.9599,False,False,-1
-9,BURST,user_0_laptop_1,High-Risk,0.3656,1.0,0.963,False,False,-1
-10,BURST,user_0_phone,High-Risk,0.5135,0.228,0.8274,False,False,-1
-10,BURST,user_0_laptop_1,High-Risk,0.3719,0.2349,0.8485,False,False,-1
-10,BURST,rogue_laptop,High-Risk,0.84,0.6352,0.6502,False,False,-1
-11,BURST,user_0_phone,High-Risk,0.4512,1.0,0.9598,True,True,-1
-11,BURST,user_0_laptop_1,High-Risk,0.3731,1.0,0.9627,True,True,-1
-11,BURST,rogue_laptop,High-Risk,0.5538,1.0,0.9557,True,True,1
-1,RANDOM,user_0_phone,Normal,1.0,0.0729,0.0627,False,False,-1
-1,RANDOM,user_0_laptop_1,Normal,1.0,0.0485,0.0292,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8526,1.0,0.9412,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7546,1.0,0.9464,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.75,1.0,0.9466,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.6034,1.0,0.9535,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6786,1.0,0.9501,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5103,1.0,0.9575,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6289,1.0,0.9524,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4529,1.0,0.9598,True,True,-1
-10,RANDOM,rogue_laptop,Suspicious,0.91,0.4772,0.5247,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.5342,1.0,0.938,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0375,0.068,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.029,0.0666,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.6113,1.0,0.9532,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5152,1.0,0.9573,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.456,1.0,0.9597,True,True,-1
-10,RANDOM,rogue_laptop,High-Risk,0.84,0.7206,0.5941,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.559,1.0,0.9365,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0484,0.0669,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.0693,0.0673,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7524,1.0,0.9465,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6803,1.0,0.95,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6301,1.0,0.9523,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,RANDOM,rogue_laptop,High-Risk,0.84,0.8045,0.7599,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.5712,1.0,0.9358,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0185,0.0951,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.064,0.0725,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,RANDOM,rogue_laptop,Normal,1.0,0.4802,0.54,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.581,1.0,0.9352,True,True,1
-1,RANDOM,user_0_phone,Normal,1.0,0.0198,0.0485,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.0349,0.0626,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8526,1.0,0.9412,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7674,1.0,0.9457,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6907,1.0,0.9495,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6547,1.0,0.9512,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,RANDOM,rogue_laptop,High-Risk,0.84,0.744,0.6488,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.5433,1.0,0.9374,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0746,0.0826,False,False,-1
-1,RANDOM,user_0_laptop_1,Normal,1.0,0.0747,0.0686,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7546,1.0,0.9464,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.6034,1.0,0.9535,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5103,1.0,0.9575,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4529,1.0,0.9598,True,True,-1
-10,RANDOM,rogue_laptop,High-Risk,0.84,0.497,0.7308,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.6251,1.0,0.9324,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0399,0.0782,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.0131,0.0461,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.6113,1.0,0.9532,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6892,1.0,0.9496,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5152,1.0,0.9573,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.5841,1.0,0.9544,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.456,1.0,0.9597,True,True,-1
-10,RANDOM,rogue_laptop,Normal,1.0,0.8151,0.8014,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.7075,1.0,0.9271,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0387,0.0919,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.0724,0.0972,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.6053,1.0,0.9535,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6196,1.0,0.9528,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5115,1.0,0.9574,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.5878,1.0,0.9542,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4537,1.0,0.9597,True,True,-1
-10,RANDOM,rogue_laptop,High-Risk,0.84,0.4571,0.5581,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.6018,1.0,0.9339,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0246,0.0713,False,False,-1
-1,RANDOM,user_0_laptop_1,Idle,0.98,0.056,0.071,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7524,1.0,0.9465,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6977,1.0,0.9492,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6422,1.0,0.9518,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,RANDOM,rogue_laptop,Suspicious,0.91,0.7847,0.755,False,False,-1
-11,RANDOM,rogue_laptop,High-Risk,0.576,1.0,0.9547,True,True,1
-1,RANDOM,user_0_phone,Idle,0.98,0.0575,0.0829,False,False,-1
-1,RANDOM,user_0_laptop_1,Normal,1.0,0.036,0.0298,False,False,-1
-2,RANDOM,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,RANDOM,user_0_laptop_1,High-Risk,0.7084,1.0,0.9487,False,False,-1
-3,RANDOM,user_0_phone,High-Risk,0.7524,1.0,0.9465,False,False,-1
-3,RANDOM,user_0_laptop_1,High-Risk,0.575,1.0,0.9548,False,False,-1
-4,RANDOM,user_0_phone,High-Risk,0.6977,1.0,0.9492,False,False,-1
-4,RANDOM,user_0_laptop_1,High-Risk,0.4928,1.0,0.9582,False,False,-1
-5,RANDOM,user_0_phone,High-Risk,0.6422,1.0,0.9518,True,True,-1
-5,RANDOM,user_0_laptop_1,High-Risk,0.4576,1.0,0.9596,True,True,-1
-10,RANDOM,rogue_laptop,Idle,0.98,0.5391,0.5655,False,False,-1
-11,RANDOM,rogue_laptop,Suspicious,0.6575,1.0,0.9304,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0252,0.0975,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0525,0.0864,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5211,1.0,0.9571,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.475,1.0,0.9589,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0553,0.1085,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Suspicious,0.92,0.0514,0.321,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7053,1.0,0.9488,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5731,1.0,0.9549,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.4916,1.0,0.9582,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4414,1.0,0.9602,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0671,0.1067,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0439,0.0904,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.5588,1.0,0.9555,False,False,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-6,legacy_mimicry,user_0_phone,High-Risk,0.482,1.0,0.9586,False,False,-1
-7,legacy_mimicry,user_0_phone,High-Risk,0.4978,1.0,0.958,False,False,-1
-8,legacy_mimicry,user_0_phone,High-Risk,0.5085,1.0,0.9576,False,False,-1
-9,legacy_mimicry,user_0_phone,High-Risk,0.5158,1.0,0.9573,False,False,-1
-10,legacy_mimicry,user_0_phone,High-Risk,0.5582,0.2216,0.8191,False,False,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,user_0_phone,High-Risk,0.4816,1.0,0.9586,True,True,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0745,0.1173,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0238,0.0562,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8561,1.0,0.941,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7698,1.0,0.9456,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6924,1.0,0.9494,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6385,1.0,0.952,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Normal,1.0,0.0302,0.0343,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0427,0.051,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8526,1.0,0.9412,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.75,1.0,0.9466,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6786,1.0,0.9501,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6289,1.0,0.9524,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Normal,1.0,0.0404,0.0275,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0207,0.0651,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8526,1.0,0.9412,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.75,1.0,0.9466,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.696,1.0,0.9493,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5211,1.0,0.9571,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6584,1.0,0.951,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4596,1.0,0.9595,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0613,0.0708,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0325,0.0779,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7577,1.0,0.9462,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.6881,1.0,0.9496,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.6207,1.0,0.9528,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6355,1.0,0.9521,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.521,1.0,0.9571,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.5989,1.0,0.9537,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4595,1.0,0.9595,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0323,0.0568,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0419,0.0846,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6892,1.0,0.9496,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5057,1.0,0.9577,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6363,1.0,0.9521,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.4501,1.0,0.9599,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Idle,0.98,0.0668,0.0955,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0738,0.0933,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.8387,1.0,0.9419,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7403,1.0,0.9471,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.6113,1.0,0.9532,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.6718,1.0,0.9504,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5152,1.0,0.9573,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6242,1.0,0.9526,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.456,1.0,0.9597,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
-1,legacy_mimicry,user_0_phone,Normal,1.0,0.06,0.0474,False,False,-1
-1,legacy_mimicry,user_0_laptop_1,Idle,0.98,0.0196,0.0507,False,False,-1
-2,legacy_mimicry,user_0_phone,High-Risk,0.87,1.0,0.9402,False,False,-1
-2,legacy_mimicry,user_0_laptop_1,High-Risk,0.7423,1.0,0.947,False,False,-1
-3,legacy_mimicry,user_0_phone,High-Risk,0.7621,1.0,0.946,False,False,-1
-3,legacy_mimicry,user_0_laptop_1,High-Risk,0.5959,1.0,0.9539,False,False,-1
-4,legacy_mimicry,user_0_phone,High-Risk,0.687,1.0,0.9497,False,False,-1
-4,legacy_mimicry,user_0_laptop_1,High-Risk,0.5211,1.0,0.9571,False,False,-1
-5,legacy_mimicry,user_0_phone,High-Risk,0.6348,1.0,0.9521,True,True,-1
-5,legacy_mimicry,user_0_laptop_1,High-Risk,0.475,1.0,0.9589,True,True,-1
-10,legacy_mimicry,rogue_laptop,Normal,1.0,0.0,0.0,False,False,-1
-11,legacy_mimicry,rogue_laptop,High-Risk,0.65,1.0,0.9514,True,True,1
+Epoch,AttackerStrategy,DeviceID,HMM_State,AnomalyScore,BehavioralTrust,TrustScore,GraphRisk,FinalRisk,Triggered,TriggerReason,Quarantined,DetectionEpoch,DetectionTime
+1,STEALTH,user_0_phone,Idle,0.0686,0.9314,0.98,0.0426,0.0582,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0869,0.9131,0.98,0.0636,0.0776,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Normal,0.0732,0.9268,1.0,0.0953,0.0809,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.0699,0.9301,0.98,0.0166,0.0486,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0524,0.9476,0.98,0.0188,0.039,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Normal,0.0626,0.9374,1.0,0.1273,0.0852,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.0874,0.9126,0.98,0.0387,0.0679,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.1384,0.8616,0.98,0.0319,0.0958,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8561,1.0,0.9722,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7524,1.0,0.9693,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6803,1.0,0.9671,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6301,1.0,0.9654,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Normal,0.1461,0.8539,1.0,0.0429,0.11,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Suspicious,0.3511,0.6489,0.92,0.0376,0.2257,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.1368,0.8632,0.98,0.022,0.0908,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7969,1.0,0.9706,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7112,1.0,0.9681,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.6113,1.0,0.9648,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6516,1.0,0.9662,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5152,1.0,0.9614,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6101,1.0,0.9648,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.456,1.0,0.9591,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Idle,0.1615,0.8385,0.98,0.0547,0.1241,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,0.9877,1.0,0.8991,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.1425,0.8575,0.98,0.0666,0.1121,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0588,0.9412,0.98,0.0176,0.0424,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6416,1.0,0.9658,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4039,1.0,0.9571,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Idle,0.1432,0.8568,0.98,0.1463,0.1443,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,0.9184,1.0,0.8927,True,Behavioral anomaly detected (Risk: 0.89 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.1412,0.8588,0.98,0.0162,0.0912,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0949,0.9051,0.98,0.0257,0.0672,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6881,1.0,0.9673,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6355,1.0,0.9656,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.5989,1.0,0.9644,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Normal,0.0643,0.9357,1.0,0.1156,0.0822,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Normal,0.063,0.937,1.0,0.0183,0.0451,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0592,0.9408,0.98,0.0548,0.0574,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8526,1.0,0.9721,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.678,1.0,0.967,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.75,1.0,0.9692,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5418,1.0,0.9624,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6786,1.0,0.967,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4751,1.0,0.9599,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6463,1.0,0.966,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4351,1.0,0.9583,False,trust-compliant,False,,-1
+6,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3511,1.0,0.9548,False,trust-compliant,False,,-1
+7,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3607,1.0,0.9552,False,trust-compliant,False,,-1
+8,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3064,1.0,0.9529,False,trust-compliant,False,,-1
+9,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3188,1.0,0.9534,False,trust-compliant,False,,-1
+10,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.2813,0.2256,0.8073,False,trust-compliant,False,,-1
+10,STEALTH,rogue_laptop,Normal,0.1092,0.8908,1.0,0.0541,0.0899,False,trust-compliant,False,,-1
+11,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3188,0.8775,0.9412,True,Behavioral anomaly detected (Risk: 0.94 >= 0.65),True,11,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,0.9415,1.0,0.8949,True,Behavioral anomaly detected (Risk: 0.89 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.1374,0.8626,0.98,0.0121,0.0873,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0727,0.9273,0.98,0.0315,0.0562,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Normal,0.1392,0.8608,1.0,0.0735,0.1162,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.0856,0.9144,0.98,0.0348,0.0653,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.1185,0.8815,0.98,0.0156,0.0773,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.678,1.0,0.967,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4968,1.0,0.9607,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3881,1.0,0.9564,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3679,1.0,0.9555,False,trust-compliant,False,,-1
+6,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3707,1.0,0.9557,False,trust-compliant,False,,-1
+7,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3724,1.0,0.9557,False,trust-compliant,False,,-1
+8,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3734,1.0,0.9558,False,trust-compliant,False,,-1
+9,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.374,1.0,0.9558,False,trust-compliant,False,,-1
+10,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3144,0.1923,0.802,False,trust-compliant,False,,-1
+10,STEALTH,rogue_laptop,Idle,0.1538,0.8462,0.98,0.0566,0.1198,False,trust-compliant,False,,-1
+11,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.3386,1.0,0.9543,True,Behavioral anomaly detected (Risk: 0.95 >= 0.65),True,11,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,0.9723,1.0,0.8977,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,STEALTH,user_0_phone,Idle,0.059,0.941,0.98,0.0338,0.0489,False,trust-compliant,False,,-1
+1,STEALTH,user_0_laptop_1,Idle,0.0656,0.9344,0.98,0.0697,0.0673,False,trust-compliant,False,,-1
+2,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,STEALTH,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,STEALTH,user_0_laptop_1,High-Risk,1.0,0.0,0.4655,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,STEALTH,rogue_laptop,Normal,0.1464,0.8536,1.0,0.0706,0.1199,False,trust-compliant,False,,-1
+11,STEALTH,rogue_laptop,Normal,0.0,1.0,0.9846,1.0,0.8989,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.0996,0.9004,0.98,0.0166,0.0664,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.0805,0.9195,0.98,0.065,0.0743,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.572,1.0,0.9635,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Idle,0.1337,0.8663,0.98,0.1161,0.1275,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Normal,0.0,1.0,0.9877,1.0,0.8991,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.121,0.879,0.98,0.0433,0.0899,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.1163,0.8837,0.98,0.0537,0.0913,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.6113,1.0,0.9648,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5306,1.0,0.962,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4654,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Normal,0.2433,0.7567,1.0,0.1486,0.2102,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Normal,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.1241,0.8759,0.98,0.0447,0.0923,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.0563,0.9437,0.98,0.0711,0.0622,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6268,1.0,0.9653,False,trust-compliant,False,,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+6,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.5962,1.0,0.9643,False,trust-compliant,False,,-1
+7,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.5754,1.0,0.9636,False,trust-compliant,False,,-1
+8,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.4933,1.0,0.9606,False,trust-compliant,False,,-1
+9,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.5054,1.0,0.961,False,trust-compliant,False,,-1
+10,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.4457,0.1936,0.8224,False,trust-compliant,False,,-1
+10,MIMIC,rogue_laptop,Normal,0.2469,0.7531,1.0,0.1455,0.2114,False,trust-compliant,False,,-1
+11,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.4731,1.0,0.9598,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,-1
+11,MIMIC,rogue_laptop,Normal,0.0,1.0,0.9846,1.0,0.8989,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.0863,0.9137,0.98,0.0656,0.078,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.1151,0.8849,0.98,0.034,0.0827,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Idle,0.1582,0.8418,0.98,0.2047,0.1745,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Idle,0.0004,0.9996,0.9895,1.0,0.8994,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.075,0.925,0.98,0.0425,0.062,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.0753,0.9247,0.98,0.0226,0.0542,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Normal,0.2481,0.7519,1.0,0.1953,0.2296,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Idle,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.1343,0.8657,0.98,0.034,0.0941,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.1225,0.8775,0.98,0.0146,0.0794,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.6113,1.0,0.9648,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5152,1.0,0.9614,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.456,1.0,0.9591,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Idle,0.1546,0.8454,0.98,0.218,0.1768,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Normal,0.0,1.0,0.9723,1.0,0.8977,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.058,0.942,0.98,0.0429,0.052,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Normal,0.0564,0.9436,1.0,0.0367,0.0485,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.77,1.0,0.9698,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.6283,1.0,0.9654,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.684,1.0,0.9672,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5256,1.0,0.9618,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6327,1.0,0.9655,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4624,1.0,0.9594,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Normal,0.1651,0.8349,1.0,0.1374,0.1554,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Idle,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.1459,0.8541,0.98,0.078,0.1187,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.14,0.86,0.98,0.0151,0.09,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.684,1.0,0.9672,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6327,1.0,0.9655,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Normal,0.1911,0.8089,1.0,0.1986,0.1937,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Idle,0.0,1.0,0.9415,1.0,0.8949,True,Behavioral anomaly detected (Risk: 0.89 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.0907,0.9093,0.98,0.0648,0.0804,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Normal,0.059,0.941,1.0,0.0409,0.0518,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7546,1.0,0.9694,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5572,1.0,0.9629,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4818,1.0,0.9601,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6416,1.0,0.9658,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4354,1.0,0.9583,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Normal,0.2107,0.7893,1.0,0.1228,0.1799,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Idle,0.0,1.0,0.987,1.0,0.8991,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,MIMIC,user_0_phone,Idle,0.0594,0.9406,0.98,0.0627,0.0607,False,trust-compliant,False,,-1
+1,MIMIC,user_0_laptop_1,Idle,0.1145,0.8855,0.98,0.0423,0.0856,False,trust-compliant,False,,-1
+2,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.8561,1.0,0.9722,False,trust-compliant,False,,-1
+2,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.7524,1.0,0.9693,False,trust-compliant,False,,-1
+3,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.6803,1.0,0.9671,False,trust-compliant,False,,-1
+4,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,MIMIC,user_0_phone,High-Risk,1.0,0.0,0.5779,1.0,0.9637,True,Inactivity timer expired,True,5,-1
+5,MIMIC,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,MIMIC,rogue_laptop,Normal,0.1276,0.8724,1.0,0.1629,0.1399,False,trust-compliant,False,,-1
+11,MIMIC,rogue_laptop,Idle,0.0,1.0,1.0,1.0,0.9002,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,11,1
+1,BURST,user_0_phone,Normal,0.0273,0.9727,1.0,0.0791,0.048,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.0745,0.9255,0.98,0.0242,0.0544,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8526,1.0,0.9721,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.75,1.0,0.9692,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.696,1.0,0.9676,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5211,1.0,0.9616,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.641,1.0,0.9658,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4596,1.0,0.9593,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,Idle,0.1027,0.8973,0.98,0.094,0.0997,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.6266,1.0,0.9653,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.0865,0.9135,0.98,0.0302,0.064,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1155,0.8845,0.98,0.024,0.0789,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,Idle,0.1187,0.8813,0.98,0.0994,0.1119,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.6266,1.0,0.9653,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.0544,0.9456,0.98,0.0146,0.0385,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1034,0.8966,0.98,0.0558,0.0844,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8561,1.0,0.9722,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7524,1.0,0.9693,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.6113,1.0,0.9648,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6803,1.0,0.9671,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5152,1.0,0.9614,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6301,1.0,0.9654,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.456,1.0,0.9591,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,High-Risk,0.765,0.235,0.84,0.7267,0.7516,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.5538,1.0,0.9628,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.0506,0.9494,0.98,0.017,0.0372,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1147,0.8853,0.98,0.0248,0.0787,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5211,1.0,0.9616,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4596,1.0,0.9593,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,High-Risk,0.6385,0.3615,0.84,0.7614,0.6815,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,Suspicious,1.0,0.0,0.4628,1.0,0.9594,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,BURST,user_0_phone,Normal,0.0697,0.9303,1.0,0.0169,0.0486,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Normal,0.053,0.947,1.0,0.0526,0.0528,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8526,1.0,0.9721,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7546,1.0,0.9694,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.75,1.0,0.9692,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.6034,1.0,0.9645,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6786,1.0,0.967,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5103,1.0,0.9612,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6289,1.0,0.9654,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4529,1.0,0.959,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,High-Risk,0.6685,0.3315,0.84,0.5625,0.6314,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.5538,1.0,0.9628,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.0831,0.9169,0.98,0.0201,0.0579,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1095,0.8905,0.98,0.0753,0.0958,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.7865,1.0,0.9703,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.704,1.0,0.9678,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6466,1.0,0.966,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6066,1.0,0.9647,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4655,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,Idle,0.095,0.905,0.98,0.0609,0.0831,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.6266,1.0,0.9653,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.1419,0.8581,0.98,0.0395,0.101,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1138,0.8862,0.98,0.0333,0.0816,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,Idle,0.0891,0.9109,0.98,0.13,0.1034,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.6266,1.0,0.9653,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.146,0.854,0.98,0.0711,0.116,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1344,0.8656,0.98,0.0613,0.1052,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5211,1.0,0.9616,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4596,1.0,0.9593,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,High-Risk,0.6515,0.3485,0.84,0.7628,0.6904,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.5538,1.0,0.9628,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.1124,0.8876,0.98,0.072,0.0963,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Normal,0.0118,0.9882,1.0,0.0176,0.0141,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7546,1.0,0.9694,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.6034,1.0,0.9645,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6892,1.0,0.9674,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5103,1.0,0.9612,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6363,1.0,0.9657,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4683,1.0,0.9596,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,High-Risk,0.8262,0.1738,0.84,0.7382,0.7954,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,High-Risk,1.0,0.0,0.5538,1.0,0.9628,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,BURST,user_0_phone,Idle,0.0886,0.9114,0.98,0.0517,0.0738,False,trust-compliant,False,,-1
+1,BURST,user_0_laptop_1,Idle,0.1027,0.8973,0.98,0.0206,0.0699,False,trust-compliant,False,,-1
+2,BURST,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,BURST,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,BURST,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,BURST,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,BURST,user_0_laptop_1,High-Risk,1.0,0.0,0.4655,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,BURST,rogue_laptop,Idle,0.0569,0.9431,0.98,0.0901,0.0685,False,trust-compliant,False,,-1
+11,BURST,rogue_laptop,Suspicious,1.0,0.0,0.5811,1.0,0.9638,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.0547,0.9453,0.98,0.0221,0.0416,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.1407,0.8593,0.98,0.0209,0.0927,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,High-Risk,0.795,0.205,0.84,0.7425,0.7766,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.6714,1.0,0.9668,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Normal,0.0229,0.9771,1.0,0.0407,0.03,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.088,0.912,0.98,0.0329,0.066,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8526,1.0,0.9721,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.75,1.0,0.9692,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6786,1.0,0.967,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6289,1.0,0.9654,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4655,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,Idle,0.5979,0.4021,0.98,0.4777,0.5558,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.6345,1.0,0.9656,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.0799,0.9201,0.98,0.017,0.0548,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.1131,0.8869,0.98,0.05,0.0879,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5211,1.0,0.9616,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4596,1.0,0.9593,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,Suspicious,0.6298,0.3702,0.91,0.5594,0.6052,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,High-Risk,1.0,0.0,0.576,1.0,0.9636,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.0812,0.9188,0.98,0.033,0.0619,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.1069,0.8931,0.98,0.0692,0.0918,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.684,1.0,0.9672,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6327,1.0,0.9655,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,Suspicious,0.8017,0.1983,0.91,0.6803,0.7592,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,High-Risk,1.0,0.0,0.696,1.0,0.9676,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.1424,0.8576,0.98,0.061,0.1098,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.0865,0.9135,0.98,0.0387,0.0674,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.6113,1.0,0.9648,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5152,1.0,0.9614,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.456,1.0,0.9591,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,Normal,0.7077,0.2923,1.0,0.5777,0.6622,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.735,1.0,0.9688,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.0874,0.9126,0.98,0.0118,0.0572,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.0547,0.9453,0.98,0.0254,0.043,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.684,1.0,0.9672,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6327,1.0,0.9655,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,High-Risk,0.8272,0.1728,0.84,0.7808,0.811,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.5482,1.0,0.9626,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.0906,0.9094,0.98,0.0249,0.0643,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.1438,0.8562,0.98,0.0743,0.116,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6892,1.0,0.9674,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6363,1.0,0.9657,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,High-Risk,0.6764,0.3236,0.84,0.5525,0.633,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.4628,1.0,0.9594,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.1025,0.8975,0.98,0.0325,0.0745,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Idle,0.1375,0.8625,0.98,0.0111,0.0869,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4595,1.0,0.9593,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4217,1.0,0.9578,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,High-Risk,0.7856,0.2144,0.84,0.5072,0.6882,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.4628,1.0,0.9594,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.1329,0.8671,0.98,0.0186,0.0872,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Normal,0.0123,0.9877,1.0,0.0164,0.0139,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7546,1.0,0.9694,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.6034,1.0,0.9645,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5103,1.0,0.9612,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6416,1.0,0.9658,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4529,1.0,0.959,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,Idle,0.5409,0.4591,0.98,0.6403,0.5757,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.6884,1.0,0.9673,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,RANDOM,user_0_phone,Idle,0.0876,0.9124,0.98,0.0634,0.0779,False,trust-compliant,False,,-1
+1,RANDOM,user_0_laptop_1,Normal,0.0745,0.9255,1.0,0.037,0.0595,False,trust-compliant,False,,-1
+2,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.7546,1.0,0.9694,False,trust-compliant,False,,-1
+3,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.6034,1.0,0.9645,False,trust-compliant,False,,-1
+4,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.684,1.0,0.9672,False,trust-compliant,False,,-1
+4,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.5103,1.0,0.9612,False,trust-compliant,False,,-1
+5,RANDOM,user_0_phone,High-Risk,1.0,0.0,0.6327,1.0,0.9655,True,Inactivity timer expired,True,5,-1
+5,RANDOM,user_0_laptop_1,High-Risk,1.0,0.0,0.4529,1.0,0.959,True,Inactivity timer expired,True,5,-1
+10,RANDOM,rogue_laptop,High-Risk,0.7639,0.2361,0.84,0.6694,0.7308,False,trust-compliant,False,,-1
+11,RANDOM,rogue_laptop,Suspicious,1.0,0.0,0.6021,1.0,0.9645,True,Behavioral anomaly detected (Risk: 0.96 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.0944,0.9056,0.98,0.0158,0.0629,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.1443,0.8557,0.98,0.0281,0.0978,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.1342,0.8658,0.98,0.0596,0.1043,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.1263,0.8737,0.98,0.0167,0.0825,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.684,1.0,0.9672,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6327,1.0,0.9655,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4655,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.0687,0.9313,0.98,0.0395,0.057,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.0768,0.9232,0.98,0.0412,0.0626,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5497,1.0,0.9627,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4772,1.0,0.96,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.3325,1.0,0.954,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.098,0.902,0.98,0.0726,0.0878,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.1244,0.8756,0.98,0.0478,0.0938,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.134,0.866,0.98,0.0715,0.109,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.1259,0.8741,0.98,0.0377,0.0907,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.0908,0.9092,0.98,0.0661,0.0809,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.0935,0.9065,0.98,0.0173,0.063,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7577,1.0,0.9695,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.6053,1.0,0.9646,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6892,1.0,0.9674,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5115,1.0,0.9613,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6363,1.0,0.9657,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4537,1.0,0.9591,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.1127,0.8873,0.98,0.0302,0.0797,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.135,0.865,0.98,0.0265,0.0916,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5497,1.0,0.9627,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6892,1.0,0.9674,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4772,1.0,0.96,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6363,1.0,0.9657,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4326,1.0,0.9582,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.0851,0.9149,0.98,0.0668,0.0778,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.107,0.893,0.98,0.0128,0.0693,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.6113,1.0,0.9648,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5152,1.0,0.9614,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.456,1.0,0.9591,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Normal,0.0243,0.9757,1.0,0.047,0.0334,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.1308,0.8692,0.98,0.0665,0.1051,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8526,1.0,0.9721,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.75,1.0,0.9692,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6786,1.0,0.967,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6289,1.0,0.9654,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4501,1.0,0.9589,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1
+1,legacy_mimicry,user_0_phone,Idle,0.0886,0.9114,0.98,0.0361,0.0676,False,trust-compliant,False,,-1
+1,legacy_mimicry,user_0_laptop_1,Idle,0.0814,0.9186,0.98,0.0226,0.0579,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.8387,1.0,0.9718,False,trust-compliant,False,,-1
+2,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.7423,1.0,0.969,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.7403,1.0,0.9689,False,trust-compliant,False,,-1
+3,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5959,1.0,0.9643,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6718,1.0,0.9668,False,trust-compliant,False,,-1
+4,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.5057,1.0,0.961,False,trust-compliant,False,,-1
+5,legacy_mimicry,user_0_phone,High-Risk,1.0,0.0,0.6242,1.0,0.9652,True,Inactivity timer expired,True,5,-1
+5,legacy_mimicry,user_0_laptop_1,High-Risk,1.0,0.0,0.4655,1.0,0.9595,True,Inactivity timer expired,True,5,-1
+10,legacy_mimicry,rogue_laptop,Normal,0.0,1.0,1.0,0.0,0.0,False,trust-compliant,False,,-1
+11,legacy_mimicry,rogue_laptop,High-Risk,1.0,0.0,0.65,1.0,0.9661,True,Behavioral anomaly detected (Risk: 0.97 >= 0.65),True,11,1

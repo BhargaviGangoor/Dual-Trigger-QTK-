@@ -188,8 +188,15 @@ class AblationTrialRunner:
                         dev.update_behavioral_risk(0.0)
                     else:
                         self.hmm_detector.predict(dev)
+
+            # 2. Trust updates (Equation 3 & 4)
+            for dev in self.devices:
+                if len(dev.telemetry_history) >= 2:
+                    p_c = getattr(dev, "behavioral_risk", 0.0)
+                    evidence = 1.0 - p_c
+                    TrustScore.update(dev, evidence, self.cfg.alpha)
                         
-            # 2. Relational Graph Prediction
+            # 3. Relational Graph Prediction
             u0_devs = [d for d in self.devices if d.owner_id == "user_0"]
             if all(len(d.telemetry_history) >= 2 for d in u0_devs) and len(u0_devs) >= 2:
                 u0_histories = [d.telemetry_history for d in u0_devs]
@@ -209,26 +216,6 @@ class AblationTrialRunner:
             if self.ablation_type == AblationType.HMM_ONLY:
                 for dev in self.devices:
                     dev.update_graph_risk(0.0)
-                    
-            # 3. Trust updates
-            for dev in self.devices:
-                if len(dev.telemetry_history) >= 2:
-                    hmm_st = dev.hmm_state
-                    if hmm_st == HMMState.NORMAL:
-                        evidence = 1.0
-                    elif hmm_st == HMMState.IDLE:
-                        evidence = 0.90
-                    elif hmm_st == HMMState.SUSPICIOUS:
-                        evidence = 0.60
-                    else:
-                        evidence = 0.25
-                        
-                    # GNN penalty unless HMM Only
-                    if self.ablation_type != AblationType.HMM_ONLY:
-                        if dev.graph_risk > 0.4:
-                            evidence = max(0.0, evidence - (0.5 * dev.graph_risk))
-                            
-                    TrustScore.update(dev, evidence, self.cfg.alpha)
                     
             # 4. Risk Fusion Layer
             for dev in self.devices:
@@ -253,11 +240,15 @@ class AblationTrialRunner:
                 self.epoch_logs.append({
                     "Epoch": current_epoch,
                     "DeviceID": dev.device_id,
+                    "AnomalyScore": round(getattr(dev, "behavioral_risk", 0.0), 4),
+                    "BehavioralTrust": round(1.0 - getattr(dev, "behavioral_risk", 0.0), 4),
                     "TrustScore": round(dev.trust_score, 4),
                     "GraphRisk": round(dev.graph_risk, 4),
                     "FinalRisk": round(dev.final_risk, 4),
                     "Triggered": triggered,
+                    "TriggerReason": reason,
                     "Quarantined": dev.is_quarantined,
+                    "DetectionEpoch": dev.quarantined_epoch if dev.is_quarantined else None,
                     "Configuration": self.ablation_type.value
                 })
                 

@@ -124,32 +124,21 @@ class FalseQuarantineRunner:
             for dev in self.devices:
                 if len(dev.telemetry_history) >= 2:
                     self.hmm_detector.predict(dev)
+
+            # 2. Trust updates (Equation 3 & 4)
+            for dev in self.devices:
+                if len(dev.telemetry_history) >= 2:
+                    p_c = getattr(dev, "behavioral_risk", 0.0)
+                    evidence = 1.0 - p_c
+                    TrustScore.update(dev, evidence, self.alpha)
                     
-            # 2. Relational Graph Prediction
+            # 3. Relational Graph Prediction
             if all(len(d.telemetry_history) >= 2 for d in self.devices):
                 histories = [d.telemetry_history for d in self.devices]
                 adj, rel_scores = self.graph_lstm.evaluate_devices(histories, prev_adj)
                 prev_adj = adj
                 for idx, dev in enumerate(self.devices):
                     dev.update_graph_risk(rel_scores[idx])
-
-            # 3. Trust updates
-            for dev in self.devices:
-                if len(dev.telemetry_history) >= 2:
-                    hmm_st = dev.hmm_state
-                    if hmm_st == HMMState.NORMAL:
-                        evidence = 1.0
-                    elif hmm_st == HMMState.IDLE:
-                        evidence = 0.90
-                    elif hmm_st == HMMState.SUSPICIOUS:
-                        evidence = 0.60
-                    else:
-                        evidence = 0.25
-                        
-                    if dev.graph_risk > 0.4:
-                        evidence = max(0.0, evidence - (0.5 * dev.graph_risk))
-                        
-                    TrustScore.update(dev, evidence, self.alpha)
 
             # 4. Risk Fusion Layer
             for dev in self.devices:
@@ -186,12 +175,15 @@ class FalseQuarantineRunner:
                     "Scenario": params.name,
                     "DeviceID": dev.device_id,
                     "HMM_State": dev.hmm_state.value if hasattr(dev.hmm_state, "value") else str(dev.hmm_state),
+                    "AnomalyScore": round(getattr(dev, "behavioral_risk", 0.0), 4),
+                    "BehavioralTrust": round(1.0 - getattr(dev, "behavioral_risk", 0.0), 4),
                     "TrustScore": round(dev.trust_score, 4),
                     "GraphRisk": round(dev.graph_risk, 4),
                     "FinalRisk": round(dev.final_risk, 4),
                     "Triggered": triggered,
-                    "Reason": reason,
-                    "Quarantined": dev.is_quarantined
+                    "TriggerReason": reason,
+                    "Quarantined": dev.is_quarantined,
+                    "DetectionEpoch": dev.quarantined_epoch if dev.is_quarantined else None
                 })
                 
         # Compute trial metrics

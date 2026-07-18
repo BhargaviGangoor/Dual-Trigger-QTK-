@@ -1,38 +1,21 @@
-Epoch,DeviceID,Type,HMM_State,TrustScore,GraphRisk,FinalRisk,Triggered,Reason,Quarantined
-1,user_0_phone,primary,Normal,1.0,0.0301,0.0393,False,Device is trust-compliant.,False
-1,user_0_laptop_1,linked,Normal,1.0,0.076,0.0431,False,Device is trust-compliant.,False
-1,silent_forgotten_tablet,linked,Idle,0.995,0.0304,0.0416,False,Device is trust-compliant.,False
-2,user_0_phone,primary,High-Risk,0.8851,0.0114,0.6819,True,Behavioral anomaly detected (Risk: 0.68 >= 0.65),True
-2,user_0_laptop_1,linked,High-Risk,0.7659,0.0606,0.7272,True,Behavioral anomaly detected (Risk: 0.73 >= 0.65),True
-2,silent_forgotten_tablet,linked,Idle,0.9902,0.0324,0.053,False,Device is trust-compliant.,False
-3,silent_forgotten_tablet,linked,Idle,0.9857,0.0376,0.0455,False,Device is trust-compliant.,False
-4,silent_forgotten_tablet,linked,Idle,0.9815,0.0403,0.028,False,Device is trust-compliant.,False
-5,silent_forgotten_tablet,linked,Idle,0.9774,0.0277,0.0258,True,Inactivity timer expired (Epoch Gap: 5 >= 5),True
-10,rogue_client_0,linked,Normal,1.0,0.0539,0.0838,False,Device is trust-compliant.,False
-11,rogue_client_0,linked,Normal,1.0,0.0937,0.3515,False,Device is trust-compliant.,False
-12,rogue_client_0,linked,Normal,1.0,0.0783,0.3445,False,Device is trust-compliant.,False
-13,rogue_client_0,linked,Normal,1.0,0.0411,0.3279,False,Device is trust-compliant.,False
-14,rogue_client_0,linked,Normal,1.0,0.1197,0.3634,False,Device is trust-compliant.,False
-15,rogue_client_0,linked,Normal,0.9846,0.0683,0.3434,False,Device is trust-compliant.,False
-16,rogue_client_0,linked,Normal,0.9905,0.0737,0.3445,False,Device is trust-compliant.,False
-17,rogue_client_0,linked,Normal,0.9941,0.1084,0.3595,False,Device is trust-compliant.,False
-18,rogue_client_0,linked,Normal,0.9964,0.0622,0.338,False,Device is trust-compliant.,False
-19,rogue_client_0,linked,Normal,0.9978,0.1058,0.3575,False,Device is trust-compliant.,False
-20,rogue_client_0,linked,Normal,0.9986,0.1032,0.3561,False,Device is trust-compliant.,False
-21,rogue_client_0,linked,Normal,0.9991,0.0819,0.3463,False,Device is trust-compliant.,False
-22,rogue_client_0,linked,Normal,0.984,0.1109,0.363,False,Device is trust-compliant.,False
-23,rogue_client_0,linked,Normal,0.9901,0.1183,0.3651,False,Device is trust-compliant.,False
-24,rogue_client_0,linked,Normal,0.9785,0.0873,0.3534,False,Device is trust-compliant.,False
-25,rogue_client_0,linked,Normal,0.9888,0.0796,0.3476,False,Device is trust-compliant.,False
-26,rogue_client_0,linked,Normal,0.9942,0.0909,0.3515,False,Device is trust-compliant.,False
-27,rogue_client_0,linked,Normal,0.9964,0.0452,0.3305,False,Device is trust-compliant.,False
-28,rogue_client_0,linked,Normal,0.9978,0.0669,0.3398,False,Device is trust-compliant.,False
-29,rogue_client_0,linked,Normal,0.9832,0.1172,0.3661,False,Device is trust-compliant.,False
-30,rogue_client_0,linked,Normal,0.9897,0.0808,0.3479,False,Device is trust-compliant.,False
-31,rogue_client_0,linked,Normal,0.9937,0.052,0.3341,False,Device is trust-compliant.,False
-32,rogue_client_0,linked,Normal,0.9961,0.0555,0.3351,False,Device is trust-compliant.,False
-33,rogue_client_0,linked,Normal,0.9976,0.0496,0.3322,False,Device is trust-compliant.,False
-34,rogue_client_0,linked,Normal,0.9985,0.0773,0.3444,False,Device is trust-compliant.,False
-35,rogue_client_0,linked,Normal,0.9837,0.1341,0.3739,False,Device is trust-compliant.,False
-36,rogue_client_0,linked,Normal,0.99,0.142,0.3761,False,Device is trust-compliant.,False
-37,rogue_client_0,linked,Normal,0.8198,1.0,0.799,True,Behavioral anomaly detected (Risk: 0.80 >= 0.65),True
+Epoch,DeviceID,Type,HMM_State,AnomalyScore,BehavioralTrust,TrustScore,GraphRisk,FinalRisk,Triggered,TriggerReason,Quarantined,DetectionEpoch
+1,user_0_phone,primary,Normal,0.0449,0.9551,1.0,0.0736,0.0564,False,Device is trust-compliant.,False,
+1,user_0_laptop_1,linked,Idle,0.0688,0.9312,0.98,0.0254,0.0515,False,Device is trust-compliant.,False,
+1,silent_forgotten_tablet,linked,Idle,0.056,0.944,0.995,0.0356,0.0479,False,Device is trust-compliant.,False,
+2,user_0_phone,primary,High-Risk,1.0,0.0,0.8526,0.0653,0.8433,True,Behavioral anomaly detected (Risk: 0.84 >= 0.65),True,2
+2,user_0_laptop_1,linked,High-Risk,1.0,0.0,0.7423,0.0118,0.8124,True,Behavioral anomaly detected (Risk: 0.81 >= 0.65),True,2
+2,silent_forgotten_tablet,linked,Idle,0.0229,0.9771,0.9902,0.0488,0.0333,False,Device is trust-compliant.,False,
+3,silent_forgotten_tablet,linked,Idle,0.0173,0.9827,0.9857,0.0456,0.0286,False,Device is trust-compliant.,False,
+4,silent_forgotten_tablet,linked,Idle,0.0637,0.9363,0.9815,0.0244,0.0479,False,Device is trust-compliant.,False,
+5,silent_forgotten_tablet,linked,Idle,0.0326,0.9674,0.9774,0.0481,0.0388,True,Inactivity timer expired (Epoch Gap: 5 >= 5),True,5
+10,rogue_client_0,linked,Normal,0.1719,0.8281,1.0,0.0661,0.1349,False,Device is trust-compliant.,False,
+11,rogue_client_0,linked,Normal,0.0,1.0,1.0,0.1235,0.6099,False,Device is trust-compliant.,False,
+12,rogue_client_0,linked,Normal,0.0,1.0,1.0,0.0797,0.5889,False,Device is trust-compliant.,False,
+13,rogue_client_0,linked,Normal,0.0,1.0,1.0,0.0682,0.5833,False,Device is trust-compliant.,False,
+14,rogue_client_0,linked,Normal,0.0,1.0,0.9846,0.1127,0.6011,False,Device is trust-compliant.,False,
+15,rogue_client_0,linked,Normal,0.0,1.0,0.9905,0.107,0.5998,False,Device is trust-compliant.,False,
+16,rogue_client_0,linked,Normal,0.0,1.0,0.9951,0.063,0.5796,False,Device is trust-compliant.,False,
+17,rogue_client_0,linked,Normal,0.0,1.0,0.9816,0.0587,0.5742,False,Device is trust-compliant.,False,
+18,rogue_client_0,linked,Normal,0.0,1.0,0.9733,0.119,0.6014,False,Device is trust-compliant.,False,
+19,rogue_client_0,linked,Normal,0.0,1.0,0.9836,0.0682,0.5793,False,Device is trust-compliant.,False,
+20,rogue_client_0,linked,Normal,0.0,1.0,0.9745,1.0,0.8979,True,Behavioral anomaly detected (Risk: 0.90 >= 0.65),True,20
