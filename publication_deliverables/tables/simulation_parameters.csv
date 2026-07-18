@@ -1,0 +1,13 @@
+Parameter,Value
+Epochs,100 (varies by exp)
+Number of legitimate devices,"3 (Phone, Laptop, Tablet)"
+Silent devices,Configurable (Forgotten Tablet)
+Rogue devices,1
+Injection epoch,10
+Sequence length,2+
+HMM states,"Normal, Idle, Suspicious, HighRisk"
+α (Trust update rate),0.8
+β (Graph decay),0.8
+θ_R (Risk Threshold),0.65
+δ_inact (Inactivity Threshold),5 epochs
+Simulation duration,30 epochs

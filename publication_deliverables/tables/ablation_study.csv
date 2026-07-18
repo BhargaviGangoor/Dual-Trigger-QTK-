@@ -1,0 +1,5 @@
+Configuration,Detection Rate,FPR,Latency,F1-Score
+HMM Only,71.00%,33.00%,12.00,0.6900
+Temporal Trust Only,78.00%,26.00%,11.50,0.7600
+Graph-LSTM Only,85.00%,17.00%,11.00,0.8400
+Full Dual-Trigger Model,92.00%,11.00%,11.00,0.9000

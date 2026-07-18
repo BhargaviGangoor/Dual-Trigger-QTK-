@@ -1,0 +1,4 @@
+Epoch,Device,Risk Score,Trust Score,Status
+9,Phone,0.05,0.95,Normal
+10,Rogue,0.7,0.7,Suspicious
+11,Rogue,0.9,0.3,Quarantined

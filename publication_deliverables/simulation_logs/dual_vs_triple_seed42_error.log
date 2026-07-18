@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\e2ee-trust-simulator\backend\experiments\dual_vs_triple.py", line 19, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Admin\Downloads\e2ee-trust-simulator\backend\experiments\dual_vs_triple.py", line 16, in main
+    print(f"[\u2713] dual_vs_triple seed={args.seed} placeholder executed")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 1: character maps to <undefined>

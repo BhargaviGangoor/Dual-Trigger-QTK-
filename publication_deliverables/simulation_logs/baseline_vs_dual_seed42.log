@@ -1,0 +1,71 @@
+DEBUG: mse for device 0 is 0.00026980035153162407, relational_score: 0.039662076419882064
+DEBUG: mse for device 1 is 3.0305329617577636e-05, relational_score: 0.004535482934529211
+DEBUG: mse for device 2 is 2.980635659527517e-05, relational_score: 0.004460973655403766
+DEBUG: mse for device 3 is 2.9919679679086754e-05, relational_score: 0.004477896144453153
+DEBUG: mse for device 0 is 8.315637290196141e-05, relational_score: 0.012395984829159712
+DEBUG: mse for device 1 is 9.328590903292745e-06, relational_score: 0.0013983100876280297
+DEBUG: mse for device 2 is 9.281264178692387e-06, relational_score: 0.0013912209803906839
+DEBUG: mse for device 3 is 9.237579100533972e-06, relational_score: 0.001384677313566951
+DEBUG: mse for device 0 is 0.00011007739366676643, relational_score: 0.016376039615361382
+DEBUG: mse for device 1 is 1.229864950590501e-05, relational_score: 0.0018430968330249708
+DEBUG: mse for device 2 is 1.2405762829844153e-05, relational_score: 0.0018591340897460285
+DEBUG: mse for device 3 is 1.2136353363707761e-05, relational_score: 0.0018187969850396168
+DEBUG: mse for device 0 is 0.00014475283433489032, relational_score: 0.021478896467067465
+DEBUG: mse for device 1 is 1.6048040274089906e-05, relational_score: 0.0024043110440686855
+DEBUG: mse for device 2 is 1.6457874790893226e-05, relational_score: 0.0024656365311239714
+DEBUG: mse for device 3 is 1.5937471175459685e-05, relational_score: 0.0023877654184426556
+DEBUG: mse for device 0 is 0.00016565188805219404, relational_score: 0.024541618125970777
+DEBUG: mse for device 1 is 1.8704984292082833e-05, relational_score: 0.00280181521255507
+DEBUG: mse for device 2 is 1.8730943825016394e-05, relational_score: 0.0028056982248628737
+DEBUG: mse for device 3 is 1.8091353416592747e-05, relational_score: 0.0027100242489118687
+DEBUG: mse for device 0 is 9.450179532733221e-05, relational_score: 0.01407527321732338
+DEBUG: mse for device 1 is 4.9963322564729114e-05, relational_score: 0.007466484658318007
+DEBUG: mse for device 2 is 6.183760007239206e-05, relational_score: 0.009232753962998386
+DEBUG: mse for device 3 is 6.78842674848865e-05, relational_score: 0.010130972562233609
+DEBUG: mse for device 0 is 0.0002130129496820028, relational_score: 0.031446872751122346
+DEBUG: mse for device 1 is 5.1084489992414916e-05, relational_score: 0.007633390060500234
+DEBUG: mse for device 2 is 2.6774933424062116e-05, relational_score: 0.00400818570796857
+DEBUG: mse for device 3 is 2.5153159356011627e-05, relational_score: 0.003765865180516137
+DEBUG: mse for device 0 is 0.00022189435486660598, relational_score: 0.0327363305605044
+DEBUG: mse for device 1 is 4.6394801284598206e-05, relational_score: 0.0069350608956202375
+DEBUG: mse for device 2 is 2.910620639293001e-05, relational_score: 0.004356414137336562
+DEBUG: mse for device 3 is 2.7773823550015092e-05, relational_score: 0.004157407486801268
+DEBUG: mse for device 0 is 0.00023385823845714296, relational_score: 0.03447060843404881
+DEBUG: mse for device 1 is 2.687829948279057e-05, relational_score: 0.004023628350505293
+DEBUG: mse for device 2 is 2.78919828188354e-05, relational_score: 0.004175057535275695
+DEBUG: mse for device 3 is 2.623040657002578e-05, relational_score: 0.003926830742124188
+DEBUG: mse for device 0 is 0.00025033395151649823, relational_score: 0.036853830106207575
+DEBUG: mse for device 1 is 2.6819096719974113e-05, relational_score: 0.004014783628297658
+DEBUG: mse for device 2 is 3.065667442291648e-05, relational_score: 0.004587944245161957
+DEBUG: mse for device 3 is 2.8918117341389738e-05, relational_score: 0.004328323292409397
+DEBUG: mse for device 0 is 0.00027390425990910254, relational_score: 0.040253065326363524
+DEBUG: mse for device 1 is 2.9604272118671478e-05, relational_score: 0.0044307957505579365
+DEBUG: mse for device 2 is 3.257294512376873e-05, relational_score: 0.004874024971241342
+DEBUG: mse for device 3 is 3.040238776886538e-05, relational_score: 0.004549975520886984
+DEBUG: mse for device 0 is 0.000288719468610754, relational_score: 0.04238352488005981
+DEBUG: mse for device 1 is 3.6541179580288826e-05, relational_score: 0.005466182694609634
+DEBUG: mse for device 2 is 3.288341161486143e-05, relational_score: 0.004920366882611549
+DEBUG: mse for device 3 is 3.0463277449387405e-05, relational_score: 0.004559067374461878
+DEBUG: mse for device 0 is 0.00011934832711579797, relational_score: 0.017742955792245607
+DEBUG: mse for device 1 is 0.0007209866650472696, relational_score: 0.1025052424054943
+DEBUG: mse for device 2 is 0.0002529293199805942, relational_score: 0.037228715008487456
+DEBUG: mse for device 3 is 0.00027455174434943424, relational_score: 0.04034627398098234
+DEBUG: mse for device 0 is 0.00013184919691570192, relational_score: 0.01958309012004733
+DEBUG: mse for device 1 is 0.00013665351159585718, relational_score: 0.02028937030298361
+DEBUG: mse for device 2 is 0.00013231950410451572, relational_score: 0.01965225224857281
+DEBUG: mse for device 3 is 0.00013575942537811684, relational_score: 0.02015796962620764
+
+==================================================
+Experimental Evaluation Summary
+==================================================
+Experiment Type:          dual_trigger
+Attack Scenario:          late_enrollment
+Attack Strategy:          STEALTH
+Rogue Detection Rate:     0.0000%
+False Positive Rate:      0.0000%
+False Quarantine Rate:    0.0000%
+Avg Detection Latency:    -1.00 epochs
+Evasion Duration (Baseline): 30.00 epochs
+Evasion Duration (Dual):     30.00 epochs
+F1-Score:                 0.0000
+==================================================
