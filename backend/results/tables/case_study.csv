@@ -1,0 +1,3 @@
+Device,HMM Anomaly,Behavioral Trust,Graph Risk,Final Risk,Decision
+Smartphone,0.000,0.717,0.067,0.513,Normal
+Attacker,0.102,0.949,0.092,0.619,Normal

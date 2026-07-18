@@ -1,0 +1,5 @@
+Configuration,Detection Rate,FPR,Latency,F1-Score
+Hmm Only,0.00%,0.00%,24.00,0.0000
+Temporal Only,0.00%,0.00%,7.25,0.0000
+Graph Lstm Only,0.00%,0.00%,12.00,0.0000
+Full,0.00%,0.00%,11.33,0.0000

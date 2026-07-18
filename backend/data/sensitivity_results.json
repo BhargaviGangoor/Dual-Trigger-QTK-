@@ -12,7 +12,7 @@
         "precision": 0.3333333333333333,
         "recall": 1.0,
         "f1": 0.5,
-        "availability_loss": 1.325,
+        "availability_loss": 1.3050000000000002,
         "evasion_duration": 1.0
     },
     {
@@ -44,7 +44,7 @@
         "precision": 0.3333333333333333,
         "recall": 1.0,
         "f1": 0.5,
-        "availability_loss": 1.29,
+        "availability_loss": 1.325,
         "evasion_duration": 1.0
     },
     {
@@ -60,28 +60,12 @@
         "precision": 0.3333333333333333,
         "recall": 1.0,
         "f1": 0.5,
-        "availability_loss": 1.275,
+        "availability_loss": 1.2600000000000002,
         "evasion_duration": 1.0
     },
     {
         "delta_inact": 5,
         "theta_R": 0.65,
-        "detection_rate": 1.0,
-        "detection_rate_std": 0.0,
-        "latency": 1.0,
-        "latency_std": 0.0,
-        "false_positives": 2.0,
-        "false_positives_std": 0.0,
-        "fpr": 1.0,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "f1": 0.5,
-        "availability_loss": 1.275,
-        "evasion_duration": 1.0
-    },
-    {
-        "delta_inact": 5,
-        "theta_R": 0.8,
         "detection_rate": 1.0,
         "detection_rate_std": 0.0,
         "latency": 1.0,
@@ -96,6 +80,22 @@
         "evasion_duration": 1.0
     },
     {
+        "delta_inact": 5,
+        "theta_R": 0.8,
+        "detection_rate": 1.0,
+        "detection_rate_std": 0.0,
+        "latency": 1.0,
+        "latency_std": 0.0,
+        "false_positives": 2.0,
+        "false_positives_std": 0.0,
+        "fpr": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "availability_loss": 1.26,
+        "evasion_duration": 1.0
+    },
+    {
         "delta_inact": 7,
         "theta_R": 0.5,
         "detection_rate": 1.0,
@@ -108,7 +108,7 @@
         "precision": 0.3333333333333333,
         "recall": 1.0,
         "f1": 0.5,
-        "availability_loss": 1.1800000000000002,
+        "availability_loss": 1.1900000000000002,
         "evasion_duration": 1.0
     },
     {
@@ -124,7 +124,7 @@
         "precision": 0.3333333333333333,
         "recall": 1.0,
         "f1": 0.5,
-        "availability_loss": 1.195,
+        "availability_loss": 1.2150000000000003,
         "evasion_duration": 1.0
     },
     {
@@ -132,15 +132,15 @@
         "theta_R": 0.8,
         "detection_rate": 1.0,
         "detection_rate_std": 0.0,
-        "latency": 1.4,
-        "latency_std": 0.8,
+        "latency": 1.0,
+        "latency_std": 0.0,
         "false_positives": 2.0,
         "false_positives_std": 0.0,
         "fpr": 1.0,
         "precision": 0.3333333333333333,
         "recall": 1.0,
         "f1": 0.5,
-        "availability_loss": 1.1775,
-        "evasion_duration": 1.4
+        "availability_loss": 1.185,
+        "evasion_duration": 1.0
     }
 ]
