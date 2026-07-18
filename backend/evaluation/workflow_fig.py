@@ -12,17 +12,17 @@ def generate_workflow_fig(output_dir: str):
     
     steps = [
         "Simulation Setup",
-        "Device Behaviour Generation",
+        "Device Behavior Generation",
         "Telemetry Collection",
-        "Behaviour Detection",
-        "Graph Analysis",
-        "Risk Fusion",
-        "Dual Trigger",
-        "Metric Computation"
+        "Behavioral Risk Estimation",
+        "Dynamic Graph Learning",
+        "Risk Fusion Engine",
+        "Dual-Trigger Decision",
+        "Performance Evaluation"
     ]
     
     num_steps = len(steps)
-    box_width = 0.6
+    box_width = 0.85
     box_height = 0.08
     vertical_spacing = 0.11
     
@@ -49,7 +49,7 @@ def generate_workflow_fig(output_dir: str):
             step,
             ha='center',
             va='center',
-            fontsize=10,
+            fontsize=8.5,
             fontweight='bold',
             fontfamily='serif',
             zorder=3
