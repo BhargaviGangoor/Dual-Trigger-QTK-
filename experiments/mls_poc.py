@@ -348,8 +348,8 @@ def run_proof_of_concept(output_dir: Optional[str] = None) -> Dict[str, Any]:
     Epochs 1-5: Normal operation — all legitimate members commit key updates
                 Rogue exhibits: long sessions, high sync rate, IP changes
 
-    Epoch 6:    Alice Tablet exceeds delta_inact=5 → INACTIVITY quarantine
-                Rogue Client triggers behavioral threshold → BEHAVIORAL quarantine
+    Epoch 6:    Alice Tablet exceeds delta_inact=5 -> INACTIVITY quarantine
+                Rogue Client triggers behavioral threshold -> BEHAVIORAL quarantine
                 Both are MLS-Removed from the group after quarantine
     """
     if output_dir is None:
@@ -380,14 +380,14 @@ def run_proof_of_concept(output_dir: Optional[str] = None) -> Dict[str, Any]:
     ]:
         ev = poc.add_member(device_id=dev_id, name=name, is_rogue=rogue)
         tag = " [ROGUE]" if rogue else ""
-        print(f"  Added{tag}: {dev_id} → MLS epoch {ev['mls_epoch']} "
+        print(f"  Added{tag}: {dev_id} -> MLS epoch {ev['mls_epoch']} "
               f"| tree_hash={ev['tree_hash'][:16]}...")
 
     print(f"\n  Initial MLS members: {poc.mls_group.active_members}")
     print(f"  MLS epoch after adds: {poc.mls_group.epoch}")
 
-    # ── Epochs 1-5: Normal operation ──────────────────────────────────
-    print("\n── Epochs 1–5: Normal operation ──")
+    # -- Epochs 1-5: Normal operation ----------------------------------
+    print("\n-- Epochs 1-5: Normal operation --")
     timeline_results = []
 
     for ep in range(1, 6):
@@ -426,8 +426,8 @@ def run_proof_of_concept(output_dir: Optional[str] = None) -> Dict[str, Any]:
               f"Active MLS: {res['active_mls_members']} "
               f"| Quarantines: {len(res['quarantine_actions'])}")
 
-    # ── Epoch 6: Trigger quarantine ────────────────────────────────────
-    print("\n── Epoch 6: Inactivity + Behavioral triggers ──")
+    # -- Epoch 6: Trigger quarantine ------------------------------------
+    print("\n-- Epoch 6: Inactivity + Behavioral triggers --")
     events_ep6 = [
         {
             "device_id": "alice_phone",
@@ -463,14 +463,14 @@ def run_proof_of_concept(output_dir: Optional[str] = None) -> Dict[str, Any]:
           f"| Quarantines: {len(res6['quarantine_actions'])}")
 
     for q in res6["quarantine_actions"]:
-        print(f"  → Quarantined: {q['device_id']} | Reason: {q['reason']}")
+        print(f"  -> Quarantined: {q['device_id']} | Reason: {q['reason']}")
         if "mls_remove_commit" in q:
             rc = q["mls_remove_commit"]
             print(f"    MLS Remove Commit: epoch={rc['new_epoch']} "
                   f"tree_hash={rc['tree_hash'][:16]}...")
 
-    # ── Summary ─────────────────────────────────────────────────────────
-    print("\n── Final State ──")
+    # -- Summary --------------------------------------------------------─
+    print("\n-- Final State --")
     print(f"  MLS epoch:   {poc.mls_group.epoch}")
     print(f"  Tree hash:   {poc.mls_group.tree_hash.hex()[:24]}...")
     print(f"  MLS members: {poc.mls_group.active_members}")

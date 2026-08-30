@@ -72,38 +72,55 @@ class RatchetTree:
         self._num_leaves: int = 0
 
     # ------------------------------------------------------------------
-    # Tree structure helpers
+    # Tree structure helpers (RFC 9420 §7.7 Tree Math)
     # ------------------------------------------------------------------
 
     @staticmethod
     def _level(x: int) -> int:
         """Level of node x (leaves = 0, root = max)."""
-        level = 0
-        while (x & 1) == 1:
-            x >>= 1
-            level += 1
-        return level
+        if (x & 1) == 0:
+            return 0
+        k = 0
+        while (x >> k) & 1 == 1:
+            k += 1
+        return k
 
-    @staticmethod
-    def _parent(x: int) -> int:
-        """Parent node index."""
-        level = RatchetTree._level(x)
-        bit = 1 << (level + 1)
-        return (x | bit) & ~(bit >> 1)
+    def _node_width(self) -> int:
+        return 2 * self._num_leaves - 1 if self._num_leaves > 0 else 0
+
+    def _root(self) -> int:
+        w = self._node_width()
+        return (1 << (w.bit_length() - 1)) - 1 if w > 0 else 0
 
     @staticmethod
     def _left_child(x: int) -> int:
-        """Left child of an internal node."""
-        level = RatchetTree._level(x)
-        assert level > 0, "Leaves have no children"
-        return x ^ (1 << (level - 1))
+        k = RatchetTree._level(x)
+        assert k > 0, "Leaves have no children"
+        return x ^ (1 << (k - 1))
+
+    def _right_child(self, x: int) -> int:
+        k = RatchetTree._level(x)
+        assert k > 0, "Leaves have no children"
+        r = x ^ (3 << (k - 1))
+        w = self._node_width()
+        while r >= w:
+            r = self._left_child(r)
+        return r
 
     @staticmethod
-    def _right_child(x: int) -> int:
-        """Right child of an internal node."""
-        level = RatchetTree._level(x)
-        assert level > 0, "Leaves have no children"
-        return x ^ (3 << (level - 1))
+    def _parent_step(x: int) -> int:
+        k = RatchetTree._level(x)
+        b = (x >> (k + 1)) & 1
+        return (x | (1 << k)) ^ (b << (k + 1))
+
+    def _parent(self, x: int) -> int:
+        if x == self._root():
+            return x
+        p = self._parent_step(x)
+        w = self._node_width()
+        while p >= w:
+            p = self._parent_step(p)
+        return p
 
     @staticmethod
     def _leaf_index_to_node(leaf: int) -> int:
@@ -127,16 +144,6 @@ class RatchetTree:
         needed = 2 * new_leaves - 1
         while len(self._nodes) < needed:
             self._nodes.append(TreeNode())
-
-    def _root(self) -> int:
-        """Root node index."""
-        n = self._num_leaves
-        if n == 0:
-            return 0
-        # Root is the top-center node in the left-balanced tree
-        # For n leaves: root = (2n-2) >> 1 rounded to nearest odd
-        size = 2 * n - 1
-        return size - 1 if (size - 1) % 2 == 1 else size - 2
 
     # ------------------------------------------------------------------
     # Leaf operations
@@ -186,8 +193,6 @@ class RatchetTree:
         """Blank all parent nodes on the direct path from leaf to root."""
         for node_idx in self._direct_path_nodes(leaf_idx):
             if node_idx < len(self._nodes):
-                n = self._nodes[node_idx]
-                # Preserve tree structure but clear crypto material
                 self._nodes[node_idx] = TreeNode()
 
     # ------------------------------------------------------------------
@@ -209,8 +214,6 @@ class RatchetTree:
         while node != root:
             node = self._parent(node)
             path.append(node)
-            if node >= self._tree_size():
-                break
         return path
 
     def copath(self, leaf_idx: int) -> List[int]:
@@ -223,14 +226,11 @@ class RatchetTree:
         root = self._root()
         while node != root:
             p = self._parent(node)
-            # Sibling: the other child of parent
             lc = self._left_child(p)
             rc = self._right_child(p)
             sibling = rc if node == lc else lc
             copath.append(sibling)
             node = p
-            if node >= self._tree_size():
-                break
         return copath
 
     def resolve(self, node_idx: int) -> List[int]:
