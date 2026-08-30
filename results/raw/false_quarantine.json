@@ -1,0 +1,1162 @@
+{
+    "normal_legitimate": {
+        "summary": {
+            "availability_loss": {
+                "mean": 0.0011,
+                "std": 0.005,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0034,
+                "ci_margin": 0.0023,
+                "n": 20
+            },
+            "false_positive_rate": {
+                "mean": 0.0167,
+                "std": 0.0745,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0515,
+                "ci_margin": 0.0349,
+                "n": 20
+            },
+            "false_quarantine_rate": {
+                "mean": 0.0167,
+                "std": 0.0745,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0515,
+                "ci_margin": 0.0349,
+                "n": 20
+            },
+            "mttf_epoch": {
+                "mean": 29.1,
+                "std": 4.0249,
+                "ci_lower": 27.2163,
+                "ci_upper": 30.9837,
+                "ci_margin": 1.8837,
+                "n": 20
+            },
+            "quarantined_devices_count": {
+                "mean": 0.05,
+                "std": 0.2236,
+                "ci_lower": 0.0,
+                "ci_upper": 0.1546,
+                "ci_margin": 0.1046,
+                "n": 20
+            },
+            "recovery_events_count": {
+                "mean": 0.05,
+                "std": 0.2236,
+                "ci_lower": 0.0,
+                "ci_upper": 0.1546,
+                "ci_margin": 0.1046,
+                "n": 20
+            },
+            "run_id": {
+                "mean": 9.5,
+                "std": 5.9161,
+                "ci_lower": 6.7312,
+                "ci_upper": 12.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            },
+            "seed": {
+                "mean": 5051.5,
+                "std": 5.9161,
+                "ci_lower": 5048.7312,
+                "ci_upper": 5054.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            }
+        },
+        "runs": [
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 0,
+                "seed": 5042,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 1,
+                "seed": 5043,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 2,
+                "seed": 5044,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 3,
+                "seed": 5045,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 4,
+                "seed": 5046,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 5,
+                "seed": 5047,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 6,
+                "seed": 5048,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 7,
+                "seed": 5049,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 8,
+                "seed": 5050,
+                "false_quarantine_rate": 0.3333,
+                "false_positive_rate": 0.3333,
+                "availability_loss": 0.0222,
+                "quarantined_devices_count": 1,
+                "recovery_events_count": 1,
+                "mttf_epoch": 12.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 9,
+                "seed": 5051,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 10,
+                "seed": 5052,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 11,
+                "seed": 5053,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 12,
+                "seed": 5054,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 13,
+                "seed": 5055,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 14,
+                "seed": 5056,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 15,
+                "seed": 5057,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 16,
+                "seed": 5058,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 17,
+                "seed": 5059,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 18,
+                "seed": 5060,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "normal_legitimate",
+                "run_id": 19,
+                "seed": 5061,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            }
+        ]
+    },
+    "irregular_legitimate": {
+        "summary": {
+            "availability_loss": {
+                "mean": 0.0678,
+                "std": 0.0153,
+                "ci_lower": 0.0607,
+                "ci_upper": 0.0749,
+                "ci_margin": 0.0071,
+                "n": 20
+            },
+            "false_positive_rate": {
+                "mean": 1.0167,
+                "std": 0.2288,
+                "ci_lower": 0.9096,
+                "ci_upper": 1.1237,
+                "ci_margin": 0.1071,
+                "n": 20
+            },
+            "false_quarantine_rate": {
+                "mean": 1.0167,
+                "std": 0.2288,
+                "ci_lower": 0.9096,
+                "ci_upper": 1.1237,
+                "ci_margin": 0.1071,
+                "n": 20
+            },
+            "mttf_epoch": {
+                "mean": 24.075,
+                "std": 0.7656,
+                "ci_lower": 23.7167,
+                "ci_upper": 24.4333,
+                "ci_margin": 0.3583,
+                "n": 20
+            },
+            "quarantined_devices_count": {
+                "mean": 3.05,
+                "std": 0.6863,
+                "ci_lower": 2.7288,
+                "ci_upper": 3.3712,
+                "ci_margin": 0.3212,
+                "n": 20
+            },
+            "recovery_events_count": {
+                "mean": 3.05,
+                "std": 0.6863,
+                "ci_lower": 2.7288,
+                "ci_upper": 3.3712,
+                "ci_margin": 0.3212,
+                "n": 20
+            },
+            "run_id": {
+                "mean": 9.5,
+                "std": 5.9161,
+                "ci_lower": 6.7312,
+                "ci_upper": 12.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            },
+            "seed": {
+                "mean": 5051.5,
+                "std": 5.9161,
+                "ci_lower": 5048.7312,
+                "ci_upper": 5054.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            }
+        },
+        "runs": [
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 0,
+                "seed": 5042,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.0444,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 2,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 1,
+                "seed": 5043,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 27.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 2,
+                "seed": 5044,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 3,
+                "seed": 5045,
+                "false_quarantine_rate": 1.3333,
+                "false_positive_rate": 1.3333,
+                "availability_loss": 0.0889,
+                "quarantined_devices_count": 4,
+                "recovery_events_count": 4,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 4,
+                "seed": 5046,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 5,
+                "seed": 5047,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 6,
+                "seed": 5048,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 7,
+                "seed": 5049,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 8,
+                "seed": 5050,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 9,
+                "seed": 5051,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.0444,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 2,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 10,
+                "seed": 5052,
+                "false_quarantine_rate": 1.3333,
+                "false_positive_rate": 1.3333,
+                "availability_loss": 0.0889,
+                "quarantined_devices_count": 4,
+                "recovery_events_count": 4,
+                "mttf_epoch": 22.5
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 11,
+                "seed": 5053,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 12,
+                "seed": 5054,
+                "false_quarantine_rate": 1.6667,
+                "false_positive_rate": 1.6667,
+                "availability_loss": 0.1111,
+                "quarantined_devices_count": 5,
+                "recovery_events_count": 5,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 13,
+                "seed": 5055,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 14,
+                "seed": 5056,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.0444,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 2,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 15,
+                "seed": 5057,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 16,
+                "seed": 5058,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 17,
+                "seed": 5059,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 18,
+                "seed": 5060,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            },
+            {
+                "scenario": "irregular_legitimate",
+                "run_id": 19,
+                "seed": 5061,
+                "false_quarantine_rate": 1.0,
+                "false_positive_rate": 1.0,
+                "availability_loss": 0.0667,
+                "quarantined_devices_count": 3,
+                "recovery_events_count": 3,
+                "mttf_epoch": 24.0
+            }
+        ]
+    },
+    "long_idle_legitimate": {
+        "summary": {
+            "availability_loss": {
+                "mean": 0.0,
+                "std": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "false_positive_rate": {
+                "mean": 0.0,
+                "std": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "false_quarantine_rate": {
+                "mean": 0.0,
+                "std": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "mttf_epoch": {
+                "mean": 30.0,
+                "std": 0.0,
+                "ci_lower": 30.0,
+                "ci_upper": 30.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "quarantined_devices_count": {
+                "mean": 0.0,
+                "std": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "recovery_events_count": {
+                "mean": 0.0,
+                "std": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "run_id": {
+                "mean": 9.5,
+                "std": 5.9161,
+                "ci_lower": 6.7312,
+                "ci_upper": 12.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            },
+            "seed": {
+                "mean": 5051.5,
+                "std": 5.9161,
+                "ci_lower": 5048.7312,
+                "ci_upper": 5054.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            }
+        },
+        "runs": [
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 0,
+                "seed": 5042,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 1,
+                "seed": 5043,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 2,
+                "seed": 5044,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 3,
+                "seed": 5045,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 4,
+                "seed": 5046,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 5,
+                "seed": 5047,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 6,
+                "seed": 5048,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 7,
+                "seed": 5049,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 8,
+                "seed": 5050,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 9,
+                "seed": 5051,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 10,
+                "seed": 5052,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 11,
+                "seed": 5053,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 12,
+                "seed": 5054,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 13,
+                "seed": 5055,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 14,
+                "seed": 5056,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 15,
+                "seed": 5057,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 16,
+                "seed": 5058,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 17,
+                "seed": 5059,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 18,
+                "seed": 5060,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            },
+            {
+                "scenario": "long_idle_legitimate",
+                "run_id": 19,
+                "seed": 5061,
+                "false_quarantine_rate": 0.0,
+                "false_positive_rate": 0.0,
+                "availability_loss": 0.0,
+                "quarantined_devices_count": 0,
+                "recovery_events_count": 0,
+                "mttf_epoch": 30.0
+            }
+        ]
+    },
+    "network_changing_legitimate": {
+        "summary": {
+            "availability_loss": {
+                "mean": 0.5111,
+                "std": 0.0,
+                "ci_lower": 0.5111,
+                "ci_upper": 0.5111,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "false_positive_rate": {
+                "mean": 0.6667,
+                "std": 0.0,
+                "ci_lower": 0.6667,
+                "ci_upper": 0.6667,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "false_quarantine_rate": {
+                "mean": 0.6667,
+                "std": 0.0,
+                "ci_lower": 0.6667,
+                "ci_upper": 0.6667,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "mttf_epoch": {
+                "mean": 8.0,
+                "std": 0.0,
+                "ci_lower": 8.0,
+                "ci_upper": 8.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "quarantined_devices_count": {
+                "mean": 2.0,
+                "std": 0.0,
+                "ci_lower": 2.0,
+                "ci_upper": 2.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "recovery_events_count": {
+                "mean": 0.0,
+                "std": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0,
+                "ci_margin": 0.0,
+                "n": 20
+            },
+            "run_id": {
+                "mean": 9.5,
+                "std": 5.9161,
+                "ci_lower": 6.7312,
+                "ci_upper": 12.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            },
+            "seed": {
+                "mean": 5051.5,
+                "std": 5.9161,
+                "ci_lower": 5048.7312,
+                "ci_upper": 5054.2688,
+                "ci_margin": 2.7688,
+                "n": 20
+            }
+        },
+        "runs": [
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 0,
+                "seed": 5042,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 1,
+                "seed": 5043,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 2,
+                "seed": 5044,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 3,
+                "seed": 5045,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 4,
+                "seed": 5046,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 5,
+                "seed": 5047,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 6,
+                "seed": 5048,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 7,
+                "seed": 5049,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 8,
+                "seed": 5050,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 9,
+                "seed": 5051,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 10,
+                "seed": 5052,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 11,
+                "seed": 5053,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 12,
+                "seed": 5054,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 13,
+                "seed": 5055,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 14,
+                "seed": 5056,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 15,
+                "seed": 5057,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 16,
+                "seed": 5058,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 17,
+                "seed": 5059,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 18,
+                "seed": 5060,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            },
+            {
+                "scenario": "network_changing_legitimate",
+                "run_id": 19,
+                "seed": 5061,
+                "false_quarantine_rate": 0.6667,
+                "false_positive_rate": 0.6667,
+                "availability_loss": 0.5111,
+                "quarantined_devices_count": 2,
+                "recovery_events_count": 0,
+                "mttf_epoch": 8.0
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+num_devices,graph_evolution_time_ms,graph_evolution_std_ms,gnn_forward_time_ms,gnn_forward_std_ms,graph_lstm_time_ms,graph_lstm_std_ms,total_epoch_time_ms,total_epoch_std_ms,peak_memory_kb,peak_memory_std_kb
+4,0.781,0.025,0.215,0.007,11.752,0.263,34.399,0.941,62.83,5.43
+8,3.49,0.199,0.309,0.019,24.859,2.798,72.548,6.62,111.41,0.09
+16,15.76,0.307,0.488,0.012,54.81,1.093,156.183,2.446,220.09,0.34
+32,61.598,7.853,0.867,0.118,133.499,18.491,354.786,46.455,448.05,0.27
+64,278.126,8.335,1.917,0.144,433.742,6.492,1062.159,14.512,958.84,0.56

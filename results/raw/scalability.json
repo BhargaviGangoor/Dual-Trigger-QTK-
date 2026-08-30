@@ -1,0 +1,67 @@
+[
+    {
+        "num_devices": 4,
+        "graph_evolution_time_ms": 0.781,
+        "graph_evolution_std_ms": 0.025,
+        "gnn_forward_time_ms": 0.215,
+        "gnn_forward_std_ms": 0.007,
+        "graph_lstm_time_ms": 11.752,
+        "graph_lstm_std_ms": 0.263,
+        "total_epoch_time_ms": 34.399,
+        "total_epoch_std_ms": 0.941,
+        "peak_memory_kb": 62.83,
+        "peak_memory_std_kb": 5.43
+    },
+    {
+        "num_devices": 8,
+        "graph_evolution_time_ms": 3.49,
+        "graph_evolution_std_ms": 0.199,
+        "gnn_forward_time_ms": 0.309,
+        "gnn_forward_std_ms": 0.019,
+        "graph_lstm_time_ms": 24.859,
+        "graph_lstm_std_ms": 2.798,
+        "total_epoch_time_ms": 72.548,
+        "total_epoch_std_ms": 6.62,
+        "peak_memory_kb": 111.41,
+        "peak_memory_std_kb": 0.09
+    },
+    {
+        "num_devices": 16,
+        "graph_evolution_time_ms": 15.76,
+        "graph_evolution_std_ms": 0.307,
+        "gnn_forward_time_ms": 0.488,
+        "gnn_forward_std_ms": 0.012,
+        "graph_lstm_time_ms": 54.81,
+        "graph_lstm_std_ms": 1.093,
+        "total_epoch_time_ms": 156.183,
+        "total_epoch_std_ms": 2.446,
+        "peak_memory_kb": 220.09,
+        "peak_memory_std_kb": 0.34
+    },
+    {
+        "num_devices": 32,
+        "graph_evolution_time_ms": 61.598,
+        "graph_evolution_std_ms": 7.853,
+        "gnn_forward_time_ms": 0.867,
+        "gnn_forward_std_ms": 0.118,
+        "graph_lstm_time_ms": 133.499,
+        "graph_lstm_std_ms": 18.491,
+        "total_epoch_time_ms": 354.786,
+        "total_epoch_std_ms": 46.455,
+        "peak_memory_kb": 448.05,
+        "peak_memory_std_kb": 0.27
+    },
+    {
+        "num_devices": 64,
+        "graph_evolution_time_ms": 278.126,
+        "graph_evolution_std_ms": 8.335,
+        "gnn_forward_time_ms": 1.917,
+        "gnn_forward_std_ms": 0.144,
+        "graph_lstm_time_ms": 433.742,
+        "graph_lstm_std_ms": 6.492,
+        "total_epoch_time_ms": 1062.159,
+        "total_epoch_std_ms": 14.512,
+        "peak_memory_kb": 958.84,
+        "peak_memory_std_kb": 0.56
+    }
+]

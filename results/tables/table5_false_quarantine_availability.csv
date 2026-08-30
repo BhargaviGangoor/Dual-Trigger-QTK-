@@ -1,0 +1,5 @@
+Legitimate Scenario,FQ Frequency (events/dev),Availability Loss (%),Mean Time to FQ (epochs),Recovery Events
+Normal Legitimate,0.02 ± 0.03,0.11 ± 0.23,29.10 ± 1.88,0.05
+Irregular Legitimate,1.02 ± 0.11,6.78 ± 0.71,24.07 ± 0.36,3.05
+Long Idle Legitimate,0.00 ± 0.00,0.00 ± 0.00,30.00 ± 0.00,0.00
+Network Changing Legitimate,0.67 ± 0.00,51.11 ± 0.00,8.00 ± 0.00,0.00

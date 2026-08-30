@@ -1,0 +1,33 @@
+{
+    "dataset_metadata": {
+        "num_runs": 20,
+        "epochs_per_run": 30,
+        "base_seed": 42,
+        "splits": {
+            "train_runs": 14,
+            "val_runs": 3,
+            "test_runs": 3,
+            "train_observations": 1554,
+            "val_observations": 333,
+            "test_observations": 333,
+            "total_observations": 2220
+        },
+        "class_distribution": {
+            "legitimate_observations": 1800,
+            "rogue_observations": 420
+        }
+    },
+    "experiments_executed": [
+        "baseline_vs_dual",
+        "behavioral_baselines",
+        "ablation",
+        "mimicry",
+        "false_quarantine",
+        "sensitivity",
+        "scalability",
+        "mls_poc"
+    ],
+    "status": "ALL_EXPERIMENTS_COMPLETED_SUCCESSFULLY",
+    "num_runs": 20,
+    "base_seed": 42
+}

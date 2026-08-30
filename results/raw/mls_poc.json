@@ -1,0 +1,233 @@
+{
+    "group_id": "mls_group_demo_icoco",
+    "total_epochs": 6,
+    "devices": {
+        "alice_phone": "<Device id=alice_phone type=primary state=Trusted last_key_ep=6>",
+        "alice_laptop": "<Device id=alice_laptop type=linked state=Trusted last_key_ep=6>",
+        "alice_standby_tablet": "<Device id=alice_standby_tablet type=linked state=Quarantined last_key_ep=0>",
+        "rogue_client": "<Device id=rogue_client type=linked state=Quarantined last_key_ep=6>"
+    },
+    "timeline_results": [
+        {
+            "epoch": 1,
+            "quarantine_actions": [
+                {
+                    "device_id": "rogue_client",
+                    "reason": "BEHAVIORAL",
+                    "detail": "Behavioral risk threshold exceeded (Risk: 0.886 >= 0.65)",
+                    "shamir_shares_generated": 3,
+                    "threshold": 2
+                }
+            ],
+            "active_devices": [
+                "alice_phone",
+                "alice_laptop",
+                "alice_standby_tablet"
+            ]
+        },
+        {
+            "epoch": 2,
+            "quarantine_actions": [],
+            "active_devices": [
+                "alice_phone",
+                "alice_laptop",
+                "alice_standby_tablet"
+            ]
+        },
+        {
+            "epoch": 3,
+            "quarantine_actions": [],
+            "active_devices": [
+                "alice_phone",
+                "alice_laptop",
+                "alice_standby_tablet"
+            ]
+        },
+        {
+            "epoch": 4,
+            "quarantine_actions": [],
+            "active_devices": [
+                "alice_phone",
+                "alice_laptop",
+                "alice_standby_tablet"
+            ]
+        },
+        {
+            "epoch": 5,
+            "quarantine_actions": [
+                {
+                    "device_id": "alice_standby_tablet",
+                    "reason": "INACTIVITY",
+                    "detail": "Inactivity threshold exceeded (Key Age: 5 >= 5)",
+                    "shamir_shares_generated": 2,
+                    "threshold": 2
+                }
+            ],
+            "active_devices": [
+                "alice_phone",
+                "alice_laptop"
+            ]
+        },
+        {
+            "epoch": 6,
+            "quarantine_actions": [],
+            "active_devices": [
+                "alice_phone",
+                "alice_laptop"
+            ]
+        }
+    ],
+    "mls_event_log": [
+        {
+            "epoch": 0,
+            "event_type": "MLS_CREATE_GROUP",
+            "group_id": "mls_group_demo_icoco",
+            "creator": "alice_phone",
+            "detail": "MLS GroupContext initialized at epoch 0"
+        },
+        {
+            "epoch": 0,
+            "event_type": "MLS_ADD_MEMBER",
+            "device_id": "alice_laptop",
+            "detail": "MLS Add Proposal committed for client alice_laptop"
+        },
+        {
+            "epoch": 0,
+            "event_type": "MLS_ADD_MEMBER",
+            "device_id": "alice_standby_tablet",
+            "detail": "MLS Add Proposal committed for client alice_standby_tablet"
+        },
+        {
+            "epoch": 0,
+            "event_type": "MLS_ADD_MEMBER",
+            "device_id": "rogue_client",
+            "detail": "MLS Add Proposal committed for client rogue_client"
+        },
+        {
+            "epoch": 1,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_phone",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 1"
+        },
+        {
+            "epoch": 1,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_laptop",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 1"
+        },
+        {
+            "epoch": 1,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "rogue_client",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 1"
+        },
+        {
+            "epoch": 1,
+            "event_type": "QTK_QUARANTINE_INVOKED",
+            "device_id": "rogue_client",
+            "reason": "BEHAVIORAL",
+            "detail": "Behavioral risk threshold exceeded (Risk: 0.886 >= 0.65)",
+            "shamir_shares_generated": 3,
+            "threshold": 2
+        },
+        {
+            "epoch": 2,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_phone",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 2"
+        },
+        {
+            "epoch": 2,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_laptop",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 2"
+        },
+        {
+            "epoch": 2,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "rogue_client",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 2"
+        },
+        {
+            "epoch": 3,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_phone",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 3"
+        },
+        {
+            "epoch": 3,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_laptop",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 3"
+        },
+        {
+            "epoch": 3,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "rogue_client",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 3"
+        },
+        {
+            "epoch": 4,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_phone",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 4"
+        },
+        {
+            "epoch": 4,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_laptop",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 4"
+        },
+        {
+            "epoch": 4,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "rogue_client",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 4"
+        },
+        {
+            "epoch": 5,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_phone",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 5"
+        },
+        {
+            "epoch": 5,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_laptop",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 5"
+        },
+        {
+            "epoch": 5,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "rogue_client",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 5"
+        },
+        {
+            "epoch": 5,
+            "event_type": "QTK_QUARANTINE_INVOKED",
+            "device_id": "alice_standby_tablet",
+            "reason": "INACTIVITY",
+            "detail": "Inactivity threshold exceeded (Key Age: 5 >= 5)",
+            "shamir_shares_generated": 2,
+            "threshold": 2
+        },
+        {
+            "epoch": 6,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_phone",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 6"
+        },
+        {
+            "epoch": 6,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "alice_laptop",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 6"
+        },
+        {
+            "epoch": 6,
+            "event_type": "MLS_KEY_UPDATE_COMMIT",
+            "device_id": "rogue_client",
+            "detail": "TreeKEM Direct Path KeyPackage committed at epoch 6"
+        }
+    ]
+}
