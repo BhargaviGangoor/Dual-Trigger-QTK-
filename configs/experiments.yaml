@@ -1,0 +1,45 @@
+# Experiment Suite Configuration
+
+global_experiment:
+  base_seed: 42
+  num_runs: 20
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+
+baseline_vs_dual:
+  epochs: 30
+  delta_inact: 5
+  theta_R: 0.65
+  alpha: 0.8
+  beta: 0.8
+
+ablation:
+  configurations:
+    - "hmm_only"
+    - "hmm_plus_trust"
+    - "hmm_plus_graph"
+    - "full_model"
+
+mimicry:
+  strategies:
+    - "naive_rogue"
+    - "moderate_mimicry"
+    - "strong_mimicry"
+
+false_quarantine:
+  scenarios:
+    - "normal_legitimate"
+    - "irregular_legitimate"
+    - "long_idle_legitimate"
+    - "network_changing_legitimate"
+
+sensitivity:
+  delta_inact_sweep: [3, 5, 7, 10]
+  theta_R_sweep: [0.45, 0.55, 0.65, 0.75, 0.85]
+  alpha_sweep: [0.6, 0.7, 0.8, 0.9]
+  beta_sweep: [0.6, 0.7, 0.8, 0.9]
+
+scalability:
+  device_counts: [4, 8, 16, 32, 64]

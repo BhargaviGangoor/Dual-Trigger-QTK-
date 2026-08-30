@@ -1,0 +1,51 @@
+# Simulation Configuration for Dual-Trigger QTK Testbed
+simulation:
+  epochs_per_run: 30
+  num_legitimate_devices: 3
+  num_rogue_devices: 1
+  injection_epoch: 10
+  default_profile: "Student"
+  base_seed: 42
+
+profiles:
+  Student:
+    description: "College student with diurnal active hours and mobile/campus WiFi usage."
+    active_hours: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    avg_messages_per_hour: 12.0
+    std_messages_per_hour: 4.0
+    avg_session_duration_sec: 120.0
+    std_session_duration_sec: 35.0
+    avg_sync_interval_sec: 900.0
+    networks: ["WiFi", "Cellular"]
+    countries: ["United States"]
+    timezones: ["America/New_York"]
+    ip_prefix: "172.16.23."
+    battery_drain_rate: 2
+
+  Corporate_Employee:
+    description: "Office worker with strict business hours and predictable workstation usage."
+    active_hours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+    avg_messages_per_hour: 8.0
+    std_messages_per_hour: 2.5
+    avg_session_duration_sec: 180.0
+    std_session_duration_sec: 45.0
+    avg_sync_interval_sec: 600.0
+    networks: ["WiFi", "Ethernet"]
+    countries: ["United States"]
+    timezones: ["America/Chicago"]
+    ip_prefix: "10.200.45."
+    battery_drain_rate: 1
+
+  Traveler:
+    description: "Frequent traveler with dynamic timezones, IP shifts, and irregular sync schedules."
+    active_hours: [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+    avg_messages_per_hour: 10.0
+    std_messages_per_hour: 5.0
+    avg_session_duration_sec: 90.0
+    std_session_duration_sec: 30.0
+    avg_sync_interval_sec: 1200.0
+    networks: ["Cellular", "WiFi", "VPN"]
+    countries: ["United States", "Germany", "United Kingdom", "Japan"]
+    timezones: ["America/New_York", "Europe/Berlin", "Europe/London", "Asia/Tokyo"]
+    ip_prefix: "82.102.15."
+    battery_drain_rate: 3

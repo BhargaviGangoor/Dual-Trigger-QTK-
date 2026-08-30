@@ -1,0 +1,15 @@
+# Protocol and Risk Decision Thresholds
+
+qtk:
+  delta_inact: 5         # Inactivity threshold in MLS epochs
+  theta_R: 0.65          # Behavioral risk quarantine threshold
+
+trust:
+  alpha: 0.8             # Memory retention rate for trust decay: T_{t+1} = alpha * T_t + (1-alpha) * B_t
+  initial_trust: 1.0
+  distrust_weight: 1.0
+
+fsm_boundaries:
+  trusted_threshold: 0.75
+  suspicious_threshold: 0.45
+  critical_revocation_threshold: 0.15

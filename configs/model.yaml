@@ -1,0 +1,46 @@
+# Model Hyperparameters and Architecture Configuration
+
+hmm:
+  n_states: 4
+  state_names: ["Normal", "Idle", "Suspicious", "High-Risk"]
+  sequence_length: 12
+  feature_names:
+    - "session_duration_norm"
+    - "sync_frequency_norm"
+    - "message_count_norm"
+    - "ip_changed"
+    - "tz_changed"
+  training:
+    max_iter: 50
+    tol: 1e-4
+
+dynamic_graph:
+  beta: 0.8
+  similarity_weights:
+    sync_frequency: 0.25
+    network_type_and_ip: 0.25
+    country: 0.25
+    timezone: 0.25
+
+weighted_gnn:
+  feature_dim: 5
+  hidden_dim: 16
+  activation: "relu"
+  num_layers: 1
+
+graph_lstm:
+  input_dim: 16
+  hidden_dim: 16
+  sequence_length: 12
+  learning_rate: 0.01
+  batch_size: 16
+  training_epochs: 40
+  stopping_criterion: 1e-4
+  regularization_l2: 1e-4
+
+risk_fusion:
+  input_dim: 3 # [P_c(d,t), S_graph(d,t), 1 - T_t(d)]
+  learning_rate: 0.05
+  training_epochs: 100
+  initial_weights: [1.5, 2.0, 1.2]
+  initial_bias: -1.0
