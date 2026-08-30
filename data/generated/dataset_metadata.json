@@ -1,0 +1,18 @@
+{
+    "num_runs": 20,
+    "epochs_per_run": 30,
+    "base_seed": 42,
+    "splits": {
+        "train_runs": 14,
+        "val_runs": 3,
+        "test_runs": 3,
+        "train_observations": 1554,
+        "val_observations": 333,
+        "test_observations": 333,
+        "total_observations": 2220
+    },
+    "class_distribution": {
+        "legitimate_observations": 1800,
+        "rogue_observations": 420
+    }
+}

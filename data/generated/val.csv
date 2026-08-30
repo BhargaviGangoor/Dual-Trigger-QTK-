@@ -1,0 +1,334 @@
+run_id,seed,split,epoch,device_id,device_type,key_update_age,performed_key_update,session_duration_sec,sync_frequency,message_count_sent,network_type,network_ip,location_country,active_timezone,is_vpn,ip_changed,tz_changed,ground_truth_label
+14,56,val,1,user0_phone,primary,1,False,8.87,1.02,0,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,1,user0_laptop,linked,1,False,26.53,1.1,0,WiFi,172.16.23.15,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,1,user0_travel_tablet,linked,1,False,77.0,4.29,3,WiFi,172.16.23.100,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,2,user0_phone,primary,2,False,17.69,1.05,1,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,2,user0_laptop,linked,2,False,14.66,1.0,0,Cellular,172.16.23.10,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,2,user0_travel_tablet,linked,2,False,90.59,1.24,3,WiFi,172.16.23.158,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,3,user0_phone,primary,0,True,8.71,1.17,0,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,3,user0_laptop,linked,0,True,20.27,0.99,2,Cellular,172.16.23.120,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,3,user0_travel_tablet,linked,3,False,89.38,3.02,1,WiFi,172.16.23.199,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,4,user0_phone,primary,1,False,19.03,1.0,2,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,4,user0_laptop,linked,1,False,22.13,0.83,0,Cellular,172.16.23.240,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,4,user0_travel_tablet,linked,0,True,102.85,5.72,5,WiFi,172.16.23.12,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,5,user0_phone,primary,2,False,4.27,0.89,3,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,5,user0_laptop,linked,2,False,21.7,0.92,0,Cellular,172.16.23.153,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,5,user0_travel_tablet,linked,1,False,147.76,3.78,4,WiFi,172.16.23.237,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,6,user0_phone,primary,0,True,4.4,0.74,1,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,6,user0_laptop,linked,0,True,29.02,1.2,2,Cellular,172.16.23.74,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,6,user0_travel_tablet,linked,2,False,104.97,2.58,9,Cellular,172.16.23.227,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,7,user0_phone,primary,1,False,1.95,0.87,1,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,7,user0_laptop,linked,1,False,0.0,1.43,1,Cellular,172.16.23.138,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,7,user0_travel_tablet,linked,0,True,143.9,3.34,8,WiFi,172.16.23.75,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,8,user0_phone,primary,0,True,25.2,0.93,2,Cellular,172.16.23.198,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,8,user0_laptop,linked,0,True,8.33,0.95,0,Cellular,172.16.23.45,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,8,user0_travel_tablet,linked,1,False,126.83,4.16,9,WiFi,82.102.15.113,Germany,Europe/Berlin,0.0,1.0,1.0,0
+14,56,val,9,user0_phone,primary,1,False,84.86,3.61,9,WiFi,172.16.23.191,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,9,user0_laptop,linked,1,False,131.51,4.69,11,VPN,198.51.100.160,United States,America/New_York,1.0,1.0,0.0,0
+14,56,val,9,user0_travel_tablet,linked,2,False,85.44,3.06,2,VPN,82.102.15.192,Germany,Europe/Berlin,1.0,1.0,0.0,0
+14,56,val,10,user0_phone,primary,0,True,92.08,3.76,11,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,10,user0_laptop,linked,0,True,128.23,6.62,5,WiFi,172.16.23.195,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,10,user0_travel_tablet,linked,0,True,116.34,4.37,7,Cellular,82.102.15.249,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,10,user0_rogue_terminal,linked,0,False,80.19,4.16,6,VPN,185.220.101.7,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+14,56,val,11,user0_phone,primary,1,False,76.36,3.94,12,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,11,user0_laptop,linked,1,False,210.72,3.43,11,WiFi,172.16.23.210,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,11,user0_travel_tablet,linked,1,False,74.94,0.69,6,Cellular,82.102.15.61,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,11,user0_rogue_terminal,linked,1,False,81.47,4.54,4,Cellular,185.220.101.7,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+14,56,val,12,user0_phone,primary,2,False,83.06,3.87,12,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,12,user0_laptop,linked,2,False,115.35,3.65,12,VPN,198.51.100.242,United States,America/New_York,1.0,1.0,0.0,0
+14,56,val,12,user0_travel_tablet,linked,2,False,37.17,1.15,9,Cellular,82.102.15.132,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,12,user0_rogue_terminal,linked,0,True,115.85,6.29,6,VPN,185.220.101.188,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+14,56,val,13,user0_phone,primary,0,True,211.08,3.24,27,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,13,user0_laptop,linked,0,True,53.57,3.92,14,VPN,198.51.100.242,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,13,user0_travel_tablet,linked,0,True,107.49,3.5,4,WiFi,82.102.15.157,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,13,user0_rogue_terminal,linked,1,False,233.37,10.06,22,VPN,185.220.101.232,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+14,56,val,14,user0_phone,primary,1,False,119.7,3.65,7,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,14,user0_laptop,linked,1,False,156.49,4.97,10,VPN,198.51.100.79,United States,America/New_York,1.0,1.0,0.0,0
+14,56,val,14,user0_travel_tablet,linked,1,False,28.89,3.45,7,WiFi,82.102.15.131,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,14,user0_rogue_terminal,linked,0,True,144.58,5.19,10,WiFi,185.220.101.232,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+14,56,val,15,user0_phone,primary,2,False,100.12,5.27,9,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,15,user0_laptop,linked,2,False,107.54,5.58,10,WiFi,172.16.23.254,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,15,user0_travel_tablet,linked,2,False,76.57,5.15,3,Cellular,82.102.15.214,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,15,user0_rogue_terminal,linked,1,False,123.74,5.83,9,WiFi,185.220.101.232,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+14,56,val,16,user0_phone,primary,0,True,83.72,3.99,13,WiFi,172.16.23.191,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,16,user0_laptop,linked,0,True,98.96,3.75,10,WiFi,172.16.23.125,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,16,user0_travel_tablet,linked,0,True,83.83,5.17,8,WiFi,172.16.23.239,United States,America/New_York,0.0,1.0,1.0,0
+14,56,val,16,user0_rogue_terminal,linked,0,True,73.61,5.82,6,Cellular,198.51.100.218,United States,America/Chicago,0.0,1.0,1.0,1
+14,56,val,17,user0_phone,primary,1,False,70.67,3.44,10,VPN,198.51.100.94,United States,America/New_York,1.0,1.0,0.0,0
+14,56,val,17,user0_laptop,linked,1,False,81.25,4.26,17,WiFi,172.16.23.125,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,17,user0_travel_tablet,linked,1,False,122.24,1.39,3,WiFi,172.16.23.127,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,17,user0_rogue_terminal,linked,1,False,148.72,5.28,9,Cellular,198.51.100.170,United States,America/Chicago,0.0,1.0,0.0,1
+14,56,val,18,user0_phone,primary,0,True,141.94,4.43,3,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,18,user0_laptop,linked,2,False,116.02,4.55,8,VPN,198.51.100.134,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,18,user0_travel_tablet,linked,2,False,125.33,5.03,6,WiFi,172.16.23.12,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,18,user0_rogue_terminal,linked,0,True,100.16,6.04,7,WiFi,203.0.113.76,United States,America/New_York,0.0,1.0,1.0,1
+14,56,val,19,user0_phone,primary,1,False,173.33,7.14,10,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,19,user0_laptop,linked,0,True,160.31,3.96,15,VPN,198.51.100.234,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,19,user0_travel_tablet,linked,0,True,10.0,2.71,4,WiFi,172.16.23.226,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,19,user0_rogue_terminal,linked,1,False,189.99,9.94,15,VPN,203.0.113.76,Netherlands,America/New_York,1.0,0.0,0.0,1
+14,56,val,20,user0_phone,primary,0,True,163.6,3.25,20,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,20,user0_laptop,linked,1,False,91.46,4.99,16,VPN,198.51.100.217,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,20,user0_travel_tablet,linked,1,False,72.93,3.48,4,WiFi,172.16.23.236,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,20,user0_rogue_terminal,linked,0,True,189.08,8.58,19,Cellular,198.51.100.60,United States,America/Chicago,0.0,1.0,1.0,1
+14,56,val,21,user0_phone,primary,1,False,187.97,4.02,8,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,21,user0_laptop,linked,0,True,111.47,2.95,25,VPN,198.51.100.217,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,21,user0_travel_tablet,linked,2,False,49.95,1.88,4,WiFi,172.16.23.42,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,21,user0_rogue_terminal,linked,1,False,153.28,6.3,6,VPN,185.220.101.189,Netherlands,Europe/Amsterdam,1.0,1.0,1.0,1
+14,56,val,22,user0_phone,primary,0,True,103.92,3.8,10,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,22,user0_laptop,linked,1,False,58.15,4.65,5,VPN,198.51.100.33,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,22,user0_travel_tablet,linked,0,True,140.27,3.12,3,WiFi,172.16.23.60,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,22,user0_rogue_terminal,linked,0,True,136.56,8.23,15,VPN,185.220.101.129,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+14,56,val,23,user0_phone,primary,1,False,88.68,3.5,9,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,23,user0_laptop,linked,0,True,160.57,2.95,12,VPN,198.51.100.144,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,23,user0_travel_tablet,linked,1,False,117.28,4.34,6,Cellular,172.16.23.23,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,23,user0_rogue_terminal,linked,1,False,119.27,6.19,18,WiFi,203.0.113.157,United States,America/New_York,0.0,1.0,1.0,1
+14,56,val,24,user0_phone,primary,0,True,12.64,0.93,2,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,24,user0_laptop,linked,1,False,38.44,1.0,1,VPN,198.51.100.144,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,24,user0_travel_tablet,linked,2,False,95.04,3.77,4,WiFi,82.102.15.106,Germany,Europe/Berlin,0.0,1.0,1.0,0
+14,56,val,24,user0_rogue_terminal,linked,0,True,225.74,9.28,8,VPN,185.220.101.154,Netherlands,Europe/Amsterdam,1.0,1.0,1.0,1
+14,56,val,25,user0_phone,primary,1,False,25.43,1.02,2,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,25,user0_laptop,linked,0,True,0.0,0.91,2,VPN,198.51.100.71,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,25,user0_travel_tablet,linked,3,False,54.62,5.16,9,WiFi,82.102.15.143,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,25,user0_rogue_terminal,linked,1,False,233.19,5.83,9,VPN,185.220.101.182,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+14,56,val,26,user0_phone,primary,0,True,10.87,0.87,0,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,26,user0_laptop,linked,1,False,16.47,1.16,0,VPN,198.51.100.86,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,26,user0_travel_tablet,linked,0,True,91.48,4.67,5,Cellular,82.102.15.212,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,26,user0_rogue_terminal,linked,0,True,124.35,8.34,16,WiFi,185.220.101.182,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+14,56,val,27,user0_phone,primary,1,False,40.61,1.08,1,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,27,user0_laptop,linked,0,True,15.05,1.08,1,VPN,198.51.100.66,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,27,user0_travel_tablet,linked,1,False,48.02,2.45,6,Cellular,82.102.15.191,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,27,user0_rogue_terminal,linked,1,False,128.29,5.76,8,VPN,185.220.101.28,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+14,56,val,28,user0_phone,primary,0,True,0.0,1.03,0,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,28,user0_laptop,linked,1,False,8.36,1.28,2,VPN,198.51.100.126,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,28,user0_travel_tablet,linked,2,False,102.01,4.9,2,Cellular,82.102.15.154,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,28,user0_rogue_terminal,linked,0,True,211.51,5.82,7,WiFi,203.0.113.103,United States,America/New_York,0.0,1.0,1.0,1
+14,56,val,29,user0_phone,primary,1,False,6.13,0.97,1,VPN,198.51.100.94,United States,America/New_York,0.0,0.0,0.0,0
+14,56,val,29,user0_laptop,linked,0,True,8.74,0.87,1,VPN,198.51.100.232,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,29,user0_travel_tablet,linked,0,True,139.98,7.15,7,Cellular,82.102.15.242,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,29,user0_rogue_terminal,linked,1,False,166.79,5.67,16,Cellular,203.0.113.103,United States,America/New_York,0.0,0.0,0.0,1
+14,56,val,30,user0_phone,primary,0,True,0.0,1.1,1,WiFi,172.16.23.250,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,30,user0_laptop,linked,1,False,5.2,0.95,1,VPN,198.51.100.64,United States,America/New_York,0.0,1.0,0.0,0
+14,56,val,30,user0_travel_tablet,linked,1,False,78.84,1.47,5,Cellular,82.102.15.6,Germany,Europe/Berlin,0.0,1.0,0.0,0
+14,56,val,30,user0_rogue_terminal,linked,0,True,209.7,6.77,16,WiFi,203.0.113.103,United States,America/New_York,0.0,0.0,0.0,1
+15,57,val,1,user0_phone,primary,1,False,10.62,1.09,0,VPN,198.51.100.152,United States,America/New_York,1.0,0.0,0.0,0
+15,57,val,1,user0_laptop,linked,1,False,23.23,1.09,2,WiFi,172.16.23.134,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,1,user0_silent_tablet,linked,1,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,2,user0_phone,primary,0,True,12.82,1.1,0,VPN,198.51.100.152,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,2,user0_laptop,linked,0,True,8.0,1.01,0,VPN,198.51.100.149,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,2,user0_silent_tablet,linked,2,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,3,user0_phone,primary,1,False,15.89,0.86,2,VPN,198.51.100.152,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,3,user0_laptop,linked,1,False,12.93,1.01,1,VPN,198.51.100.121,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,3,user0_silent_tablet,linked,3,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,4,user0_phone,primary,0,True,16.74,0.86,2,VPN,198.51.100.152,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,4,user0_laptop,linked,0,True,12.49,1.02,2,VPN,198.51.100.39,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,4,user0_silent_tablet,linked,4,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,5,user0_phone,primary,1,False,8.77,0.97,1,VPN,198.51.100.152,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,5,user0_laptop,linked,1,False,5.46,1.03,0,Cellular,172.16.23.45,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,5,user0_silent_tablet,linked,5,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,6,user0_phone,primary,0,True,11.85,0.97,1,VPN,198.51.100.152,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,6,user0_laptop,linked,2,False,14.78,1.31,0,VPN,198.51.100.166,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,6,user0_silent_tablet,linked,6,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,7,user0_phone,primary,1,False,21.07,1.18,0,VPN,198.51.100.152,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,7,user0_laptop,linked,0,True,9.53,1.17,2,Cellular,172.16.23.21,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,7,user0_silent_tablet,linked,7,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,8,user0_phone,primary,0,True,21.18,0.86,1,Cellular,172.16.23.163,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,8,user0_laptop,linked,1,False,36.02,0.94,0,VPN,198.51.100.7,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,8,user0_silent_tablet,linked,8,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,9,user0_phone,primary,1,False,76.2,3.19,18,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,9,user0_laptop,linked,2,False,174.18,3.22,14,VPN,198.51.100.7,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,9,user0_silent_tablet,linked,9,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,10,user0_phone,primary,0,True,105.74,3.52,15,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,10,user0_laptop,linked,0,True,155.89,3.83,8,Cellular,172.16.23.69,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,10,user0_silent_tablet,linked,10,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,10,user0_mimic_client,linked,0,False,60.9,3.14,21,VPN,185.220.101.45,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,11,user0_phone,primary,1,False,112.91,5.76,7,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,11,user0_laptop,linked,1,False,139.64,4.57,14,Cellular,172.16.23.98,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,11,user0_silent_tablet,linked,11,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,11,user0_mimic_client,linked,1,False,112.32,3.2,13,VPN,185.220.101.74,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,12,user0_phone,primary,0,True,125.47,4.13,15,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,12,user0_laptop,linked,0,True,116.74,4.46,13,Cellular,172.16.23.171,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,12,user0_silent_tablet,linked,12,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,12,user0_mimic_client,linked,2,False,117.46,6.42,8,VPN,185.220.101.138,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,13,user0_phone,primary,1,False,120.84,4.15,7,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,13,user0_laptop,linked,1,False,177.17,3.72,11,Cellular,172.16.23.42,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,13,user0_silent_tablet,linked,13,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,13,user0_mimic_client,linked,0,True,117.44,3.47,18,VPN,185.220.101.193,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,14,user0_phone,primary,0,True,60.36,4.17,20,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,14,user0_laptop,linked,0,True,121.11,3.53,11,VPN,198.51.100.24,United States,America/New_York,1.0,1.0,0.0,0
+15,57,val,14,user0_silent_tablet,linked,14,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,14,user0_mimic_client,linked,1,False,121.45,3.79,6,VPN,185.220.101.178,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,15,user0_phone,primary,1,False,124.83,5.21,22,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,15,user0_laptop,linked,1,False,134.36,3.33,22,Cellular,172.16.23.131,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,15,user0_silent_tablet,linked,15,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,15,user0_mimic_client,linked,2,False,61.99,3.94,21,VPN,185.220.101.78,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,16,user0_phone,primary,0,True,142.86,4.65,8,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,16,user0_laptop,linked,0,True,128.86,3.45,12,Cellular,172.16.23.66,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,16,user0_silent_tablet,linked,16,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,16,user0_mimic_client,linked,0,True,135.91,5.96,26,VPN,185.220.101.181,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,17,user0_phone,primary,1,False,153.1,3.42,7,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,17,user0_laptop,linked,1,False,65.0,4.16,9,Cellular,172.16.23.96,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,17,user0_silent_tablet,linked,17,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,17,user0_mimic_client,linked,1,False,153.99,5.29,9,VPN,185.220.101.81,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,18,user0_phone,primary,0,True,163.07,3.24,20,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,18,user0_laptop,linked,0,True,128.21,4.66,8,Cellular,172.16.23.69,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,18,user0_silent_tablet,linked,18,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,18,user0_mimic_client,linked,2,False,130.76,3.77,5,VPN,185.220.101.33,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,19,user0_phone,primary,1,False,97.46,4.84,19,Cellular,172.16.23.163,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,19,user0_laptop,linked,1,False,160.35,2.9,21,Cellular,172.16.23.237,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,19,user0_silent_tablet,linked,19,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,19,user0_mimic_client,linked,0,True,173.84,2.76,18,VPN,185.220.101.144,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,20,user0_phone,primary,2,False,104.36,3.74,20,WiFi,172.16.23.37,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,20,user0_laptop,linked,0,True,136.99,7.06,10,Cellular,172.16.23.237,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,20,user0_silent_tablet,linked,20,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,20,user0_mimic_client,linked,1,False,72.77,4.5,23,VPN,185.220.101.120,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,21,user0_phone,primary,0,True,95.68,3.67,17,WiFi,172.16.23.37,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,21,user0_laptop,linked,1,False,137.5,3.33,14,WiFi,172.16.23.83,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,21,user0_silent_tablet,linked,21,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,21,user0_mimic_client,linked,2,False,90.71,3.42,16,VPN,185.220.101.48,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,22,user0_phone,primary,1,False,92.84,5.88,12,WiFi,172.16.23.37,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,22,user0_laptop,linked,2,False,90.81,4.23,11,WiFi,172.16.23.91,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,22,user0_silent_tablet,linked,22,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,22,user0_mimic_client,linked,0,True,119.61,4.27,20,VPN,185.220.101.7,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,23,user0_phone,primary,0,True,94.26,3.67,16,WiFi,172.16.23.37,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,23,user0_laptop,linked,0,True,164.63,3.47,13,WiFi,172.16.23.30,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,23,user0_silent_tablet,linked,23,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,23,user0_mimic_client,linked,1,False,87.19,6.54,11,VPN,185.220.101.205,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,24,user0_phone,primary,1,False,0.0,0.88,0,WiFi,172.16.23.246,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,24,user0_laptop,linked,1,False,10.35,1.04,0,WiFi,172.16.23.70,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,24,user0_silent_tablet,linked,24,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,24,user0_mimic_client,linked,0,True,68.2,3.07,16,VPN,185.220.101.18,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,25,user0_phone,primary,0,True,16.95,1.36,0,VPN,198.51.100.47,United States,America/New_York,1.0,1.0,0.0,0
+15,57,val,25,user0_laptop,linked,0,True,28.39,1.4,1,WiFi,172.16.23.102,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,25,user0_silent_tablet,linked,25,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,25,user0_mimic_client,linked,1,False,11.3,1.59,0,VPN,185.220.101.241,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,26,user0_phone,primary,1,False,7.53,0.85,2,VPN,198.51.100.47,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,26,user0_laptop,linked,1,False,33.87,1.25,1,WiFi,172.16.23.102,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,26,user0_silent_tablet,linked,26,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,26,user0_mimic_client,linked,0,True,24.24,0.79,0,VPN,185.220.101.193,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,27,user0_phone,primary,0,True,4.55,1.0,1,Cellular,172.16.23.87,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,27,user0_laptop,linked,0,True,8.12,0.92,0,VPN,198.51.100.12,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,27,user0_silent_tablet,linked,27,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,27,user0_mimic_client,linked,1,False,-13.79,1.59,2,VPN,185.220.101.13,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,28,user0_phone,primary,1,False,9.72,1.02,0,Cellular,172.16.23.87,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,28,user0_laptop,linked,1,False,9.33,0.92,0,Cellular,172.16.23.64,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,28,user0_silent_tablet,linked,28,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,28,user0_mimic_client,linked,2,False,10.99,0.93,0,VPN,185.220.101.114,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,29,user0_phone,primary,2,False,13.5,0.93,0,Cellular,172.16.23.87,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,29,user0_laptop,linked,0,True,12.79,0.95,0,Cellular,172.16.23.64,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,29,user0_silent_tablet,linked,29,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,29,user0_mimic_client,linked,0,True,-4.39,0.66,0,VPN,185.220.101.85,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+15,57,val,30,user0_phone,primary,0,True,18.78,1.03,0,WiFi,172.16.23.125,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,30,user0_laptop,linked,1,False,17.73,0.84,1,Cellular,172.16.23.72,United States,America/New_York,0.0,1.0,0.0,0
+15,57,val,30,user0_silent_tablet,linked,30,False,0.0,0.0,0,WiFi,192.168.1.50,United States,America/New_York,0.0,0.0,0.0,0
+15,57,val,30,user0_mimic_client,linked,1,False,10.68,1.01,0,VPN,185.220.101.160,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+16,58,val,1,user0_phone,primary,1,False,17.92,1.09,0,WiFi,172.16.23.51,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,1,user0_laptop,linked,1,False,11.16,0.99,2,Cellular,172.16.23.56,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,1,user0_travel_tablet,linked,1,False,120.83,5.29,6,Cellular,172.16.23.17,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,2,user0_phone,primary,0,True,0.0,0.91,1,WiFi,172.16.23.51,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,2,user0_laptop,linked,2,False,14.94,0.79,1,VPN,198.51.100.214,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,2,user0_travel_tablet,linked,2,False,59.4,7.31,4,Cellular,172.16.23.152,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,3,user0_phone,primary,1,False,28.84,0.76,1,WiFi,172.16.23.51,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,3,user0_laptop,linked,0,True,14.52,0.84,2,WiFi,172.16.23.126,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,3,user0_travel_tablet,linked,3,False,88.97,3.11,7,WiFi,172.16.23.13,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,4,user0_phone,primary,2,False,7.07,1.35,0,WiFi,172.16.23.51,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,4,user0_laptop,linked,1,False,31.42,0.88,1,WiFi,172.16.23.126,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,4,user0_travel_tablet,linked,0,True,59.12,4.3,5,WiFi,172.16.23.171,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,5,user0_phone,primary,0,True,7.57,1.12,0,WiFi,172.16.23.38,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,5,user0_laptop,linked,0,True,17.86,1.2,1,Cellular,172.16.23.208,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,5,user0_travel_tablet,linked,1,False,122.02,2.07,9,WiFi,172.16.23.204,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,6,user0_phone,primary,1,False,14.61,1.3,1,WiFi,172.16.23.38,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,6,user0_laptop,linked,1,False,17.92,1.26,0,WiFi,172.16.23.219,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,6,user0_travel_tablet,linked,2,False,124.35,2.95,10,WiFi,172.16.23.139,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,7,user0_phone,primary,0,True,18.94,0.99,0,WiFi,172.16.23.38,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,7,user0_laptop,linked,0,True,7.1,0.95,3,WiFi,172.16.23.54,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,7,user0_travel_tablet,linked,3,False,116.77,4.32,10,Cellular,172.16.23.3,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,8,user0_phone,primary,1,False,11.27,0.99,1,WiFi,172.16.23.38,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,8,user0_laptop,linked,1,False,3.65,0.95,1,VPN,198.51.100.245,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,8,user0_travel_tablet,linked,0,True,72.82,4.12,2,WiFi,82.102.15.45,Germany,Europe/Berlin,0.0,1.0,1.0,0
+16,58,val,9,user0_phone,primary,2,False,140.32,5.81,11,VPN,198.51.100.172,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,9,user0_laptop,linked,0,True,125.21,3.95,11,WiFi,172.16.23.229,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,9,user0_travel_tablet,linked,1,False,141.92,1.98,9,WiFi,82.102.15.191,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,10,user0_phone,primary,0,True,142.33,5.16,13,VPN,198.51.100.172,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,10,user0_laptop,linked,1,False,155.94,10.16,13,VPN,198.51.100.141,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,10,user0_travel_tablet,linked,2,False,46.63,3.16,9,WiFi,82.102.15.188,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,10,user0_rogue_terminal,linked,0,False,159.54,5.69,6,VPN,185.220.101.7,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+16,58,val,11,user0_phone,primary,1,False,86.81,2.97,12,VPN,198.51.100.172,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,11,user0_laptop,linked,0,True,141.25,4.5,14,Cellular,172.16.23.84,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,11,user0_travel_tablet,linked,0,True,122.14,4.24,7,VPN,82.102.15.173,Germany,Europe/Berlin,1.0,1.0,0.0,0
+16,58,val,11,user0_rogue_terminal,linked,1,False,86.1,4.13,7,Cellular,185.220.101.7,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+16,58,val,12,user0_phone,primary,0,True,137.14,3.84,6,WiFi,172.16.23.8,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,12,user0_laptop,linked,1,False,128.68,4.11,12,VPN,198.51.100.220,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,12,user0_travel_tablet,linked,1,False,112.33,3.02,8,WiFi,82.102.15.176,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,12,user0_rogue_terminal,linked,0,True,152.95,9.35,13,Cellular,185.220.101.7,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+16,58,val,13,user0_phone,primary,1,False,95.65,5.46,22,WiFi,172.16.23.8,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,13,user0_laptop,linked,0,True,162.03,4.64,10,WiFi,172.16.23.231,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,13,user0_travel_tablet,linked,2,False,20.53,3.03,5,VPN,82.102.15.46,Germany,Europe/Berlin,1.0,1.0,0.0,0
+16,58,val,13,user0_rogue_terminal,linked,1,False,91.79,5.27,10,WiFi,185.220.101.7,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+16,58,val,14,user0_phone,primary,0,True,94.75,3.66,9,WiFi,172.16.23.8,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,14,user0_laptop,linked,1,False,115.6,3.49,16,WiFi,172.16.23.100,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,14,user0_travel_tablet,linked,3,False,95.41,2.75,7,VPN,82.102.15.51,Germany,Europe/Berlin,1.0,1.0,0.0,0
+16,58,val,14,user0_rogue_terminal,linked,0,True,114.33,6.86,7,Cellular,198.51.100.199,United States,America/Chicago,0.0,1.0,1.0,1
+16,58,val,15,user0_phone,primary,1,False,82.94,4.56,14,WiFi,172.16.23.8,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,15,user0_laptop,linked,2,False,150.96,8.74,10,WiFi,172.16.23.53,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,15,user0_travel_tablet,linked,0,True,92.32,3.46,4,WiFi,82.102.15.247,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,15,user0_rogue_terminal,linked,1,False,122.48,6.37,2,Cellular,198.51.100.199,United States,America/Chicago,0.0,0.0,0.0,1
+16,58,val,16,user0_phone,primary,0,True,134.56,3.23,23,WiFi,172.16.23.8,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,16,user0_laptop,linked,0,True,136.5,3.19,15,WiFi,172.16.23.53,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,16,user0_travel_tablet,linked,1,False,110.29,2.21,5,WiFi,172.16.23.167,United States,America/New_York,0.0,1.0,1.0,0
+16,58,val,16,user0_rogue_terminal,linked,0,True,86.05,4.01,10,WiFi,203.0.113.167,United States,America/New_York,0.0,1.0,1.0,1
+16,58,val,17,user0_phone,primary,1,False,71.45,2.74,13,VPN,198.51.100.170,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,17,user0_laptop,linked,1,False,65.14,5.96,17,WiFi,172.16.23.137,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,17,user0_travel_tablet,linked,2,False,38.0,3.03,10,WiFi,172.16.23.27,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,17,user0_rogue_terminal,linked,1,False,117.35,6.07,8,Cellular,198.51.100.107,United States,America/Chicago,0.0,1.0,1.0,1
+16,58,val,18,user0_phone,primary,2,False,106.62,4.25,11,VPN,198.51.100.170,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,18,user0_laptop,linked,2,False,93.0,4.06,10,VPN,198.51.100.161,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,18,user0_travel_tablet,linked,0,True,177.62,1.67,7,WiFi,172.16.23.186,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,18,user0_rogue_terminal,linked,0,True,155.29,4.68,9,Cellular,198.51.100.37,United States,America/Chicago,0.0,1.0,0.0,1
+16,58,val,19,user0_phone,primary,0,True,123.53,4.73,7,WiFi,172.16.23.147,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,19,user0_laptop,linked,0,True,100.77,3.47,6,VPN,198.51.100.8,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,19,user0_travel_tablet,linked,1,False,148.9,3.44,10,WiFi,172.16.23.196,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,19,user0_rogue_terminal,linked,1,False,141.43,5.96,4,Cellular,198.51.100.44,United States,America/Chicago,0.0,1.0,0.0,1
+16,58,val,20,user0_phone,primary,1,False,148.25,3.87,14,WiFi,172.16.23.147,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,20,user0_laptop,linked,1,False,80.74,3.33,28,WiFi,172.16.23.3,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,20,user0_travel_tablet,linked,2,False,106.63,0.98,5,Cellular,172.16.23.23,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,20,user0_rogue_terminal,linked,0,True,150.2,3.82,9,VPN,185.220.101.7,Netherlands,Europe/Amsterdam,1.0,1.0,1.0,1
+16,58,val,21,user0_phone,primary,2,False,150.92,5.09,8,WiFi,172.16.23.147,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,21,user0_laptop,linked,0,True,94.28,3.29,11,VPN,198.51.100.176,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,21,user0_travel_tablet,linked,0,True,80.97,2.1,8,WiFi,172.16.23.93,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,21,user0_rogue_terminal,linked,1,False,114.93,6.88,5,VPN,185.220.101.134,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+16,58,val,22,user0_phone,primary,0,True,170.93,4.01,6,WiFi,172.16.23.147,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,22,user0_laptop,linked,1,False,117.01,3.1,13,VPN,198.51.100.176,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,22,user0_travel_tablet,linked,1,False,48.37,1.22,6,Cellular,172.16.23.61,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,22,user0_rogue_terminal,linked,0,True,207.63,5.22,10,VPN,185.220.101.134,Netherlands,Europe/Amsterdam,1.0,0.0,0.0,1
+16,58,val,23,user0_phone,primary,1,False,144.78,3.46,8,Cellular,172.16.23.221,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,23,user0_laptop,linked,2,False,176.69,3.87,14,WiFi,172.16.23.194,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,23,user0_travel_tablet,linked,2,False,109.25,2.28,1,Cellular,172.16.23.214,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,23,user0_rogue_terminal,linked,1,False,220.09,6.53,15,WiFi,203.0.113.238,United States,America/New_York,0.0,1.0,1.0,1
+16,58,val,24,user0_phone,primary,0,True,7.67,1.2,0,Cellular,172.16.23.221,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,24,user0_laptop,linked,0,True,0.0,1.29,0,VPN,198.51.100.126,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,24,user0_travel_tablet,linked,3,False,72.71,0.99,10,WiFi,82.102.15.217,Germany,Europe/Berlin,0.0,1.0,1.0,0
+16,58,val,24,user0_rogue_terminal,linked,0,True,234.18,8.81,16,VPN,203.0.113.238,Netherlands,America/New_York,1.0,0.0,0.0,1
+16,58,val,25,user0_phone,primary,1,False,7.57,0.87,0,Cellular,172.16.23.221,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,25,user0_laptop,linked,1,False,14.84,1.0,0,Cellular,172.16.23.229,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,25,user0_travel_tablet,linked,0,True,118.92,2.17,0,WiFi,82.102.15.32,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,25,user0_rogue_terminal,linked,1,False,230.38,8.8,6,Cellular,198.51.100.246,United States,America/Chicago,0.0,1.0,1.0,1
+16,58,val,26,user0_phone,primary,0,True,30.28,1.05,2,WiFi,172.16.23.157,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,26,user0_laptop,linked,0,True,16.26,1.26,2,Cellular,172.16.23.229,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,26,user0_travel_tablet,linked,1,False,155.34,3.89,11,Cellular,82.102.15.35,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,26,user0_rogue_terminal,linked,0,True,205.91,7.88,13,Cellular,198.51.100.246,United States,America/Chicago,0.0,0.0,0.0,1
+16,58,val,27,user0_phone,primary,1,False,25.96,0.86,0,WiFi,172.16.23.157,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,27,user0_laptop,linked,1,False,22.65,1.02,0,WiFi,172.16.23.140,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,27,user0_travel_tablet,linked,2,False,113.68,4.1,3,Cellular,82.102.15.194,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,27,user0_rogue_terminal,linked,1,False,111.12,7.03,8,VPN,185.220.101.27,Netherlands,Europe/Amsterdam,1.0,1.0,1.0,1
+16,58,val,28,user0_phone,primary,0,True,18.57,1.18,0,WiFi,172.16.23.157,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,28,user0_laptop,linked,0,True,17.6,0.78,0,WiFi,172.16.23.51,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,28,user0_travel_tablet,linked,0,True,146.83,3.84,3,Cellular,82.102.15.161,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,28,user0_rogue_terminal,linked,0,True,167.11,5.95,17,VPN,185.220.101.233,Netherlands,Europe/Amsterdam,1.0,1.0,0.0,1
+16,58,val,29,user0_phone,primary,1,False,5.64,1.34,1,WiFi,172.16.23.157,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,29,user0_laptop,linked,1,False,17.61,1.34,0,WiFi,172.16.23.250,United States,America/New_York,0.0,1.0,0.0,0
+16,58,val,29,user0_travel_tablet,linked,1,False,126.4,3.33,0,Cellular,82.102.15.41,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,29,user0_rogue_terminal,linked,1,False,145.02,5.94,9,WiFi,185.220.101.233,United States,Europe/Amsterdam,0.0,0.0,0.0,1
+16,58,val,30,user0_phone,primary,2,False,24.01,0.91,0,VPN,198.51.100.79,United States,America/New_York,1.0,1.0,0.0,0
+16,58,val,30,user0_laptop,linked,0,True,11.93,1.15,0,WiFi,172.16.23.250,United States,America/New_York,0.0,0.0,0.0,0
+16,58,val,30,user0_travel_tablet,linked,2,False,54.15,2.99,4,WiFi,82.102.15.159,Germany,Europe/Berlin,0.0,1.0,0.0,0
+16,58,val,30,user0_rogue_terminal,linked,0,True,147.51,6.95,15,Cellular,185.220.101.233,United States,Europe/Amsterdam,0.0,0.0,0.0,1
