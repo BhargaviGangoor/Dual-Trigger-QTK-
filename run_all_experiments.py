@@ -1,26 +1,21 @@
 import os
 import sys
 
-# Add backend to path
-backend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "backend")
-sys.path.append(backend_dir)
+# Add project root to sys.path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from backend.evaluation import results
-from backend import package_deliverables
+from evaluation import results
 
 def main():
     print("==================================================")
-    print("STARTING IEEE PAPER EXPERIMENT PIPELINE (ROOT)")
+    print("  DUAL-TRIGGER QTK REPRODUCIBILITY MASTER RUNNER  ")
     print("==================================================")
     
-    # Run the updated consistent evaluation pipeline
+    # Execute full empirical experiment and evaluation suite
     results.main()
     
-    # Package all deliverables to publication_deliverables/
-    package_deliverables.main()
-    
     print("\n==================================================")
-    print("ROOT EXPERIMENT PIPELINE RUN COMPLETED SUCCESSFULLY")
+    print(" ALL EXPERIMENTS, TABLES & FIGURES READY IN results/")
     print("==================================================")
 
 if __name__ == "__main__":
